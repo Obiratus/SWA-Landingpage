@@ -50,6 +50,11 @@ header {
     color: var(--primary-color);
 }
 
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -130,6 +135,11 @@ header {
     background: var(--bg-light);
 }
 
+.features-page {
+    padding: 120px 0;
+    min-height: calc(100vh - 200px);
+}
+
 .features h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -206,6 +216,11 @@ header {
     color: var(--white);
 }
 
+.signup-page {
+    padding: 120px 0;
+    min-height: calc(100vh - 200px);
+}
+
 .signup-content {
     max-width: 600px;
     margin: 0 auto;
@@ -264,6 +279,11 @@ header {
     background: rgba(255,255,255,0.2);
     border-radius: var(--border-radius);
     font-size: 1.1rem;
+}
+
+.cta-container {
+    text-align: center;
+    margin-top: 3rem;
 }
 
 /* Footer */

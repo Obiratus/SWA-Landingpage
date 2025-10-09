@@ -1,24 +1,31 @@
 // Handle waitlist form submission
-document.getElementById('waitlistForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const waitlistForm = document.getElementById('waitlistForm');
     
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const familySize = document.getElementById('familySize').value;
-    
-    // In a real application, this would send data to a backend server
-    console.log('Waitlist signup:', { name, email, familySize });
-    
-    // Show success message
-    document.getElementById('successMessage').style.display = 'block';
-    
-    // Clear form
-    this.reset();
-    
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-        document.getElementById('successMessage').style.display = 'none';
-    }, 5000);
+    if (waitlistForm) {
+        waitlistForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const familySize = document.getElementById('familySize').value;
+            const screenTime = document.getElementById('screenTime')?.value || '';
+            
+            // In a real application, this would send data to a backend server
+            console.log('Waitlist signup:', { name, email, familySize, screenTime });
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Clear form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+    }
 });
 
 // Smooth scrolling for navigation links
