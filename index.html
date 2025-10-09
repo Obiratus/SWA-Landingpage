@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timepot - Family Screen Time Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>⏰ Timepot</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#video">How It Works</a></li>
+                    <li><a href="#signup">Join Waitlist</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Take Control of Your Family's Screen Time</h2>
+                <p>Timepot helps families track, allocate, and analyze digital screen usage together. Build healthy digital habits for every member of your family.</p>
+                <a href="#signup" class="cta-button">Join the Waitlist</a>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">📱</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Families Love Timepot</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Screen Time Allocation</h3>
+                    <p>Set and manage screen time limits for the whole family. Allocate time fairly and adjust as needed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Usage Analytics</h3>
+                    <p>Track usage patterns and get insights into how your family spends their digital time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Educational Insights</h3>
+                    <p>Educate every family member about healthy digital habits with personalized recommendations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Safe & Secure</h3>
+                    <p>Your family's data is encrypted and private. We never share your information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2>See How Timepot Works</h2>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <div class="play-button">▶</div>
+                    <p>Explainer Video Coming Soon</p>
+                </div>
+                <!-- Replace with actual video embed when available -->
+                <!-- <iframe width="560" height="315" src="YOUR_VIDEO_URL" frameborder="0" allowfullscreen></iframe> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup" class="signup-section">
+        <div class="container">
+            <div class="signup-content">
+                <h2>Join the Waitlist</h2>
+                <p>Be among the first families to experience Timepot. Sign up now and get early access when we launch!</p>
+                <form class="signup-form" id="waitlistForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="familySize" placeholder="Family Size (optional)" min="1">
+                    </div>
+                    <button type="submit" class="submit-button">Join Waitlist</button>
+                </form>
+                <div id="successMessage" class="success-message" style="display: none;">
+                    ✓ Thank you! You've been added to our waitlist.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Timepot. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
