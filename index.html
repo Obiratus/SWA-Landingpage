@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timepot - Family Screen Time Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="44aec67b-1dc1-4330-8456-c14c21477512"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><h1>⏰ Timepot</h1></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="#video">How It Works</a></li>
+                    <li><a href="waitlist.html">Join Waitlist</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-title">Turn Screen Time into Quality Time</h1>
+                <p class="hero-subtitle">Timepot helps your family build healthier digital habits together. No more fighting, just collaborating.</p>
+                <a href="waitlist.html" class="cta-button" id="waitlist-button-hero">Join the Waitlist</a>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">📱</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section">
+        <div class="container">
+            <h2>✨ New Feature: Real-World Rewards</h2>
+            <p>Turn screen time goals into family fun! With our new Real-World Rewards feature, you can set goals together and unlock real-life treats like a family dinner out or a trip to the amusement park. It's a great way to build healthy habits and make lasting memories.</p>
+            <a href="features.html#real-world-rewards" class="cta-button" id="learn-more-real-world-rewards">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2>See How Timepot Works</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tGihymYM8Zw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Timepot. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="waitlist.html">Join Waitlist</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="tracking.js"></script>
+    <script>
+        document.getElementById('waitlist-button-hero').addEventListener('click', () => trackEvent('waitlist-button-hero-click'));
+        document.getElementById('learn-more-real-world-rewards').addEventListener('click', () => trackEvent('learn-more-real-world-rewards-click'));
+    </script>
+</body>
+</html>
