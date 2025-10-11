@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Waitlist - Timepot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><h1>⏰ Timepot</h1></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="index.html#video">How It Works</a></li>
+                    <li><a href="waitlist.html">Join Waitlist</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Signup Section -->
+    <section class="signup-section signup-page">
+        <div class="container">
+            <div class="signup-content">
+                <h2>Join the Waitlist</h2>
+                <p>Be among the first families to experience Timepot. Sign up now and get early access when we launch!</p>
+                <form class="signup-form" id="waitlistForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="familySize" placeholder="Family Size (optional)" min="1">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="screenTime" placeholder="Current Screen Time (hours/day)" min="0" max="24" step="0.5" required>
+                    </div>
+                    <button type="submit" class="submit-button">Join Waitlist</button>
+                </form>
+                <div id="successMessage" class="success-message" style="display: none;">
+                    ✓ Thank you! You've been added to our waitlist.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Timepot. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="waitlist.html">Join Waitlist</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
