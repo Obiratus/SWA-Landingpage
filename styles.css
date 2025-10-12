@@ -221,6 +221,47 @@ header:hover {
     box-shadow: var(--shadow-xl);
 }
 
+.arrow-button {
+    display: inline-block;
+    padding: 1.1rem 2.8rem;
+    background: var(--white);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.arrow-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(99, 102, 241, 0.1);
+    transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
+    transform: translate(-50%, -50%);
+}
+
+.arrow-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.arrow-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+}
+
+
+
 .hero-image {
     flex: 1;
     display: flex;
@@ -255,6 +296,7 @@ header:hover {
 }
 
 .featured-section h2 {
+    line-height: 1.2;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -283,14 +325,14 @@ header:hover {
 }
 
 .features-page {
-    padding: 120px 0;
+    padding: 40px 0 120px 0; /* 40px top, 120px bottom */
     min-height: calc(100vh - 200px);
 }
 
 .features h2 {
     text-align: center;
     font-size: 2.8rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.2rem;
     font-weight: 700;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
@@ -452,7 +494,7 @@ header:hover {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-    
+
     .detail-section {
         padding: 1.5rem;
     }
@@ -465,6 +507,7 @@ header:hover {
 }
 
 .video-section h2 {
+    line-height: 1.2;
     text-align: center;
     font-size: 2.8rem;
     margin-bottom: 3.5rem;
@@ -784,12 +827,12 @@ footer .container {
     .carousel-container {
         padding: 0 50px;
     }
-    
+
     .carousel-track .feature-card {
         flex: 0 0 100%;
         min-width: 250px;
     }
-    
+
     .carousel-btn {
         width: 40px;
         height: 40px;
@@ -801,7 +844,7 @@ footer .container {
     .carousel-container {
         padding: 0 40px;
     }
-    
+
     .carousel-btn {
         width: 35px;
         height: 35px;
@@ -964,23 +1007,23 @@ footer .container {
         padding: 2rem;
         padding-bottom: 1rem;
     }
-    
+
     .modal-footer {
         padding: 1rem 2rem;
     }
-    
+
     .modal-content {
         max-height: 90vh;
     }
-    
+
     .modal-content h2 {
         font-size: 1.5rem;
     }
-    
+
     .modal-icon {
         font-size: 3rem;
     }
-    
+
     .modal-close {
         top: 1rem;
         right: 1rem;
@@ -1348,22 +1391,76 @@ footer .container {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .pricing-featured {
         transform: scale(1);
     }
-    
+
     #reservation-modal .modal-content,
     #custom-price-modal .modal-content {
         padding: 1.5rem;
         width: 95%;
     }
-    
+
     .button-group {
         flex-direction: column;
     }
-    
+
     .button-group .cta-button {
         width: 100%;
     }
+}
+
+.features-grid.all-visible {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.features-grid.all-visible .feature-card {
+    padding: 1.2rem;
+}
+
+.features-grid.all-visible .feature-card h3 {
+    font-size: 1rem;
+}
+
+.features-grid.all-visible .feature-card p {
+    font-size: 0.9rem;
+}
+
+.features.features-page {
+    max-width: 100vw;
+    padding: 1.5rem 0 2rem 0;
+}
+
+.features-grid.all-visible {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+}
+
+.features-grid.all-visible .feature-card {
+    padding: 0.7rem;
+}
+
+.features-grid.all-visible .feature-card h3 {
+    font-size: 0.85rem;
+}
+
+.features-grid.all-visible .feature-card p {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 1200px) {
+    .features-grid.all-visible {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.features .features-grid ~ h3,
+.features.features-page h3 {
+    text-align: center;
+    font-size: 1.15rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-weight: 500;
 }

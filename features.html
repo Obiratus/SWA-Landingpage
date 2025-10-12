@@ -13,120 +13,87 @@
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
-                    <a href="index.html"><h1>⏰ Timepot</h1></a>
+                    <a href="index.html"><h1>Timepot</h1></a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="features.html">Features</a></li>
                     <li><a href="index.html#video">How It Works</a></li>
-                    <li><a href="waitlist.html">Join Waitlist</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <!-- Features Section -->
-    <section class="features features-page">
+    <section id="features" class="features features-page">
         <div class="container">
-            <h2>Why Families Love Timepot</h2>
-            
-            <!-- Carousel Container -->
-            <div class="carousel-container">
-                <button class="carousel-btn carousel-prev" aria-label="Previous slide">‹</button>
-                
-                <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                        <div class="feature-card" id="feature-card-family-challenge">
-                            <div class="feature-icon">🏆</div>
-                            <h3>Family Challenge Mode</h3>
-                            <p>Turn screen time reduction into a friendly family challenge with collaborative progress tracking and light gamification — no pressure, just fun!</p>
-                        </div>
-                        <div class="feature-card" id="feature-card-privacy-first">
-                            <div class="feature-icon">🔐</div>
-                            <h3>Privacy-First App Categories</h3>
-                            <p>Apps are grouped into Productive, Educational, and Leisure categories instead of exposing specific app names, protecting everyone's privacy.</p>
-                        </div>
-                        <div class="feature-card" id="feature-card-heroes-villains">
-                            <div class="feature-icon">🦸‍♂️</div>
-                            <h3>Heroes & Villains System</h3>
-                            <p>Choose up to 3 "Hero" apps that don't count against your time, and 3 "Villain" apps that get locked when time runs out. You're in control!</p>
-                        </div>
-                        <div class="feature-card" id="feature-card-group-progress">
-                            <div class="feature-icon">👥</div>
-                            <h3>Group Progress Visualization</h3>
-                            <p>See how your family works together towards healthier screen time habits with beautiful, collaborative progress displays.</p>
-                        </div>
-                        <div class="feature-card" id="feature-card-productive-apps">
-                            <div class="feature-icon">💼</div>
-                            <h3>Productive Apps Protection</h3>
-                            <p>Essential work, planning, and organization tools can be marked as Heroes, ensuring productivity isn't hindered by screen time limits.</p>
-                        </div>
-                        <div class="feature-card" id="feature-card-educational-focus">
-                            <div class="feature-icon">📚</div>
-                            <h3>Educational Focus</h3>
-                            <p>Learning, reading, and creative apps are recognized separately, encouraging educational screen time over mindless scrolling.</p>
-                        </div>
-                        <div class="feature-card" id="feature-card-smart-leisure">
-                            <div class="feature-icon">🎮</div>
-                            <h3>Smart Leisure Management</h3>
-                            <p>Entertainment, social media, and gaming apps are thoughtfully managed without eliminating fun entirely from family time.</p>
-                        </div>
-                        <div class="feature-card" id="feature-card-personalized-control">
-                            <div class="feature-icon">🎯</div>
-                            <h3>Personalized Control</h3>
-                            <p>Each family member customizes their own Heroes and Villains based on their personal screen time goals and habits.</p>
-                        </div>
-                        <div class="feature-card" id="feature-card-real-world-rewards">
-                            <div class="feature-icon">🤝</div>
-                            <h3>Real-World Rewards</h3>
-                            <p>Connect digital progress with real-world treats and activities by setting family agreements.</p>
-                        </div>
-                    </div>
+            <h2>Click on a Feature to learn more!</h2>
+            <div class="features-grid all-visible">
+                <div class="feature-card" id="feature-card-heroes-villains">
+                    <div class="feature-icon">🦸‍♂️</div>
+                    <h3>Heroes & Villains System</h3>
                 </div>
-                
-                <button class="carousel-btn carousel-next" aria-label="Next slide">›</button>
-            </div>
-            
-            <!-- Carousel Indicators -->
-            <div class="carousel-indicators">
-                <span class="indicator active" data-slide="0"></span>
-                <span class="indicator" data-slide="1"></span>
-                <span class="indicator" data-slide="2"></span>
-                <span class="indicator" data-slide="3"></span>
-                <span class="indicator" data-slide="4"></span>
-                <span class="indicator" data-slide="5"></span>
-                <span class="indicator" data-slide="6"></span>
-                <span class="indicator" data-slide="7"></span>
-                <span class="indicator" data-slide="8"></span>
-            </div>
-
-            <!-- Pricing Question - CTA 6 -->
-            <div style="margin: 4rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
-                <h2 style="text-align: center; margin-bottom: 1rem;">What Would You Pay?</h2>
-                <p style="text-align: center; margin-bottom: 2rem; color: #666;">Help us understand what Timepot is worth to your family</p>
-                
-                <div class="pricing-input-container">
-                    <label for="user-price-input" style="display: block; text-align: center; font-size: 1.1rem; margin-bottom: 1rem;">Monthly Price</label>
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 2rem;">
-                        <span style="font-size: 2rem; font-weight: bold;">CHF</span>
-                        <input 
-                            type="number" 
-                            id="user-price-input" 
-                            placeholder="0.00" 
-                            min="0" 
-                            step="0.50"
-                            style="width: 200px; padding: 1rem 1.5rem; font-size: 2rem; font-weight: bold; text-align: center; border: 3px solid var(--primary-color); border-radius: 12px; background: white;"
-                        >
-                        <span style="font-size: 1.2rem;">/month</span>
-                    </div>
-                    <button class="cta-button cta-primary" id="submit-price-btn" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">Continue</button>
+                <div class="feature-card" id="feature-card-team-battle">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Reporting - Team Battle</h3>
                 </div>
-            </div>
-
-            <div class="cta-container">
-                <a href="waitlist.html" class="cta-button" id="waitlist-button-features">Join the Waitlist</a>
+                <div class="feature-card" id="feature-card-individual-battle">
+                    <div class="feature-icon">👥</div>
+                    <h3>Reporting - Individual Battle </h3>
+                </div>
+                <div class="feature-card" id="feature-card-family-family">
+                    <div class="feature-icon">📚</div>
+                    <h3>Reporting - Family vs. Family</h3>
+                </div>
+                <div class="feature-card" id="feature-card-agreements">
+                    <div class="feature-icon">💼</div>
+                    <h3>Agreements</h3>
+                </div>
+                <div class="feature-card" id="feature-card-privacy-first">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Privacy - App Categorization</h3>
+                </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2>What Would You Pay?</h2>
+            <div class="pricing-input-container">
+                <label for="user-price-input" style="display: block; text-align: center; font-size: 1.1rem; margin-bottom: 1rem;">Monthly Price</label>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 2rem;">
+                    <span style="font-size: 2rem; font-weight: bold;">CHF</span>
+                    <input
+                            type="number"
+                            id="user-price-input"
+                            placeholder="0.00"
+                            min="0"
+                            step="0.50"
+                            style="width: 200px; padding: 1rem 1.5rem; font-size: 2rem; font-weight: bold; text-align: center; border: 3px solid var(--primary-color); border-radius: 12px; background: white;"
+                    >
+                    <span style="font-size: 1.2rem;">/month</span>
+                </div>
+                <button class="cta-button cta-primary" id="submit-price-btn" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">Continue</button>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <a href="waitlist.html" class="cta-button" id="waitlist-button-features">Join the Waitlist</a>
+        </div>
+        </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
 
     <!-- Price Confirmation Modal -->
     <div id="price-confirmation-modal" class="modal">
@@ -171,15 +138,12 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // Feature card tracking
-        document.getElementById('feature-card-family-challenge').addEventListener('click', () => trackEvent('feature-card-family-challenge-click'));
+        document.getElementById('feature-card-team-battle').addEventListener('click', () => trackEvent('feature-card-family-challenge-click'));
         document.getElementById('feature-card-privacy-first').addEventListener('click', () => trackEvent('feature-card-privacy-first-click'));
         document.getElementById('feature-card-heroes-villains').addEventListener('click', () => trackEvent('feature-card-heroes-villains-click'));
-        document.getElementById('feature-card-group-progress').addEventListener('click', () => trackEvent('feature-card-group-progress-click'));
-        document.getElementById('feature-card-productive-apps').addEventListener('click', () => trackEvent('feature-card-productive-apps-click'));
-        document.getElementById('feature-card-educational-focus').addEventListener('click', () => trackEvent('feature-card-educational-focus-click'));
-        document.getElementById('feature-card-smart-leisure').addEventListener('click', () => trackEvent('feature-card-smart-leisure-click'));
-        document.getElementById('feature-card-personalized-control').addEventListener('click', () => trackEvent('feature-card-personalized-control-click'));
-        document.getElementById('feature-card-real-world-rewards').addEventListener('click', () => trackEvent('feature-card-real-world-rewards-click'));
+        document.getElementById('feature-card-individual-battle').addEventListener('click', () => trackEvent('feature-card-individual-battle-click'));
+        document.getElementById('feature-card-agreements').addEventListener('click', () => trackEvent('feature-card-agreements-click'));
+        document.getElementById('feature-card-family-family').addEventListener('click', () => trackEvent('feature-card-family-family-click'));
         document.getElementById('waitlist-button-features').addEventListener('click', () => trackEvent('waitlist-button-features-click'));
 
         // Track navigation clicks
@@ -198,110 +162,8 @@
             });
         });
 
-        // Carousel functionality
-        const track = document.querySelector('.carousel-track');
-        const prevBtn = document.querySelector('.carousel-prev');
-        const nextBtn = document.querySelector('.carousel-next');
-        const indicators = document.querySelectorAll('.indicator');
         const cards = document.querySelectorAll('.feature-card');
-        
-        let currentSlide = 0;
-        let cardsPerView = getCardsPerView();
-        const totalSlides = cards.length;
 
-        function getCardsPerView() {
-            if (window.innerWidth >= 1024) return 3;
-            if (window.innerWidth >= 768) return 2;
-            return 1;
-        }
-
-        function updateCarousel() {
-            const cardWidth = cards[0].offsetWidth;
-            const gap = 32; // 2rem gap
-            const offset = -(currentSlide * (cardWidth + gap));
-            track.style.transform = `translateX(${offset}px)`;
-            
-            // Update indicators
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentSlide);
-            });
-
-            // Update button states
-            prevBtn.disabled = currentSlide === 0;
-            nextBtn.disabled = currentSlide >= totalSlides - cardsPerView;
-        }
-
-        function nextSlide() {
-            if (currentSlide < totalSlides - cardsPerView) {
-                currentSlide++;
-                updateCarousel();
-            }
-        }
-
-        function prevSlide() {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateCarousel();
-            }
-        }
-
-        function goToSlide(index) {
-            currentSlide = Math.min(index, totalSlides - cardsPerView);
-            updateCarousel();
-        }
-
-        // Event listeners
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-        
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => goToSlide(index));
-        });
-
-        // Handle window resize
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                const newCardsPerView = getCardsPerView();
-                if (newCardsPerView !== cardsPerView) {
-                    cardsPerView = newCardsPerView;
-                    currentSlide = Math.min(currentSlide, totalSlides - cardsPerView);
-                    updateCarousel();
-                }
-            }, 250);
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') prevSlide();
-            if (e.key === 'ArrowRight') nextSlide();
-        });
-
-        // Touch swipe support
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        track.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        track.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            if (touchStartX - touchEndX > swipeThreshold) {
-                nextSlide();
-            } else if (touchEndX - touchStartX > swipeThreshold) {
-                prevSlide();
-            }
-        }
-
-        // Initialize
-        updateCarousel();
 
         // Modal functionality
         const modal = document.getElementById('featureModal');
@@ -311,36 +173,6 @@
         const modalClose = document.querySelector('.modal-close');
 
         const featureDetails = {
-            'feature-card-family-challenge': {
-                icon: '🏆',
-                title: 'Family Challenge Mode',
-                description: `
-                    <p>Turn screen time reduction into a friendly family challenge with collaborative progress tracking and light gamification — no pressure, just fun!</p>
-                    <h3>How It Works:</h3>
-                    <p>Timepot transforms screen time management into a collaborative family experience. Instead of individual restrictions that can feel punitive, families work together toward shared goals. Progress is visualized in real-time, celebrating collective achievements while maintaining a supportive, pressure-free environment.</p>
-                    <ul>
-                        <li>Set shared family screen time goals</li>
-                        <li>Track progress together in real-time</li>
-                        <li>Celebrate achievements as a team</li>
-                        <li>No shame or punishment, just collaboration</li>
-                    </ul>
-                `
-            },
-            'feature-card-privacy-first': {
-                icon: '🔐',
-                title: 'Privacy-First App Categories',
-                description: `
-                    <p>Apps are grouped into Productive, Educational, and Leisure categories instead of exposing specific app names, protecting everyone's privacy.</p>
-                    <h3>Your Privacy Matters:</h3>
-                    <p>Your personal app usage stays private. Instead of exposing which specific apps you use, Timepot organizes them into three transparent categories:</p>
-                    <ul>
-                        <li><strong>Productive</strong> — Work, planning, and organization tools</li>
-                        <li><strong>Educational</strong> — Learning, reading, and creative exploration</li>
-                        <li><strong>Leisure</strong> — Entertainment, social media, and gaming</li>
-                    </ul>
-                    <p>This allows meaningful family discussions about screen time habits without compromising anyone's privacy.</p>
-                `
-            },
             'feature-card-heroes-villains': {
                 icon: '🦸‍♂️',
                 title: 'Heroes & Villains System',
@@ -358,7 +190,7 @@
                     <p><em>Smart sorting by highest usage helps you make informed choices about which apps to designate as Heroes or Villains.</em></p>
                 `
             },
-            'feature-card-group-progress': {
+            'feature-card-individual-battle': {
                 icon: '👥',
                 title: 'Group Progress Visualization',
                 description: `
@@ -373,22 +205,22 @@
                     <p>Progress tracking that brings families together instead of dividing them.</p>
                 `
             },
-            'feature-card-productive-apps': {
-                icon: '💼',
-                title: 'Productive Apps Protection',
+            'feature-card-team-battle': {
+                icon: '🏆',
+                title: 'Family Challenge Mode',
                 description: `
-                    <p>Essential work, planning, and organization tools can be marked as Heroes, ensuring productivity isn't hindered by screen time limits.</p>
-                    <h3>Work Without Worry:</h3>
+                    <p>Turn screen time reduction into a friendly family challenge with collaborative progress tracking and light gamification — no pressure, just fun!</p>
+                    <h3>How It Works:</h3>
+                    <p>Timepot transforms screen time management into a collaborative family experience. Instead of individual restrictions that can feel punitive, families work together toward shared goals. Progress is visualized in real-time, celebrating collective achievements while maintaining a supportive, pressure-free environment.</p>
                     <ul>
-                        <li>Designate work and productivity apps as Heroes</li>
-                        <li>No interruption during important tasks</li>
-                        <li>Separate work from leisure time</li>
-                        <li>Perfect for remote workers and students</li>
+                        <li>Set shared family screen time goals</li>
+                        <li>Track progress together in real-time</li>
+                        <li>Celebrate achievements as a team</li>
+                        <li>No shame or punishment, just collaboration</li>
                     </ul>
-                    <p>Your productivity tools won't count against family screen time limits.</p>
                 `
             },
-            'feature-card-educational-focus': {
+            'feature-card-family-family': {
                 icon: '📚',
                 title: 'Educational Focus',
                 description: `
@@ -403,53 +235,38 @@
                     <p>Not all screen time is created equal — we help families distinguish between passive consumption and active learning.</p>
                 `
             },
-            'feature-card-smart-leisure': {
-                icon: '🎮',
-                title: 'Smart Leisure Management',
+
+            'feature-card-agreements': {
+                icon: '💼',
+                title: 'Productive Apps Protection',
                 description: `
-                    <p>Entertainment, social media, and gaming apps are thoughtfully managed without eliminating fun entirely from family time.</p>
-                    <h3>Balance is Key:</h3>
+                    <p>Essential work, planning, and organization tools can be marked as Heroes, ensuring productivity isn't hindered by screen time limits.</p>
+                    <h3>Work Without Worry:</h3>
                     <ul>
-                        <li>Manage entertainment apps intelligently</li>
-                        <li>Set healthy boundaries without being restrictive</li>
-                        <li>Keep the fun in screen time</li>
-                        <li>Learn moderation, not elimination</li>
+                        <li>Designate work and productivity apps as Heroes</li>
+                        <li>No interruption during important tasks</li>
+                        <li>Separate work from leisure time</li>
+                        <li>Perfect for remote workers and students</li>
                     </ul>
-                    <p>We believe in healthy balance, not complete restriction. Leisure time is important too!</p>
+                    <p>Your productivity tools won't count against family screen time limits.</p>
                 `
             },
-            'feature-card-personalized-control': {
-                icon: '🎯',
-                title: 'Personalized Control',
+            'feature-card-privacy-first': {
+                icon: '🔐',
+                title: 'Privacy-First App Categories',
                 description: `
-                    <p>Each family member customizes their own Heroes and Villains based on their personal screen time goals and habits.</p>
-                    <h3>Your Choice, Your Way:</h3>
+                    <p>Apps are grouped into Productive, Educational, and Leisure categories instead of exposing specific app names, protecting everyone's privacy.</p>
+                    <h3>Your Privacy Matters:</h3>
+                    <p>Your personal app usage stays private. Instead of exposing which specific apps you use, Timepot organizes them into three transparent categories:</p>
                     <ul>
-                        <li>Everyone controls their own settings</li>
-                        <li>Customize based on individual needs</li>
-                        <li>Different rules for different family members</li>
-                        <li>Respect individual preferences and requirements</li>
+                        <li><strong>Productive</strong> — Work, planning, and organization tools</li>
+                        <li><strong>Educational</strong> — Learning, reading, and creative exploration</li>
+                        <li><strong>Leisure</strong> — Entertainment, social media, and gaming</li>
                     </ul>
-                    <p>One size doesn't fit all. Timepot adapts to each family member's unique needs.</p>
-                `
-            },
-            'feature-card-real-world-rewards': {
-                icon: '🤝',
-                title: 'Real-World Rewards',
-                description: `
-                    <p>Connect digital progress with real-world treats and activities by setting family agreements.</p>
-                    <h3>Motivation That Matters:</h3>
-                    <p>A light, motivational feature that connects digital progress with real-world rewards.</p>
-                    <p>Families can define <strong>agreements</strong> — real-life treats or activities — that are unlocked when specific screen time goals are met.</p>
-                    <ul>
-                        <li>Set family rewards for achieving goals</li>
-                        <li>Choose from example agreements or create custom ones</li>
-                        <li>Examples: Family dinner out, movie night, amusement park trip</li>
-                        <li>Reinforces healthy habits through shared motivation</li>
-                    </ul>
-                    <p>The system reinforces healthy digital habits through shared motivation, not gamified points.</p>
+                    <p>This allows meaningful family discussions about screen time habits without compromising anyone's privacy.</p>
                 `
             }
+
         };
 
         // Add click handlers to all feature cards

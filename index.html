@@ -13,12 +13,12 @@
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
-                    <a href="index.html"><h1>⏰ Timepot</h1></a>
+                    <a href="index.html"><h1>Timepot</h1></a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="features.html">Features</a></li>
                     <li><a href="#video">How It Works</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="waitlist.html">Pricing</a></li>
                 </ul>
             </div>
         </nav>
@@ -47,7 +47,23 @@
             </div>
             <!-- CTA 2: Would you share screen time? -->
             <div class="video-cta text-center" style="margin-top: 2rem;">
-                <h3>Would you share your family's screen time data to build better habits together?</h3>
+                <h3>Share some of your screen time data with your family and start building better habits together!</h3>
+                <br>
+                <a href="#sharing" class="arrow-button" id="go-to-sharing">
+                    <span style="font-size: 2rem; display: block;">&#8595;</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sharing Section -->
+    <section id="sharing" class="video-section">
+        <div class="container">
+            <h2>Sharing is Caring</h2>
+            <!-- CTA 2: Would you share screen time? -->
+            <div class="video-cta text-center" style="margin-top: 2rem;">
+                <h3>Care to share your screen time with us? Gain even more benefits!</h3>
                 <div class="button-group" style="margin-top: 1.5rem;">
                     <button class="cta-button cta-secondary" id="share-screentime-yes">Yes, I'd Try This</button>
                     <button class="cta-button cta-ghost" id="share-screentime-maybe">Maybe, Tell Me More</button>
@@ -63,7 +79,7 @@
             <p>Enter your daily average screen time from the last week and discover how much time you could reclaim with your family!</p>
             <div class="demo-container">
                 <div class="demo-card">
-                    <h3>📱 Your Daily Average (Last 7 Days)</h3>
+                    <h3>Your Daily Average (Last 7 Days)</h3>
                     <div class="screentime-input-group">
                         <input 
                             type="number" 
@@ -80,13 +96,13 @@
                     <button class="cta-button" id="share-demo-data" style="margin-top: 1rem;">Calculate My Savings</button>
                 </div>
                 <div class="demo-card" id="family-pot-demo" style="opacity: 0.5;">
-                    <h3 id="savings-title">✨ Your Potential Savings</h3>
+                    <h3 id="savings-title">Your Potential Savings</h3>
                     <div class="demo-stat" id="family-pot-stat">? hours</div>
                     <p id="savings-message" style="font-size: 0.9rem; color: #666;">Enter your screen time to see your potential!</p>
                 </div>
             </div>
             <div id="savings-benefits" style="display: none; margin-top: 2rem; text-align: center; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🎉 Imagine What You Could Do!</h3>
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Imagine What You Could Do!</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
                     <div class="benefit-item">
                         <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎮</div>
@@ -111,40 +127,32 @@
 
     <!-- Features Preview - CTA 4 -->
         <!-- Features Preview - CTA 4 -->
-    <section class="features-preview">
+    <section id= "preview" class="video-section">
         <div class="container">
             <h2>Why Families Choose Timepot</h2>
             <div class="feature-grid">
-                <div class="feature-preview-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Family Challenges</h3>
-                    <p>Turn reduction into friendly competition</p>
-                </div>
                 <div class="feature-preview-card">
                     <div class="feature-icon">🔐</div>
                     <h3>Privacy First</h3>
                     <p>Category-based, not app-specific tracking</p>
                 </div>
                 <div class="feature-preview-card">
-                    <div class="feature-icon">🦸‍♂️</div>
-                    <h3>Heroes & Villains</h3>
-                    <p>You choose which apps to protect or limit</p>
+                    <div class="feature-icon">🎛️</div>
+                    <h3>Control</h3>
+                    <p>You choose which apps to freely use or limit</p>
+                </div>
+                <div class="feature-preview-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Family Challenges</h3>
+                    <p>Turn reduction into friendly competition</p>
                 </div>
             </div>
             <div class="text-center" style="margin-top: 2rem;">
-                <a href="features.html" class="cta-button" id="view-all-features">View All Features</a>
+                <a href="features.html" class="cta-button" id="view-all-features">Explore All Features</a>
             </div>
         </div>
     </section>
 
-    <!-- Featured Section -->
-    <section class="featured-section">
-        <div class="container flex">
-            <h2>✨ New Feature: Real-World Rewards</h2>
-            <p>Turn screen time goals into family fun! With our new Real-World Rewards feature, you can set goals together and unlock real-life treats like a family dinner out or a trip to the amusement park. It's a great way to build healthy habits and make lasting memories.</p>
-            <a href="features.html#real-world-rewards" class="cta-button" id="learn-more-real-world-rewards">Learn More</a>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
