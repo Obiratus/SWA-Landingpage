@@ -228,20 +228,22 @@ header:hover {
     align-items: center;
 }
 
-.phone-mockup {
-    font-size: 20rem;
-    opacity: 0.9;
-    transform: rotate(10deg);
+.hero-img {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow-xl);
     animation: float 6s ease-in-out infinite;
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
 }
 
 @keyframes float {
     0%, 100% {
-        transform: rotate(10deg) translateY(0px);
+        transform: translateY(0px);
     }
     50% {
-        transform: rotate(10deg) translateY(-20px);
+        transform: translateY(-20px);
     }
 }
 
@@ -642,8 +644,9 @@ footer .container {
         font-size: 1.1rem;
     }
 
-    .phone-mockup {
-        font-size: 8rem;
+    .hero-img {
+        width: 100%;
+        max-width: 400px;
     }
 
     .nav-links {
