@@ -99,13 +99,45 @@
                 <span class="indicator" data-slide="8"></span>
             </div>
 
-            
+            <!-- Pricing Question - CTA 6 -->
+            <div style="margin: 4rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h2 style="text-align: center; margin-bottom: 1rem;">What Would You Pay?</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: #666;">Help us understand what Timepot is worth to your family</p>
+                
+                <div class="pricing-input-container">
+                    <label for="user-price-input" style="display: block; text-align: center; font-size: 1.1rem; margin-bottom: 1rem;">Monthly Price</label>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 2rem;">
+                        <span style="font-size: 2rem; font-weight: bold;">CHF</span>
+                        <input 
+                            type="number" 
+                            id="user-price-input" 
+                            placeholder="0.00" 
+                            min="0" 
+                            step="0.50"
+                            style="width: 200px; padding: 1rem 1.5rem; font-size: 2rem; font-weight: bold; text-align: center; border: 3px solid var(--primary-color); border-radius: 12px; background: white;"
+                        >
+                        <span style="font-size: 1.2rem;">/month</span>
+                    </div>
+                    <button class="cta-button cta-primary" id="submit-price-btn" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">Continue</button>
+                </div>
+            </div>
 
             <div class="cta-container">
                 <a href="waitlist.html" class="cta-button" id="waitlist-button-features">Join the Waitlist</a>
             </div>
         </div>
     </section>
+
+    <!-- Price Confirmation Modal -->
+    <div id="price-confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Great Choice!</h2>
+            <p id="price-confirmation-text" style="font-size: 1.2rem; margin: 1.5rem 0;"></p>
+            <p>Ready to reserve your spot at this price?</p>
+            <a href="waitlist.html" class="cta-button cta-primary" id="reserve-spot-btn" style="width: 100%; margin-top: 1rem;">Reserve for This Price</a>
+        </div>
+    </div>
 
     <!-- Feature Modal -->
     <div id="featureModal" class="modal">
@@ -471,6 +503,52 @@
                 trackEvent(`modal-cta-${currentFeature}-click`);
             });
         }
+
+        // CTA 6: Submit pricing input
+        document.getElementById('submit-price-btn').addEventListener('click', function() {
+            const priceInput = document.getElementById('user-price-input');
+            const price = parseFloat(priceInput.value);
+            
+            // Validate input
+            if (!price || price < 0) {
+                alert('Please enter a valid price');
+                return;
+            }
+            
+            // Track the pricing submission
+            trackEvent('cta-6-price-submit', { price_chf: price });
+            
+            // Store price for later use
+            sessionStorage.setItem('userPrice', price);
+            
+            // Show confirmation modal
+            document.getElementById('price-confirmation-text').textContent = `You'd pay CHF ${price.toFixed(2)}/month`;
+            document.getElementById('price-confirmation-modal').style.display = 'block';
+        });
+
+        // CTA 7: Reserve spot at stated price
+        document.getElementById('reserve-spot-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const price = sessionStorage.getItem('userPrice');
+            
+            trackEvent('cta-7-reserve-at-price', { price_chf: price });
+            
+            // Redirect to waitlist with price parameter
+            window.location.href = `waitlist.html?price=${price}`;
+        });
+
+        // Modal close handlers for price confirmation
+        document.querySelectorAll('.close-modal').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.closest('.modal').style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal')) {
+                e.target.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
