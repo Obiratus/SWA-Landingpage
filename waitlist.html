@@ -28,25 +28,14 @@
         <div class="container">
             <div class="signup-content">
                 <h2>Join the Waitlist</h2>
-                <p>Be among the first families to experience Timepot. Sign up now and get early access when we launch!</p>
-                <form class="signup-form" id="waitlistForm">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" id="familySize" placeholder="Family Size (optional)" min="1">
-                    </div>
-                    <div class="form-group">
-                        <input type="number" id="screenTime" placeholder="Current Screen Time (hours/day)" min="0" max="24" step="0.5" required>
-                    </div>
-                    <button type="submit" class="submit-button">Join Waitlist</button>
-                </form>
-                <div id="successMessage" class="success-message" style="display: none;">
-                    ✓ Thank you! You've been added to our waitlist.
-                </div>
+                <p class="waitlist-message">Awesome that you're interested in Timepot. We're not quite ready yet; while we can't promise a price today, we promise to put a lot of love into building your family's screen-time tool.</p>
+                <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=WS4mp1YbWk-kEm8HGB9I7lAS-AZkj5tIpbHjqdB2TphUOFpQMVM0RktEV0EwRUQzUzlVTDNGRUo2MC4u" 
+                   class="cta-button waitlist-cta-button" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   id="survey-button">
+                    Join the Waitlist
+                </a>
             </div>
         </div>
     </section>
@@ -54,7 +43,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Timepot. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> Timepot. All rights reserved.</p>
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="features.html">Features</a>
@@ -64,5 +53,16 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Track survey button click
+        document.getElementById('survey-button').addEventListener('click', () => {
+            if (typeof trackEvent === 'function') {
+                trackEvent('survey-button-click');
+            }
+        });
+    </script>
 </body>
 </html>

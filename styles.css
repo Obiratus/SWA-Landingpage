@@ -38,6 +38,13 @@ html {
     padding: 0 20px;
 }
 
+.container.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /* Header & Navigation */
 header {
     background: rgba(255, 255, 255, 0.98);
@@ -526,6 +533,21 @@ header:hover {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     opacity: 0.95;
+}
+
+.waitlist-message {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    opacity: 1;
+    font-weight: 400;
+}
+
+.waitlist-cta-button {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    font-size: 1.15rem;
+    margin-top: 1rem;
 }
 
 .signup-form {

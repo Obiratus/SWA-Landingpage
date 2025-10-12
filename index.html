@@ -40,7 +40,7 @@
 
     <!-- Featured Section -->
     <section class="featured-section">
-        <div class="container">
+        <div class="container flex">
             <h2>✨ New Feature: Real-World Rewards</h2>
             <p>Turn screen time goals into family fun! With our new Real-World Rewards feature, you can set goals together and unlock real-life treats like a family dinner out or a trip to the amusement park. It's a great way to build healthy habits and make lasting memories.</p>
             <a href="features.html#real-world-rewards" class="cta-button" id="learn-more-real-world-rewards">Learn More</a>
@@ -60,7 +60,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Timepot. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> Timepot. All rights reserved.</p>
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="features.html">Features</a>
@@ -72,6 +72,9 @@
     <script src="script.js"></script>
     <script src="tracking.js"></script>
     <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         document.getElementById('waitlist-button-hero').addEventListener('click', () => trackEvent('waitlist-button-hero-click'));
         document.getElementById('learn-more-real-world-rewards').addEventListener('click', () => trackEvent('learn-more-real-world-rewards-click'));
     </script>

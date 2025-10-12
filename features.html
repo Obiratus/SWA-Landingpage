@@ -148,7 +148,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Timepot. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> Timepot. All rights reserved.</p>
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="features.html">Features</a>
@@ -158,6 +158,9 @@
     </footer>
     <script src="tracking.js"></script>
     <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         // Feature card tracking
         document.getElementById('feature-card-family-challenge').addEventListener('click', () => trackEvent('feature-card-family-challenge-click'));
         document.getElementById('feature-card-privacy-first').addEventListener('click', () => trackEvent('feature-card-privacy-first-click'));
