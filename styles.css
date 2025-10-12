@@ -410,6 +410,7 @@ header:hover {
     margin-right: auto;
 }
 
+
 .detail-section {
     background: var(--white);
     padding: 3rem;
@@ -1475,4 +1476,8 @@ footer .container {
     width: 4rem;
     height: 4rem;
     display: inline-block;
+}
+
+.feature-card h3 + h3 {
+    margin-top: -2.0rem;
 }
