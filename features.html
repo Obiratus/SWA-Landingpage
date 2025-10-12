@@ -30,28 +30,36 @@
             <h2>Click on a Feature to learn more!</h2>
             <div class="features-grid all-visible">
                 <div class="feature-card" id="feature-card-heroes-villains">
-                    <div class="feature-icon">🦸‍♂️</div>
+                    <div class="feature-icon">
+                        <img src="assets/icons_timepot-04.svg" alt="Privacy First Icon" />
+                    </div>
                     <h3>Heroes & Villains System</h3>
                 </div>
-                <div class="feature-card" id="feature-card-team-battle">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Reporting - Team Battle</h3>
-                </div>
-                <div class="feature-card" id="feature-card-individual-battle">
-                    <div class="feature-icon">👥</div>
-                    <h3>Reporting - Individual Battle </h3>
-                </div>
-                <div class="feature-card" id="feature-card-family-family">
-                    <div class="feature-icon">📚</div>
-                    <h3>Reporting - Family vs. Family</h3>
-                </div>
                 <div class="feature-card" id="feature-card-agreements">
-                    <div class="feature-icon">💼</div>
-                    <h3>Agreements</h3>
+                    <div class="feature-icon">
+                        <img src="assets/icons_timepot-01.svg" alt="Privacy First Icon" />
+                    </div>                    <h3>Agreements</h3>
                 </div>
                 <div class="feature-card" id="feature-card-privacy-first">
-                    <div class="feature-icon">🔐</div>
-                    <h3>Privacy - App Categorization</h3>
+                    <div class="feature-icon">
+                        <img src="assets/icons_timepot-03.svg" alt="Privacy First Icon" />
+                    </div>                    <h3>Privacy - App Categorization</h3>
+                </div>
+                <div class="feature-card" id="feature-card-individual-battle">
+                    <div class="feature-icon">
+                        <img src="assets/icons_timepot-06.svg" alt="Privacy First Icon" />
+                    </div>                    <h3>Reporting - Individual Battle </h3>
+                </div>
+                <div class="feature-card" id="feature-card-team-battle">
+                    <div class="feature-icon">
+                        <img src="assets/icons_timepot-07.svg" alt="Privacy First Icon" />
+                    </div>
+                    <h3>Reporting - Team Battle</h3>
+                </div>
+                <div class="feature-card" id="feature-card-family-family">
+                    <div class="feature-icon">
+                        <img src="assets/icons_timepot-08.svg" alt="Privacy First Icon" />
+                    </div>                    <h3>Reporting - Family vs. Family</h3>
                 </div>
             </div>
         </div>
@@ -63,7 +71,7 @@
         <div class="container">
             <h2>What Would You Pay?</h2>
             <div class="pricing-input-container">
-                <label for="user-price-input" style="display: block; text-align: center; font-size: 1.1rem; margin-bottom: 1rem;">Monthly Price</label>
+                <label for="user-price-input" style="display: block; text-align: center; font-size: 1.1rem; margin-bottom: 1rem;">Monthly price, for the whole family</label>
                 <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 2rem;">
                     <span style="font-size: 2rem; font-weight: bold;">CHF</span>
                     <input
@@ -92,19 +100,27 @@
 
 
 
-
-
-
     <!-- Price Confirmation Modal -->
     <div id="price-confirmation-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Great Choice!</h2>
-            <p id="price-confirmation-text" style="font-size: 1.2rem; margin: 1.5rem 0;"></p>
-            <p>Ready to reserve your spot at this price?</p>
-            <a href="waitlist.html" class="cta-button cta-primary" id="reserve-spot-btn" style="width: 100%; margin-top: 1rem;">Reserve for This Price</a>
+        <div class="modal-content" style="text-align: center; padding: 3rem 2rem 2.5rem 2rem;">
+            <span class="close-modal" style="top: 1.2rem; right: 1.2rem;">&times;</span>
+            <div style="margin-bottom: 1.5rem;">
+            <span style="display: inline-block; background: linear-gradient(135deg, #10b981 60%, #22d3ee 100%); color: white; border-radius: 50%; width: 64px; height: 64px; line-height: 64px; font-size: 2.5rem; box-shadow: 0 4px 16px rgba(16,185,129,0.15);">
+                &#10003;
+            </span>
+            </div>
+            <h2 style="margin-bottom: 1rem;">Great Price!</h2>
+            <div style="background: #f0fdf4; border-radius: 12px; padding: 1.2rem 0; margin-bottom: 1.5rem;">
+                <p id="price-confirmation-text" style="font-size: 1.3rem; color: var(--primary-color); font-weight: 600; margin: 0;"></p>
+            </div>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">Ready to reserve your spot at this price?</p>
+            <a href="waitlist.html" class="cta-button cta-primary" id="reserve-spot-btn" style="width: 100%; max-width: 320px; margin: 0 auto; display: block;">Reserve for this price</a>
         </div>
     </div>
+
+
+
+
 
     <!-- Feature Modal -->
     <div id="featureModal" class="modal">
@@ -115,9 +131,6 @@
                 <h2 id="modalTitle"></h2>
                 <div id="modalDescription"></div>
             </div>
-            <div class="modal-footer">
-                <a href="waitlist.html" class="cta-button modal-cta">Join the Waitlist</a>
-            </div>
         </div>
     </div>
 
@@ -126,8 +139,6 @@
         <div class="container">
             <p>&copy; <span id="current-year"></span> Timepot. All rights reserved.</p>
             <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="features.html">Features</a>
                 <a href="waitlist.html">Join Waitlist</a>
             </div>
         </div>
@@ -174,98 +185,70 @@
 
         const featureDetails = {
             'feature-card-heroes-villains': {
-                icon: '🦸‍♂️',
+                icon: '<img src="assets/icons_timepot-04.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
                 title: 'Heroes & Villains System',
                 description: `
-                    <p>Choose up to 3 "Hero" apps that don't count against your time, and 3 "Villain" apps that get locked when time runs out. You're in control!</p>
-                    <h3>Personalize Your Experience:</h3>
-                    <div style="margin: 1.5rem 0;">
-                        <h4>🦸‍♂️ Heroes (Up to 3)</h4>
-                        <p>Essential apps that <em>don't count</em> against your shared family time. Perfect for productivity tools, communication apps, or educational resources you need throughout the day.</p>
-                    </div>
-                    <div style="margin: 1.5rem 0;">
-                        <h4>🦹‍♂️ Villains (Up to 3)</h4>
-                        <p>Apps that get <em>locked</em> when your shared time runs out. Choose the apps you want help limiting — social media, games, or entertainment that tends to consume too much time.</p>
-                    </div>
-                    <p><em>Smart sorting by highest usage helps you make informed choices about which apps to designate as Heroes or Villains.</em></p>
-                `
-            },
-            'feature-card-individual-battle': {
-                icon: '👥',
-                title: 'Group Progress Visualization',
-                description: `
-                    <p>See how your family works together towards healthier screen time habits with beautiful, collaborative progress displays.</p>
-                    <h3>Track Together:</h3>
-                    <ul>
-                        <li>Beautiful visualizations of family progress</li>
-                        <li>See individual and collective achievements</li>
-                        <li>Celebrate milestones together</li>
-                        <li>Motivate each other with transparent progress</li>
-                    </ul>
-                    <p>Progress tracking that brings families together instead of dividing them.</p>
-                `
-            },
-            'feature-card-team-battle': {
-                icon: '🏆',
-                title: 'Family Challenge Mode',
-                description: `
-                    <p>Turn screen time reduction into a friendly family challenge with collaborative progress tracking and light gamification — no pressure, just fun!</p>
-                    <h3>How It Works:</h3>
-                    <p>Timepot transforms screen time management into a collaborative family experience. Instead of individual restrictions that can feel punitive, families work together toward shared goals. Progress is visualized in real-time, celebrating collective achievements while maintaining a supportive, pressure-free environment.</p>
-                    <ul>
-                        <li>Set shared family screen time goals</li>
-                        <li>Track progress together in real-time</li>
-                        <li>Celebrate achievements as a team</li>
-                        <li>No shame or punishment, just collaboration</li>
-                    </ul>
-                `
-            },
-            'feature-card-family-family': {
-                icon: '📚',
-                title: 'Educational Focus',
-                description: `
-                    <p>Learning, reading, and creative apps are recognized separately, encouraging educational screen time over mindless scrolling.</p>
-                    <h3>Encourage Learning:</h3>
-                    <ul>
-                        <li>Educational apps get special treatment</li>
-                        <li>Reading and learning don't count against limits</li>
-                        <li>Creative tools are recognized and encouraged</li>
-                        <li>Foster a love of digital learning</li>
-                    </ul>
-                    <p>Not all screen time is created equal — we help families distinguish between passive consumption and active learning.</p>
-                `
+                    <p>Choose "Hero" apps that don't count against your time, and "Villain" apps that get punished when time runs out. You're in control!</p>
+
+`,
+                audio: 'assets/heroes.mp3'
             },
 
             'feature-card-agreements': {
-                icon: '💼',
-                title: 'Productive Apps Protection',
+                icon: '<img src="assets/icons_timepot-01.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
+                title: 'Agreements',
                 description: `
-                    <p>Essential work, planning, and organization tools can be marked as Heroes, ensuring productivity isn't hindered by screen time limits.</p>
-                    <h3>Work Without Worry:</h3>
-                    <ul>
-                        <li>Designate work and productivity apps as Heroes</li>
-                        <li>No interruption during important tasks</li>
-                        <li>Separate work from leisure time</li>
-                        <li>Perfect for remote workers and students</li>
-                    </ul>
-                    <p>Your productivity tools won't count against family screen time limits.</p>
-                `
+                    <p>Families can define agreements, real-life treats or activities, that are unlocked when specific screen time goals are met.</p>
+
+                `,
+                audio: 'assets/agreements.mp3'
             },
+
             'feature-card-privacy-first': {
-                icon: '🔐',
+                icon: '<img src="assets/icons_timepot-03.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
                 title: 'Privacy-First App Categories',
                 description: `
-                    <p>Apps are grouped into Productive, Educational, and Leisure categories instead of exposing specific app names, protecting everyone's privacy.</p>
-                    <h3>Your Privacy Matters:</h3>
-                    <p>Your personal app usage stays private. Instead of exposing which specific apps you use, Timepot organizes them into three transparent categories:</p>
+                    <p>Instead of showing specific app names, Timepot groups apps into three transparent categories:</p>
                     <ul>
-                        <li><strong>Productive</strong> — Work, planning, and organization tools</li>
-                        <li><strong>Educational</strong> — Learning, reading, and creative exploration</li>
-                        <li><strong>Leisure</strong> — Entertainment, social media, and gaming</li>
+                        <li><strong>Productive</strong> — work, planning, organization tools.</li>
+                        <li><strong>Educational</strong> — learning, reading, creative exploration.</li>
+                        <li><strong>Leisure</strong> — entertainment, social media, and gaming.</li>
                     </ul>
-                    <p>This allows meaningful family discussions about screen time habits without compromising anyone's privacy.</p>
+                    <p>This allows your family members to discuss screen time habits at a category level, without exposing personal app usage details.</p>
+                    `,
+                audio: 'assets/categories.mp3'
+            },
+
+            'feature-card-individual-battle': {
+                icon: '<img src="assets/icons_timepot-06.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
+                title: 'Individual Progress Visualization',
+                description: `
+                    <p>A playful insight feature that visualizes each user’s personal progress over time — showing how Timepot has influenced their Villain app usage.</p>
+                `,
+                audio: 'assets/individual.mp3'
+            },
+
+            'feature-card-team-battle': {
+                icon: '<img src="assets/icons_timepot-07.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
+                title: 'Family Progress Visualization',
+                description: `
+                    <p>Turn screen time reduction into a friendly family challenge with collaborative progress tracking and light gamification — no pressure, just fun!</p>
                 `
+                ,
+                audio: 'assets/team.mp3'
+            },
+
+            'feature-card-family-family': {
+                icon: '<img src="assets/icons_timepot-08.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
+                title: 'Compare to other Familes',
+                description: `
+                    <p>A social comparison feature that allows families to see how their overall screen time habits compare to other families using Timepot.</p>
+                `,
+                audio: 'assets/family.mp3'
             }
+
+
+
 
         };
 
@@ -277,11 +260,21 @@
                 const feature = featureDetails[cardId];
                 
                 if (feature) {
-                    modalIcon.textContent = feature.icon;
+                    modalIcon.innerHTML = feature.icon;
                     modalTitle.textContent = feature.title;
                     modalDescription.innerHTML = feature.description;
                     modal.style.display = 'flex';
                     document.body.style.overflow = 'hidden';
+
+                    if (feature.audio) {
+                        modalDescription.innerHTML += `
+                            <p style="margin-top:2rem;">Let Anton explain it. Hit the play button!</p>
+                            <audio controls style="margin-top:1rem; width:100%;">
+                                <source src="${feature.audio}" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        `;
+                    }
                     
                     // Track modal open
                     if (typeof trackEvent === 'function') {

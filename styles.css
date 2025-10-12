@@ -1165,7 +1165,11 @@ footer .container {
 }
 
 .pricing-section h2 {
-    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .pricing-section p {
@@ -1442,9 +1446,6 @@ footer .container {
     padding: 0.7rem;
 }
 
-.features-grid.all-visible .feature-card h3 {
-    font-size: 0.85rem;
-}
 
 .features-grid.all-visible .feature-card p {
     font-size: 0.8rem;
@@ -1463,4 +1464,15 @@ footer .container {
     color: var(--text-light);
     margin-bottom: 2rem;
     font-weight: 500;
+}
+
+.features-page h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.feature-icon img {
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
 }
