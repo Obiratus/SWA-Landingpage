@@ -18,7 +18,7 @@
                 <ul class="nav-links">
                     <li><a href="features.html">Features</a></li>
                     <li><a href="#video">How It Works</a></li>
-                    <li><a href="waitlist.html">Join Waitlist</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
                 </ul>
             </div>
         </nav>
@@ -30,11 +30,218 @@
             <div class="hero-content text-center">
                 <h1 class="hero-title">Turn Screen Time into Quality Time</h1>
                 <p class="hero-subtitle">Timepot helps your family build healthier digital habits together. No more fighting, just collaborating.</p>
-                <a href="waitlist.html" class="cta-button" id="waitlist-button-hero">Join the Waitlist</a>
+                <a href="#video" class="cta-button cta-primary" id="watch-video-hero">Watch How It Works</a>
             </div>
             <div class="hero-image">
                 <img src="assets/pexels-rdne-8489723.jpg" alt="Family spending quality time together" class="hero-img">
             </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2>See How Timepot Works</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tGihymYM8Zw" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- CTA 2: Would you share screen time? -->
+            <div class="video-cta text-center" style="margin-top: 2rem;">
+                <h3>Would you share your family's screen time data to build better habits together?</h3>
+                <div class="button-group" style="margin-top: 1.5rem;">
+                    <button class="cta-button cta-secondary" id="share-screentime-yes">Yes, I'd Try This</button>
+                    <button class="cta-button cta-ghost" id="share-screentime-maybe">Maybe, Tell Me More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen Time Sharing Interactive - CTA 3 -->
+    <section id="try-sharing" class="interactive-section" style="display: none;">
+        <div class="container">
+            <h2>See Your Personalized Savings Potential</h2>
+            <p>Enter your weekly screen time and discover how much time you could reclaim with your family!</p>
+            <div class="demo-container">
+                <div class="demo-card">
+                    <h3>📱 Your Current Weekly Screen Time</h3>
+                    <div class="screentime-input-group">
+                        <input 
+                            type="number" 
+                            id="user-screentime-input" 
+                            placeholder="35" 
+                            min="0" 
+                            max="168"
+                            class="screentime-input"
+                        >
+                        <span class="screentime-unit">hours/week</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">💡 Tip: Check your phone's Screen Time or Digital Wellbeing settings</p>
+                    <button class="cta-button" id="share-demo-data" style="margin-top: 1rem;">Calculate My Savings</button>
+                </div>
+                <div class="demo-card" id="family-pot-demo" style="opacity: 0.5;">
+                    <h3 id="savings-title">✨ Your Potential Savings</h3>
+                    <div class="demo-stat" id="family-pot-stat">? hours</div>
+                    <p id="savings-message" style="font-size: 0.9rem; color: #666;">Enter your screen time to see your potential!</p>
+                </div>
+            </div>
+            <div id="savings-benefits" style="display: none; margin-top: 2rem; text-align: center; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🎉 Imagine What You Could Do!</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div class="benefit-item">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎮</div>
+                        <p><strong id="benefit-games">X game nights</strong> per month</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+                        <p><strong id="benefit-books">X books</strong> read together</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚴</div>
+                        <p><strong id="benefit-activities">X outdoor activities</strong></p>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; color: var(--text-light);">By reducing just 20% of screen time, your family could gain this quality time together!</p>
+            </div>
+            <div style="margin-top: 2rem; text-align: center;">
+                <a href="features.html" class="cta-button" id="learn-more-features">Explore All Features</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Preview - CTA 4 -->
+    <section class="features-preview">
+        <div class="container">
+            <h2>Why Families Choose Timepot</h2>
+            <div class="feature-grid">
+                <div class="feature-preview-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Family Challenges</h3>
+                    <p>Turn reduction into friendly competition</p>
+                </div>
+                <div class="feature-preview-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Privacy First</h3>
+                    <p>Category-based, not app-specific tracking</p>
+                </div>
+                <div class="feature-preview-card">
+                    <div class="feature-icon">🦸‍♂️</div>
+                    <h3>Heroes & Villains</h3>
+                    <p>You choose which apps to protect or limit</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="features.html" class="cta-button" id="view-all-features">View All Features</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section - CTA 6 & 7 -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2>Early Access Pricing</h2>
+            <p class="text-center" style="margin-bottom: 2rem;">Help us understand what Timepot is worth to you</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Supporter</h3>
+                    <div class="price">$4.99<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li>✓ Up to 4 family members</li>
+                        <li>✓ Basic features</li>
+                        <li>✓ Email support</li>
+                    </ul>
+                    <button class="cta-button cta-ghost pricing-select" data-tier="supporter" data-price="4.99">I'd Pay This</button>
+                </div>
+
+                <div class="pricing-card pricing-featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3>Family</h3>
+                    <div class="price">$9.99<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li>✓ Up to 6 family members</li>
+                        <li>✓ All features</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ Early access to new features</li>
+                    </ul>
+                    <button class="cta-button cta-primary pricing-select" data-tier="family" data-price="9.99">I'd Pay This</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Extended</h3>
+                    <div class="price">$14.99<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li>✓ Unlimited family members</li>
+                        <li>✓ All features</li>
+                        <li>✓ Premium support</li>
+                        <li>✓ Custom family goals</li>
+                    </ul>
+                    <button class="cta-button cta-ghost pricing-select" data-tier="extended" data-price="14.99">I'd Pay This</button>
+                </div>
+            </div>
+
+            <div class="custom-price" style="margin-top: 2rem; text-align: center;">
+                <p>None of these feel right?</p>
+                <button class="cta-button cta-secondary" id="custom-price-btn">Tell Us Your Price</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Modal - CTA 7 -->
+    <div id="reservation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Reserve Your Spot</h2>
+            <p id="selected-tier-text">You selected: <strong></strong></p>
+            <p>We're not quite ready yet, but we'd love to keep you updated!</p>
+            
+            <form id="reservation-form">
+                <input type="hidden" id="selected-tier" name="tier">
+                <input type="hidden" id="selected-price" name="price">
+                
+                <label for="reservation-email">Email Address</label>
+                <input type="email" id="reservation-email" name="email" required placeholder="your@email.com">
+                
+                <label for="reservation-name">First Name (Optional)</label>
+                <input type="text" id="reservation-name" name="name" placeholder="Your name">
+                
+                <button type="submit" class="cta-button cta-primary">Reserve My Spot</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom Price Modal -->
+    <div id="custom-price-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>What Would You Pay?</h2>
+            <p>Help us understand what Timepot is worth to your family</p>
+            
+            <form id="custom-price-form">
+                <label for="custom-price-input">Monthly Price (USD)</label>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="font-size: 1.5rem;">$</span>
+                    <input type="number" id="custom-price-input" name="custom_price" min="0" step="0.01" required placeholder="0.00" style="flex: 1;">
+                    <span style="color: #666;">/month</span>
+                </div>
+                
+                <label for="custom-price-email" style="margin-top: 1rem;">Email Address</label>
+                <input type="email" id="custom-price-email" name="email" required placeholder="your@email.com">
+                
+                <button type="submit" class="cta-button cta-primary" style="margin-top: 1rem;">Submit My Price</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Thank You Section -->
+    <div id="thank-you-section" style="display: none; text-align: center; padding: 4rem 0;">
+        <div class="container">
+            <h2>🎉 Thank You!</h2>
+            <p>We've saved your interest. One more thing...</p>
+            <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=WS4mp1YbWk-kEm8HGB9I7lAS-AZkj5tIpbHjqdB2TphUOFpQMVM0RktEV0EwRUQzUzlVTDNGRUo2MC4u" 
+               class="cta-button cta-primary" 
+               id="final-survey-btn"
+               target="_blank" 
+               rel="noopener noreferrer">Help Us Build Better (2 min survey)</a>
         </div>
     </section>
 
@@ -64,7 +271,7 @@
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="features.html">Features</a>
-                <a href="waitlist.html">Join Waitlist</a>
+                <a href="#pricing">Pricing</a>
             </div>
         </div>
     </footer>
@@ -75,22 +282,219 @@
         // Set current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        document.getElementById('waitlist-button-hero').addEventListener('click', () => trackEvent('waitlist-button-hero-click'));
-        document.getElementById('learn-more-real-world-rewards').addEventListener('click', () => trackEvent('learn-more-real-world-rewards-click'));
+        // CTA 1: Watch video
+        document.getElementById('watch-video-hero').addEventListener('click', () => {
+            trackEvent('cta-1-watch-video');
+        });
 
-        // Track navigation clicks
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                const linkText = e.target.textContent.toLowerCase().replace(/\s+/g, '-');
-                trackEvent(`nav-${linkText}-click`);
+        // CTA 2: Would you share screen time?
+        document.getElementById('share-screentime-yes').addEventListener('click', () => {
+            trackEvent('cta-2-share-yes');
+            document.getElementById('try-sharing').style.display = 'block';
+            document.getElementById('try-sharing').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.getElementById('share-screentime-maybe').addEventListener('click', () => {
+            trackEvent('cta-2-share-maybe');
+            window.location.href = 'features.html';
+        });
+
+        // CTA 3: Actually share demo data
+        document.getElementById('share-demo-data').addEventListener('click', function() {
+            const screenTimeInput = document.getElementById('user-screentime-input');
+            const screenTimeValue = parseFloat(screenTimeInput.value);
+            
+            // Validate input
+            if (!screenTimeValue || screenTimeValue < 0 || screenTimeValue > 168) {
+                alert('Please enter a valid screen time between 0 and 168 hours per week');
+                return;
+            }
+            
+            // Track the actual screen time value
+            trackEvent('cta-3-share-demo-data', { screen_time: screenTimeValue });
+            
+            this.disabled = true;
+            this.textContent = 'Calculating...';
+            
+            setTimeout(() => {
+                // Calculate 20% reduction
+                const reduction = screenTimeValue * 0.2;
+                const monthlyReduction = reduction * 4;
+                
+                // Update the savings display
+                const familyPot = document.getElementById('family-pot-demo');
+                const familyPotStat = document.getElementById('family-pot-stat');
+                const savingsTitle = document.getElementById('savings-title');
+                const savingsMessage = document.getElementById('savings-message');
+                
+                familyPot.style.opacity = '1';
+                savingsTitle.textContent = '✨ Your Potential Savings';
+                familyPotStat.textContent = `${reduction.toFixed(1)} hours/week`;
+                savingsMessage.innerHTML = `<strong style="color: #10b981;">That's ${monthlyReduction.toFixed(0)} hours per month!</strong>`;
+                
+                // Calculate and show benefits
+                const gameNights = Math.floor(monthlyReduction / 3); // 3 hours per game night
+                const books = Math.floor(monthlyReduction / 8); // 8 hours per book
+                const activities = Math.floor(monthlyReduction / 4); // 4 hours per activity
+                
+                document.getElementById('benefit-games').textContent = `${gameNights} game nights`;
+                document.getElementById('benefit-books').textContent = `${books} books`;
+                document.getElementById('benefit-activities').textContent = `${activities} outdoor adventures`;
+                
+                // Show benefits section
+                document.getElementById('savings-benefits').style.display = 'block';
+                
+                // Scroll to benefits
+                setTimeout(() => {
+                    document.getElementById('savings-benefits').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 300);
+                
+                // Disable input after sharing
+                screenTimeInput.disabled = true;
+            }, 1000);
+        });
+
+        // CTA 4: Learn more features
+        document.getElementById('learn-more-features').addEventListener('click', () => {
+            trackEvent('cta-4-learn-more-features');
+        });
+
+        document.getElementById('view-all-features').addEventListener('click', () => {
+            trackEvent('cta-4-view-all-features');
+        });
+
+        // CTA 6: Pricing tier selection
+        document.querySelectorAll('.pricing-select').forEach(button => {
+            button.addEventListener('click', function() {
+                const tier = this.dataset.tier;
+                const price = this.dataset.price;
+                
+                trackEvent('cta-6-pricing-select', { tier, price });
+                
+                // Show reservation modal
+                document.getElementById('selected-tier').value = tier;
+                document.getElementById('selected-price').value = price;
+                document.getElementById('selected-tier-text').innerHTML = 
+                    `You selected: <strong>${tier.charAt(0).toUpperCase() + tier.slice(1)} - $${price}/month</strong>`;
+                document.getElementById('reservation-modal').style.display = 'block';
             });
         });
 
-        // Track footer clicks
-        document.querySelectorAll('.footer-links a').forEach(link => {
+        // Custom price button
+        document.getElementById('custom-price-btn').addEventListener('click', () => {
+            trackEvent('cta-6-custom-price-click');
+            document.getElementById('custom-price-modal').style.display = 'block';
+        });
+
+        // CTA 7: Reservation form submission
+        document.getElementById('reservation-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const tier = document.getElementById('selected-tier').value;
+            const price = document.getElementById('selected-price').value;
+            const email = document.getElementById('reservation-email').value;
+            const name = document.getElementById('reservation-name').value;
+            
+            trackEvent('cta-7-reservation-submit', { tier, price, email });
+            
+            // Send to Power Automate
+            const powerAutomateUrl = 'https://defaulta7262e591b564f5aa4126f07181f48.ee.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/5c5c1dd9c2a5410baa4951ab4d93411e/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cQLweDJu2kttkNvH2BdeCE7ypBjzsJoo645xUEo8VM8'; // You'll replace this
+            
+            try {
+                const response = await fetch(powerAutomateUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        tier: tier,
+                        price: price,
+                        email: email,
+                        name: name || 'Not provided',
+                        timestamp: new Date().toISOString(),
+                        source: 'Reservation Form'
+                    })
+                });
+                
+                if (response.ok) {
+                    console.log('Data sent to Power Automate successfully');
+                }
+            } catch (error) {
+                console.error('Error sending to Power Automate:', error);
+                // Still show thank you page even if submission fails
+            }
+            
+            // Close modal and show thank you
+            document.getElementById('reservation-modal').style.display = 'none';
+            document.getElementById('thank-you-section').style.display = 'block';
+            document.getElementById('thank-you-section').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Custom price form
+        document.getElementById('custom-price-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const customPrice = document.getElementById('custom-price-input').value;
+            const email = document.getElementById('custom-price-email').value;
+            
+            trackEvent('cta-7-custom-price-submit', { custom_price: customPrice, email });
+            
+            // Send to Power Automate
+            const powerAutomateUrl = 'https://defaulta7262e591b564f5aa4126f07181f48.ee.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/5c5c1dd9c2a5410baa4951ab4d93411e/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cQLweDJu2kttkNvH2BdeCE7ypBjzsJoo645xUEo8VM8'; // You'll replace this
+            
+            try {
+                const response = await fetch(powerAutomateUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        tier: 'Custom',
+                        price: customPrice,
+                        email: email,
+                        name: 'Not provided',
+                        timestamp: new Date().toISOString(),
+                        source: 'Custom Price Form'
+                    })
+                });
+                
+                if (response.ok) {
+                    console.log('Data sent to Power Automate successfully');
+                }
+            } catch (error) {
+                console.error('Error sending to Power Automate:', error);
+                // Still show thank you page even if submission fails
+            }
+            
+            // Close modal and show thank you
+            document.getElementById('custom-price-modal').style.display = 'none';
+            document.getElementById('thank-you-section').style.display = 'block';
+            document.getElementById('thank-you-section').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // CTA 9: Final survey
+        document.getElementById('final-survey-btn').addEventListener('click', () => {
+            trackEvent('cta-9-final-survey-click');
+        });
+
+        // Modal close handlers
+        document.querySelectorAll('.close-modal').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.closest('.modal').style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal')) {
+                e.target.style.display = 'none';
+            }
+        });
+
+        // Track navigation and footer clicks
+        document.querySelectorAll('.nav-links a, .footer-links a').forEach(link => {
             link.addEventListener('click', (e) => {
                 const linkText = e.target.textContent.toLowerCase().replace(/\s+/g, '-');
-                trackEvent(`footer-${linkText}-click`);
+                trackEvent(`nav-${linkText}-click`);
             });
         });
     </script>

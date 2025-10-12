@@ -989,3 +989,381 @@ footer .container {
         height: 35px;
     }
 }
+
+/* Interactive Demo Section */
+.interactive-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+}
+
+.demo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.demo-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.demo-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.demo-stat {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+/* Screen Time Input */
+.screentime-input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.screentime-input {
+    width: 120px;
+    padding: 0.75rem 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid var(--primary-color);
+    border-radius: 12px;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.screentime-input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.screentime-input:disabled {
+    background: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.screentime-unit {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Benefits Display */
+.benefit-item {
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: scale(1.05);
+}
+
+.benefit-item p {
+    color: var(--text-dark);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.benefit-item strong {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Features Preview */
+.features-preview {
+    padding: 4rem 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-preview-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-preview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.feature-preview-card .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.pricing-section h2 {
+    color: white;
+}
+
+.pricing-section p {
+    color: white;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pricing-card {
+    background: white;
+    color: var(--text-dark);
+    padding: 2rem;
+    border-radius: 16px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-featured {
+    border: 3px solid var(--primary-color);
+    transform: scale(1.05);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.pricing-features li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.custom-price p {
+    color: white;
+}
+
+/* Button Variations */
+.cta-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.cta-secondary {
+    background: #10b981;
+    color: white;
+}
+
+.cta-secondary:hover {
+    background: #059669;
+}
+
+.cta-ghost {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.cta-ghost:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Modal base styles (for reservation & custom price modals) */
+#reservation-modal,
+#custom-price-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+}
+
+#reservation-modal .modal-content,
+#custom-price-modal .modal-content {
+    background: white;
+    margin: 0;
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: slideDown 0.3s ease;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+#reservation-modal .modal-content h2,
+#custom-price-modal .modal-content h2 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+#reservation-modal .modal-content p,
+#custom-price-modal .modal-content p {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+#reservation-modal form,
+#custom-price-modal form {
+    margin-top: 1.5rem;
+}
+
+#reservation-modal label,
+#custom-price-modal label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+#reservation-modal input,
+#custom-price-modal input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#reservation-modal input:focus,
+#custom-price-modal input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+#reservation-modal button[type="submit"],
+#custom-price-modal button[type="submit"] {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-featured {
+        transform: scale(1);
+    }
+    
+    #reservation-modal .modal-content,
+    #custom-price-modal .modal-content {
+        padding: 1.5rem;
+        width: 95%;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .button-group .cta-button {
+        width: 100%;
+    }
+}
