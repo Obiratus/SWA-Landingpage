@@ -77,6 +77,22 @@
 
         document.getElementById('waitlist-button-hero').addEventListener('click', () => trackEvent('waitlist-button-hero-click'));
         document.getElementById('learn-more-real-world-rewards').addEventListener('click', () => trackEvent('learn-more-real-world-rewards-click'));
+
+        // Track navigation clicks
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const linkText = e.target.textContent.toLowerCase().replace(/\s+/g, '-');
+                trackEvent(`nav-${linkText}-click`);
+            });
+        });
+
+        // Track footer clicks
+        document.querySelectorAll('.footer-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const linkText = e.target.textContent.toLowerCase().replace(/\s+/g, '-');
+                trackEvent(`footer-${linkText}-click`);
+            });
+        });
     </script>
 </body>
 </html>

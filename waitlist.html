@@ -53,6 +53,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="tracking.js"></script>
     <script>
         // Set current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
@@ -62,6 +63,22 @@
             if (typeof trackEvent === 'function') {
                 trackEvent('survey-button-click');
             }
+        });
+
+        // Track navigation clicks
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const linkText = e.target.textContent.toLowerCase().replace(/\s+/g, '-');
+                trackEvent(`nav-${linkText}-click`);
+            });
+        });
+
+        // Track footer clicks
+        document.querySelectorAll('.footer-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const linkText = e.target.textContent.toLowerCase().replace(/\s+/g, '-');
+                trackEvent(`footer-${linkText}-click`);
+            });
         });
     </script>
 </body>

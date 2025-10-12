@@ -150,6 +150,22 @@
         document.getElementById('feature-card-real-world-rewards').addEventListener('click', () => trackEvent('feature-card-real-world-rewards-click'));
         document.getElementById('waitlist-button-features').addEventListener('click', () => trackEvent('waitlist-button-features-click'));
 
+        // Track navigation clicks
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const linkText = e.target.textContent.toLowerCase().replace(/\s+/g, '-');
+                trackEvent(`nav-${linkText}-click`);
+            });
+        });
+
+        // Track footer clicks
+        document.querySelectorAll('.footer-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const linkText = e.target.textContent.toLowerCase().replace(/\s+/g, '-');
+                trackEvent(`footer-${linkText}-click`);
+            });
+        });
+
         // Carousel functionality
         const track = document.querySelector('.carousel-track');
         const prevBtn = document.querySelector('.carousel-prev');
@@ -446,6 +462,15 @@
                 document.body.style.overflow = 'auto';
             }
         });
+
+        // Track modal CTA clicks
+        const modalCTA = document.querySelector('.modal-cta');
+        if (modalCTA) {
+            modalCTA.addEventListener('click', () => {
+                const currentFeature = modalTitle.textContent.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+                trackEvent(`modal-cta-${currentFeature}-click`);
+            });
+        }
     </script>
 </body>
 </html>
