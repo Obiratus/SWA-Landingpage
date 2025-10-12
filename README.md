@@ -1,1 +1,294 @@
-# SWA-Landingpage
+# Timepot Landing Page
+
+> A progressive commitment funnel landing page designed to measure willingness-to-pay (WTP) and collect user engagement data for Timepot - a family screen time management app.
+
+![Project Status](https://img.shields.io/badge/status-active-success.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+## 🎯 Project Overview
+
+This landing page is a research tool designed to:
+- **Measure willingness-to-pay** through a progressive 9-stage commitment funnel
+- **Collect engagement data** via Umami analytics and Power Automate
+- **Test product-market fit** for Timepot's family screen time features
+- **Optimize conversion** through interactive demos and personalized value visualization
+
+## 📊 Progressive Commitment Funnel
+
+The landing page implements a 9-stage funnel to measure increasing levels of user commitment:
+
+| CTA | Stage | Action | Data Collected |
+|-----|-------|--------|----------------|
+| 1 | **Video Engagement** | Watch product demo | Video view tracking |
+| 2 | **Confirmation** | Confirm watched video | User acknowledgment |
+| 3 | **Data Sharing** | Enter daily screen time | Daily/weekly hours, demographics |
+| 4 | **Feature Interest** | Explore features | Feature clicks, time on page |
+| 5 | **Deep Dive** | View detailed features | Modal interactions, feature preferences |
+| 6 | **Price Signal** | State willingness-to-pay | Price in CHF (no anchoring) |
+| 7 | **Reservation** | Confirm price commitment | Price confirmation |
+| 8 | **Contact Info** | Join waitlist | Email, name, price context |
+| 9 | **Feedback** | Complete survey | Detailed user insights |
+
+## 🏗️ Architecture
+
+### File Structure
+```
+SWA-Landingpage/
+├── index.html              # Landing page (CTAs 1-4)
+├── features.html           # Feature showcase + pricing (CTAs 5-7)
+├── waitlist.html           # Email collection (CTA 8)
+├── styles.css              # Complete styling system
+├── script.js               # Core functionality
+├── tracking.js             # Umami analytics helper
+├── POWER_AUTOMATE_SETUP.md # Data collection guide
+└── assets/                 # Images and media
+```
+
+### Tech Stack
+- **Frontend:** Vanilla HTML5, CSS3, JavaScript (ES6+)
+- **Analytics:** Umami Cloud (self-hosted alternative to Google Analytics)
+- **Data Collection:** Microsoft Power Automate → Excel Online
+- **Survey:** Microsoft Forms
+- **Hosting:** GitHub Pages / Static hosting
+
+## 🚀 Features
+
+### Interactive Screen Time Calculator
+- Users enter their **daily average** screen time (0-24 hours)
+- Calculates personalized savings (20% reduction model)
+- Visualizes benefits: game nights, books, outdoor activities
+- Converts daily input to weekly/monthly projections
+
+### Feature Carousel
+- 9 feature cards with detailed modal popups
+- Responsive design (3 → 2 → 1 cards per view)
+- Touch/swipe support for mobile
+- Keyboard navigation (arrow keys)
+- Sticky CTA buttons in modals
+
+### Pricing Section (Features Page)
+- **Single CHF input** - no tiered pricing to avoid anchoring bias
+- Progressive disclosure after feature exploration
+- Confirmation modal before commitment
+- Price passed to waitlist via URL parameter
+
+### Analytics & Tracking
+All user interactions are tracked via Umami:
+- Navigation and footer link clicks
+- Video plays and confirmations
+- Feature card clicks and modal views
+- Screen time data sharing
+- Pricing inputs and confirmations
+- Waitlist submissions
+
+## 📈 Data Collection
+
+### Umami Analytics
+**Website ID:** `44aec67b-1dc1-4330-8456-c14c21477512`
+
+Tracked events include:
+- `cta-1-watch-video`
+- `cta-2-confirm-watch`
+- `cta-3-share-demo-data` (with screen time values)
+- `cta-4-learn-more-features`
+- `cta-6-price-submit` (with CHF amount)
+- `cta-7-reserve-at-price`
+- `cta-8-waitlist-submit`
+- `cta-9-final-survey-click`
+
+### Power Automate Integration
+Data is sent to Excel Online via HTTP trigger flow.
+
+**Excel Schema:**
+| Column | Description | Example |
+|--------|-------------|---------|
+| Timestamp | Submission time | 2024-10-12T14:30:00Z |
+| Email | User email | user@example.com |
+| Name | First name (optional) | John |
+| Price | Monthly price (CHF) | 12.50 |
+| Source | Form origin | Features Page |
+
+See `POWER_AUTOMATE_SETUP.md` for complete setup instructions.
+
+## 🎨 Design Principles
+
+### Progressive Commitment
+- Each CTA builds on previous engagement
+- Gradual increase in user investment
+- No pressure or forced actions
+- Clear value proposition at each stage
+
+### Privacy-First
+- No tracking without user action
+- Pricing separated from contact info
+- Optional name field
+- Transparent data usage
+
+### Mobile-First
+- Responsive breakpoints (320px → 1440px)
+- Touch-optimized interactions
+- Readable typography on all devices
+- Fast loading times
+
+## 🛠️ Setup & Deployment
+
+### Local Development
+```bash
+# Clone the repository
+git clone https://github.com/DSteinmann/SWA-Landingpage.git
+cd SWA-Landingpage
+
+# Open in browser
+open index.html
+# or use a local server
+python3 -m http.server 8000
+```
+
+### Configuration
+
+1. **Umami Analytics** (already configured)
+   - Website ID embedded in all HTML files
+   - Cloud-hosted at cloud.umami.is
+
+2. **Power Automate Flow** (optional - for production)
+   - Follow instructions in `POWER_AUTOMATE_SETUP.md`
+   - Update placeholder URL in waitlist.html (if needed in future)
+
+3. **Microsoft Forms Survey** (already configured)
+   - Survey link embedded in waitlist.html
+   - CTA 9 tracking active
+
+### Deployment
+```bash
+# Commit changes
+git add .
+git commit -m "Your message"
+git push origin main
+
+# Deploy to GitHub Pages
+# Settings → Pages → Source: main branch
+```
+
+## 📱 Pages Overview
+
+### Landing Page (`index.html`)
+**Purpose:** Quick engagement and value demonstration  
+**Key Sections:**
+- Hero with video CTA
+- Video section with confirmation
+- Interactive screen time calculator
+- Personalized savings visualization
+- Features preview grid
+- Links to features page
+
+### Features Page (`features.html`)
+**Purpose:** Detailed feature exploration and pricing  
+**Key Sections:**
+- 9 feature cards in carousel
+- Detailed modal popups
+- Pricing input (CHF)
+- Price confirmation modal
+- Waitlist CTA
+
+### Waitlist Page (`waitlist.html`)
+**Purpose:** Contact information collection  
+**Key Sections:**
+- Simple email/name form
+- Price context from URL parameter
+- Link to final survey
+- Minimal friction design
+
+## 🧪 Testing
+
+### Manual Testing Checklist
+- [ ] Navigate through all 9 CTAs in sequence
+- [ ] Test screen time calculator with various inputs (0-24 hours)
+- [ ] Verify pricing input accepts decimals (CHF format)
+- [ ] Check all modal popups open/close correctly
+- [ ] Test responsive design on mobile/tablet/desktop
+- [ ] Verify Umami events fire in dashboard
+- [ ] Test URL parameter passing (price → waitlist)
+- [ ] Confirm external survey link works
+
+### Browser Compatibility
+- ✅ Chrome/Edge (Chromium)
+- ✅ Safari (macOS/iOS)
+- ✅ Firefox
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 📊 Key Metrics to Monitor
+
+### Conversion Funnel
+```
+100% → Landing page views
+ 80% → Video engagement (CTA 1-2)
+ 60% → Screen time sharing (CTA 3)
+ 40% → Features exploration (CTA 4-5)
+ 20% → Pricing entry (CTA 6)
+ 15% → Price confirmation (CTA 7)
+ 10% → Waitlist signup (CTA 8)
+  5% → Survey completion (CTA 9)
+```
+
+### Pricing Analysis
+- Price distribution (median, mode, range)
+- Price vs. screen time correlation
+- Price vs. feature engagement correlation
+- Conversion rate by price range
+
+### Feature Engagement
+- Most viewed features (modal opens)
+- Average time per feature
+- Feature sequence patterns
+- Feature-to-pricing conversion
+
+## 🔄 Recent Updates
+
+### October 2025
+- ✅ Moved pricing section to features page
+- ✅ Removed tiered pricing ($4.99, $9.99, $14.99)
+- ✅ Changed currency from USD to CHF
+- ✅ Simplified pricing to single open-ended input
+- ✅ Changed screen time from weekly to daily average
+- ✅ Added price confirmation modal
+- ✅ Separated pricing from email collection
+
+See `PRICING_MOVED_TO_FEATURES.md` and `PRICING_FLOW_UPDATE.md` for detailed migration notes.
+
+## 📝 Documentation
+
+- `POWER_AUTOMATE_SETUP.md` - Step-by-step data collection setup
+- `PRICING_FLOW_UPDATE.md` - Daily screen time & CHF pricing implementation
+- `PRICING_MOVED_TO_FEATURES.md` - Features page migration details
+- `README.md` - This file
+
+## 🤝 Contributing
+
+This is a research project for Timepot. If you'd like to contribute or have suggestions:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -m 'Add improvement'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- **Umami Analytics** - Privacy-focused analytics platform
+- **Microsoft Power Automate** - Workflow automation
+- **GitHub Pages** - Static site hosting
+
+## 📞 Contact
+
+**Project Owner:** Dominik Steinmann  
+**Repository:** [DSteinmann/SWA-Landingpage](https://github.com/DSteinmann/SWA-Landingpage)  
+**Product:** Timepot - Family Screen Time Management
+
+---
+
+**Last Updated:** October 12, 2025  
+**Version:** 2.0 (Progressive Commitment Funnel)
