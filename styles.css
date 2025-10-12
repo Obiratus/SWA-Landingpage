@@ -389,11 +389,15 @@ header:hover {
     transform: scale(1.2) rotate(5deg);
 }
 
+/* Remove top margin and set a small bottom margin for all h3s */
 .feature-card h3 {
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+}
+
+/* Add more space only after the last h3 in the card */
+.feature-card h3:last-child {
+    margin-bottom: 0.7rem;
 }
 
 .feature-card p {
@@ -1426,7 +1430,11 @@ footer .container {
 }
 
 .features-grid.all-visible .feature-card h3 {
+    margin: 0 !important;
+    padding: 0;
+    line-height: 1.1;
     font-size: 1rem;
+
 }
 
 .features-grid.all-visible .feature-card p {
@@ -1479,5 +1487,5 @@ footer .container {
 }
 
 .feature-card h3 + h3 {
-    margin-top: -2.0rem;
+    margin-top: 0; /* No negative margin */
 }
