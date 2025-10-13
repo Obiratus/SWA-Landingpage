@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Waitlist - Timepot</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="44aec67b-1dc1-4330-8456-c14c21477512"></script>
 </head>
 <body>
     <!-- Header -->
@@ -56,10 +57,10 @@
         // Set current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
         
-        // Track survey button click
+        // Track survey button click (CTA 8)
         document.getElementById('survey-button').addEventListener('click', () => {
             if (typeof trackEvent === 'function') {
-                trackEvent('survey-button-click');
+                trackEvent('cta-8-waitlist-submit');
             }
         });
 
