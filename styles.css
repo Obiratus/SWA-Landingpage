@@ -196,6 +196,7 @@ header:hover {
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.8s ease-out 0.4s both;
+    cursor: pointer;
 }
 
 .cta-button::before {
@@ -235,6 +236,7 @@ header:hover {
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.8s ease-out 0.4s both;
+    cursor: pointer;
 }
 
 .arrow-button::before {
@@ -355,6 +357,7 @@ header:hover {
     border: 1px solid rgba(99, 102, 241, 0.08);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .feature-card::before {
@@ -554,6 +557,7 @@ header:hover {
     font-size: 4rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 /* Signup Section */

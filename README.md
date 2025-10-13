@@ -53,18 +53,19 @@ SWA-Landingpage/
 
 ## 🚀 Features
 
-### Interactive Screen Time Calculator
-- Users enter their **daily average** screen time (0-24 hours)
-- Calculates personalized savings (20% reduction model)
-- Visualizes benefits: game nights, books, outdoor activities
-- Converts daily input to weekly/monthly projections
+## 🎯 Features
 
-### Feature Carousel
-- 9 feature cards with detailed modal popups
-- Responsive design (3 → 2 → 1 cards per view)
-- Touch/swipe support for mobile
-- Keyboard navigation (arrow keys)
-- Sticky CTA buttons in modals
+### Interactive Screen Time Calculator
+- **Daily Average Input**: Users enter their average daily family screen time (0-24 hours)
+- **Visual Feedback**: Dynamic UI updates as users interact
+- **Data Collection**: Tracks screen time data via Umami Analytics with properties support
+
+### Feature Carousel (6 Cards)
+- **Modal System**: Click any feature card to view detailed information
+- **Navigation**: Previous/Next arrows for sequential exploration
+- **Tracking**: Each modal view is tracked (CTA 4)
+- **Privacy-First**: Highlights data protection commitment
+- **Features**: Heroes & Villains System, Agreements, Privacy/App Categories, Individual Battle Reporting, Team Battle Reporting, Family vs. Family Reporting
 
 ### Pricing Section (Features Page)
 - **Single CHF input** - no tiered pricing to avoid anchoring bias
@@ -244,7 +245,14 @@ git push origin main
 
 ## 🔄 Recent Updates
 
-### October 2025
+### October 13, 2025
+- ✅ **Umami tracking fixes** - Added script to waitlist.html, enabled properties support, standardized event naming
+- ✅ **UI/UX improvements** - Added cursor: pointer to all interactive elements (.cta-button, .arrow-button, .feature-card, .play-button)
+- ✅ **Modal centering fix** - Changed display from 'block' to 'flex' for proper vertical centering
+- ✅ **Color contrast fix** - Removed blue-on-blue button styling for better accessibility
+- ✅ **Documentation** - Created comprehensive audit and troubleshooting guides
+
+### October 12, 2025
 - ✅ Moved pricing section to features page
 - ✅ Removed tiered pricing ($4.99, $9.99, $14.99)
 - ✅ Changed currency from USD to CHF
@@ -253,14 +261,25 @@ git push origin main
 - ✅ Added price confirmation modal
 - ✅ Separated pricing from email collection
 
-See `PRICING_MOVED_TO_FEATURES.md` and `PRICING_FLOW_UPDATE.md` for detailed migration notes.
+See documentation files for detailed implementation notes.
 
 ## 📝 Documentation
 
+### Setup & Migration Guides
 - `POWER_AUTOMATE_SETUP.md` - Step-by-step data collection setup
 - `PRICING_FLOW_UPDATE.md` - Daily screen time & CHF pricing implementation
 - `PRICING_MOVED_TO_FEATURES.md` - Features page migration details
-- `README.md` - This file
+
+### Quality Assurance & Audits
+- `UMAMI_TRACKING_AUDIT.md` - Comprehensive tracking system audit (October 13, 2025)
+- `TRACKING_TROUBLESHOOTING.md` - Debug guide for analytics issues
+- `TRACKING_QUICK_REFERENCE.md` - Event naming and properties reference
+- `CURSOR_AUDIT.md` - Interactive element cursor states verification
+- `MODAL_CENTERING_FIX.md` - Display flex centering implementation
+- `CTA_COLOR_CONTRAST_FIX.md` - Accessibility color improvements
+
+### Project Overview
+- `README.md` - This file (comprehensive project documentation)
 
 ## 🤝 Contributing
 
@@ -290,5 +309,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-**Last Updated:** October 12, 2025  
+**Last Updated:** October 13, 2025  
 **Version:** 2.0 (Progressive Commitment Funnel)
