@@ -7,21 +7,29 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="44aec67b-1dc1-4330-8456-c14c21477512"></script>
     <script src="translations.js"></script>
+    <script src="mobile-menu.js"></script>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <nav class="navbar">
+                <nav class="navbar">
             <div class="container">
                 <div class="logo">
                     <a href="index.html"><h1>Timepot</h1></a>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html#video" data-i18n="nav.how-it-works">How It Works</a></li>
-                    <li><a href="features.html" data-i18n="nav.features">Features</a></li>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#features" data-i18n="nav.features">Features</a></li>
+                    <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
                 </ul>
             </div>
         </nav>
+        <div class="menu-overlay" id="menu-overlay"></div>
     </header>
 
     <!-- Features Section -->
@@ -115,7 +123,7 @@
     <!-- Price Confirmation Modal -->
     <div id="price-confirmation-modal" class="modal">
         <div class="modal-content" style="text-align: center; padding: 3rem 2rem 2.5rem 2rem;">
-            <span class="close-modal" style="top: 1.2rem; right: 1.2rem;" data-i18n="common.close">&times;</span>
+            <span class="close-modal" style="top: 1.2rem; right: 1.2rem;">&times;</span>
             <div style="margin-bottom: 1.5rem;">
             <span style="display: inline-block; background: linear-gradient(135deg, #10b981 60%, #22d3ee 100%); color: white; border-radius: 50%; width: 64px; height: 64px; line-height: 64px; font-size: 2.5rem; box-shadow: 0 4px 16px rgba(16,185,129,0.15);">
                 &#10003;
@@ -137,7 +145,7 @@
     <!-- Feature Modal -->
     <div id="featureModal" class="modal">
         <div class="modal-content">
-            <span class="modal-close" data-i18n="common.close">&times;</span>
+            <span class="modal-close">&times;</span>
             <div class="modal-body">
                 <div class="modal-icon" id="modalIcon"></div>
                 <h2 id="modalTitle"></h2>

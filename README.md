@@ -41,6 +41,7 @@ SWA-Landingpage/
 ├── script.js               # Core functionality
 ├── tracking.js             # Umami analytics helper
 ├── translations.js         # Multilingual support (EN/DE) 🆕
+├── mobile-menu.js          # Hamburger menu functionality 🆕
 ├── test-multilingual.html  # Translation test page 🆕
 ├── POWER_AUTOMATE_SETUP.md # Data collection guide
 └── assets/                 # Images and media
@@ -77,7 +78,17 @@ SWA-Landingpage/
 - **Persistent**: Language preference saved in localStorage
 - **Complete Coverage**: All UI text, buttons, modals, and forms translated
 - **Extensible**: Easy to add more languages (French, Italian, Spanish, etc.)
+- **Mobile Optimized**: Hamburger menu for mobile devices with integrated language switcher
 - **See**: `MULTILINGUAL_IMPLEMENTATION.md` for implementation details
+
+### Responsive Mobile Navigation (🆕)
+- **Hamburger Menu**: Professional 3-line menu icon on mobile devices (< 768px)
+- **Slide-out Panel**: Smooth 280px side panel that slides from the right
+- **Overlay**: Semi-transparent dark background when menu is open
+- **Multiple Close Options**: Click overlay, navigation link, ESC key, or resize window
+- **No Scroll**: Body scrolling disabled when menu is open
+- **Integrated Dropdown**: Language switcher fully integrated into mobile menu
+- **See**: `HAMBURGER_MENU.md` for implementation details
 
 ### Pricing Section (Features Page)
 - **Single CHF input** - no tiered pricing to avoid anchoring bias

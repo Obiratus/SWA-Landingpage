@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="44aec67b-1dc1-4330-8456-c14c21477512"></script>
     <script src="translations.js"></script>
+    <script src="mobile-menu.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -16,12 +17,18 @@
                 <div class="logo">
                     <a href="index.html"><h1>Timepot</h1></a>
                 </div>
-                <ul class="nav-links">
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-menu">
                     <li><a href="#video" data-i18n="nav.how-it-works">How It Works</a></li>
                     <li><a href="features.html" data-i18n="nav.features">Features</a></li>
                 </ul>
             </div>
         </nav>
+        <div class="menu-overlay" id="menu-overlay"></div>
     </header>
 
     <!-- Hero Section -->

@@ -25,6 +25,8 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Smooth scroll */
@@ -120,6 +122,58 @@ header:hover {
     width: 100%;
 }
 
+/* Hamburger Menu Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
 /* Language Dropdown */
 .language-dropdown {
     position: relative;
@@ -160,6 +214,12 @@ header:hover {
     align-items: center;
     gap: 0.25rem;
     white-space: nowrap;
+}
+
+/* Ensure emoji flags render properly */
+.lang-current::before,
+.lang-option::before {
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 .lang-dropdown-menu {
@@ -782,6 +842,94 @@ footer .container {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Show hamburger menu */
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Hide navigation by default on mobile */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 280px;
+        background: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 5rem 2rem 2rem;
+        box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        gap: 0;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 0;
+        font-size: 1.1rem;
+        color: var(--text-dark);
+        border-bottom: 1px solid var(--bg-light);
+    }
+    
+    .nav-links a::after {
+        display: none;
+    }
+    
+    /* Language dropdown in mobile menu */
+    .language-dropdown {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--bg-light);
+    }
+    
+    .lang-dropdown-btn {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .lang-current {
+        font-size: 1rem;
+    }
+    
+    .lang-dropdown-arrow {
+        font-size: 1rem;
+    }
+    
+    .lang-dropdown-menu {
+        position: static;
+        width: 100%;
+        margin-top: 0.5rem;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .lang-dropdown-menu.show {
+        transform: none;
+        display: block;
+    }
+    
+    .lang-option {
+        font-size: 1rem;
+        padding: 0.875rem 1rem;
+    }
+    
     .hero .container {
         flex-direction: column;
         text-align: center;
@@ -799,10 +947,19 @@ footer .container {
         width: 100%;
         max-width: 400px;
     }
-
-    .nav-links {
-        gap: 1rem;
-        font-size: 0.9rem;
+    
+    .lang-dropdown-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .lang-current {
+        font-size: 0.8rem;
+    }
+    
+    .lang-dropdown-arrow {
+        width: 10px;
+        height: 6px;
     }
 
     .features h2 {
@@ -1591,4 +1748,57 @@ footer .container {
 
 .feature-card h3 + h3 {
     margin-top: 0; /* No negative margin */
+}
+
+/* Additional Mobile Fixes for Navigation */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.75rem 0;
+    }
+    
+    .navbar .container {
+        gap: 0.5rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.25rem;
+    }
+    
+    .nav-links {
+        gap: 0.4rem;
+        font-size: 0.8rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+    
+    .language-dropdown {
+        margin-left: 0.25rem;
+    }
+    
+    .lang-dropdown-btn {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.75rem;
+        min-width: auto;
+    }
+    
+    .lang-current {
+        font-size: 0.75rem;
+    }
+    
+    .lang-dropdown-arrow {
+        width: 8px;
+        height: 5px;
+    }
+    
+    .lang-dropdown-menu {
+        min-width: 130px;
+        font-size: 0.8rem;
+    }
+    
+    .lang-option {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
 }
