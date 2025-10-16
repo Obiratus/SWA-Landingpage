@@ -6,6 +6,7 @@
     <title>Features - Timepot</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="44aec67b-1dc1-4330-8456-c14c21477512"></script>
+    <script src="translations.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -16,8 +17,8 @@
                     <a href="index.html"><h1>Timepot</h1></a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="index.html#video">How It Works</a></li>
-                    <li><a href="features.html">Features</a></li>
+                    <li><a href="index.html#video" data-i18n="nav.how-it-works">How It Works</a></li>
+                    <li><a href="features.html" data-i18n="nav.features">Features</a></li>
                 </ul>
             </div>
         </nav>
@@ -26,50 +27,50 @@
     <!-- Features Section -->
     <section id="features" class="features features-page">
         <div class="container">
-            <h2>Click on a Feature to learn more!</h2>
+            <h2 data-i18n="features-page.title">Click on a Feature to learn more!</h2>
             <div class="features-grid all-visible">
                 <div class="feature-card" id="feature-card-heroes-villains">
                     <div class="feature-icon">
                         <img src="assets/icons_timepot-04.svg" alt="Privacy First Icon" />
                     </div>
-                    <h3>Heroes & Villains System</h3>
+                    <h3 data-i18n="feature.heroes-villains.title">Heroes & Villains System</h3>
                 </div>
                 <div class="feature-card" id="feature-card-agreements">
                     <div class="feature-icon">
                         <img src="assets/icons_timepot-01.svg" alt="Privacy First Icon" />
-                    </div>                    <h3>Agreements</h3>
+                    </div>                    <h3 data-i18n="feature.agreements.title">Agreements</h3>
                 </div>
                 <div class="feature-card" id="feature-card-privacy-first">
                     <div class="feature-icon">
                         <img src="assets/icons_timepot-03.svg" alt="Privacy First Icon" />
                     </div>
-                    <h3>Privacy</h3>
+                    <h3 data-i18n="feature.privacy.title">Privacy</h3>
                     <h3>-</h3>
-                    <h3>App Categories</h3>
+                    <h3 data-i18n="feature.privacy.subtitle">App Categories</h3>
                 </div>
                 <div class="feature-card" id="feature-card-individual-battle">
                     <div class="feature-icon">
                         <img src="assets/icons_timepot-06.svg" alt="Privacy First Icon" />
                     </div>
-                    <h3>Reporting</h3>
+                    <h3 data-i18n="feature.individual.title">Reporting</h3>
                     <h3>-</h3>
-                    <h3>Individual Battle</h3>
+                    <h3 data-i18n="feature.individual.subtitle">Individual Battle</h3>
                 </div>
                 <div class="feature-card" id="feature-card-team-battle">
                     <div class="feature-icon">
                         <img src="assets/icons_timepot-07.svg" alt="Privacy First Icon" />
                     </div>
-                    <h3>Reporting</h3>
+                    <h3 data-i18n="feature.team.title">Reporting</h3>
                     <h3>-</h3>
-                    <h3>Team Battle</h3>
+                    <h3 data-i18n="feature.team.subtitle">Team Battle</h3>
                 </div>
                 <div class="feature-card" id="feature-card-family-family">
                     <div class="feature-icon">
                         <img src="assets/icons_timepot-08.svg" alt="Privacy First Icon" />
                     </div>
-                    <h3>Reporting</h3>
+                    <h3 data-i18n="feature.family-vs-family.title">Reporting</h3>
                     <h3>-</h3>
-                    <h3>Family vs. Family</h3>
+                    <h3 data-i18n="feature.family-vs-family.subtitle">Family vs. Family</h3>
                 </div>
             </div>
         </div>
@@ -79,27 +80,28 @@
     <!-- Pricing Section -->
     <section id="pricing" class="pricing-section">
         <div class="container">
-            <h2>What Would You Pay?</h2>
+            <h2 data-i18n="pricing.title">What Would You Pay?</h2>
             <div class="pricing-input-container">
-                <label for="user-price-input" style="display: block; text-align: center; font-size: 1.1rem; margin-bottom: 1rem;">Monthly price, for the whole family</label>
+                <label for="user-price-input" style="display: block; text-align: center; font-size: 1.1rem; margin-bottom: 1rem;" data-i18n="pricing.label">Monthly price, for the whole family</label>
                 <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 2rem;">
                     <span style="font-size: 2rem; font-weight: bold;">CHF</span>
                     <input
                             type="number"
                             id="user-price-input"
+                            data-i18n-placeholder="pricing.placeholder"
                             placeholder="0.00"
                             min="0"
                             step="0.50"
                             style="width: 200px; padding: 1rem 1.5rem; font-size: 2rem; font-weight: bold; text-align: center; border: 3px solid var(--primary-color); border-radius: 12px; background: white;"
                     >
-                    <span style="font-size: 1.2rem;">/month</span>
+                    <span style="font-size: 1.2rem;" data-i18n="pricing.month">/month</span>
                 </div>
-                <button class="cta-button" id="submit-price-btn" style="width: 100%; max-width: 300px; margin: 0 auto; display: block; background: white; color: var(--primary-color); font-weight: 600;">Continue</button>
+                <button class="cta-button" id="submit-price-btn" style="width: 100%; max-width: 300px; margin: 0 auto; display: block; background: white; color: var(--primary-color); font-weight: 600;" data-i18n="pricing.cta">Continue</button>
             </div>
         </div>
 
         <div class="cta-container">
-            <a href="waitlist.html" class="cta-button" id="waitlist-button-features">Join the Waitlist</a>
+            <a href="waitlist.html" class="cta-button" id="waitlist-button-features" data-i18n="pricing.direct-waitlist">Join the Waitlist</a>
         </div>
         </div>
 
@@ -113,18 +115,18 @@
     <!-- Price Confirmation Modal -->
     <div id="price-confirmation-modal" class="modal">
         <div class="modal-content" style="text-align: center; padding: 3rem 2rem 2.5rem 2rem;">
-            <span class="close-modal" style="top: 1.2rem; right: 1.2rem;">&times;</span>
+            <span class="close-modal" style="top: 1.2rem; right: 1.2rem;" data-i18n="common.close">&times;</span>
             <div style="margin-bottom: 1.5rem;">
             <span style="display: inline-block; background: linear-gradient(135deg, #10b981 60%, #22d3ee 100%); color: white; border-radius: 50%; width: 64px; height: 64px; line-height: 64px; font-size: 2.5rem; box-shadow: 0 4px 16px rgba(16,185,129,0.15);">
                 &#10003;
             </span>
             </div>
-            <h2 style="margin-bottom: 1rem;">Great Price!</h2>
+            <h2 style="margin-bottom: 1rem;" data-i18n="price-confirm.title">Great Price!</h2>
             <div style="background: #f0fdf4; border-radius: 12px; padding: 1.2rem 0; margin-bottom: 1.5rem;">
                 <p id="price-confirmation-text" style="font-size: 1.3rem; color: var(--primary-color); font-weight: 600; margin: 0;"></p>
             </div>
-            <p style="color: var(--text-light); margin-bottom: 2rem;">Ready to reserve your spot at this price?</p>
-            <a href="waitlist.html" class="cta-button cta-primary" id="reserve-spot-btn" style="width: 100%; max-width: 320px; margin: 0 auto; display: block;">Reserve for this price</a>
+            <p style="color: var(--text-light); margin-bottom: 2rem;" data-i18n="price-confirm.reserve">Ready to reserve your spot at this price?</p>
+            <a href="waitlist.html" class="cta-button cta-primary" id="reserve-spot-btn" style="width: 100%; max-width: 320px; margin: 0 auto; display: block;" data-i18n="price-confirm.cta">Reserve for this price</a>
         </div>
     </div>
 
@@ -135,7 +137,7 @@
     <!-- Feature Modal -->
     <div id="featureModal" class="modal">
         <div class="modal-content">
-            <span class="modal-close">&times;</span>
+            <span class="modal-close" data-i18n="common.close">&times;</span>
             <div class="modal-body">
                 <div class="modal-icon" id="modalIcon"></div>
                 <h2 id="modalTitle"></h2>
@@ -147,7 +149,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year"></span> Timepot. All rights reserved.</p>
+            <p data-i18n="footer.copyright">&copy; <span id="current-year"></span> Timepot. All rights reserved.</p>
             <div class="footer-links">
                 <a href="waitlist.html">Join Waitlist</a>
             </div>

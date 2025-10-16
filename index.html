@@ -6,6 +6,7 @@
     <title>Timepot - Family Screen Time Management</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="44aec67b-1dc1-4330-8456-c14c21477512"></script>
+    <script src="translations.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -16,8 +17,8 @@
                     <a href="index.html"><h1>Timepot</h1></a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#video">How It Works</a></li>
-                    <li><a href="features.html">Features</a></li>
+                    <li><a href="#video" data-i18n="nav.how-it-works">How It Works</a></li>
+                    <li><a href="features.html" data-i18n="nav.features">Features</a></li>
                 </ul>
             </div>
         </nav>
@@ -27,9 +28,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content text-center">
-                <h1 class="hero-title">Turn Screen Time into Quality Time</h1>
-                <p class="hero-subtitle">Timepot helps your family build healthier digital habits together. No more fighting, just collaborating.</p>
-                <a href="#video" class="cta-button" id="watch-video-hero">Watch How It Works</a>
+                <h1 class="hero-title" data-i18n="hero.title">Turn Screen Time into Quality Time</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Timepot helps your family build healthier digital habits together. No more fighting, just collaborating.</p>
+                <a href="#video" class="cta-button" id="watch-video-hero" data-i18n="hero.cta">Watch How It Works</a>
             </div>
             <div class="hero-image">
                 <img src="assets/pexels-rdne-8489723.jpg" alt="Family spending quality time together" class="hero-img">
@@ -40,7 +41,7 @@
     <!-- Video Section -->
     <section id="video" class="video-section">
         <div class="container">
-            <h2>See How Timepot Works</h2>
+            <h2 data-i18n="video.title">See How Timepot Works</h2>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/tGihymYM8Zw" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -58,10 +59,10 @@
             <div class="video-cta text-center" style="margin-top: 2rem;">
                 <h3>Share some of your screen time data with your family and start building better habits together!</h3>
                 <br>
-                <h3>Care to share your screen time with us? Gain even more benefits!</h3>
+                <h3 data-i18n="video.question">Care to share your screen time with us? Gain even more benefits!</h3>
                 <div class="button-group" style="margin-top: 1.5rem;">
-                    <button class="cta-button cta-secondary" id="share-screentime-yes">Yes, I'd Try This</button>
-                    <button class="cta-button cta-ghost" id="share-screentime-maybe">Maybe, Tell Me More</button>
+                    <button class="cta-button cta-secondary" id="share-screentime-yes" data-i18n="video.cta.yes">Yes, I'd Try This</button>
+                    <button class="cta-button cta-ghost" id="share-screentime-maybe" data-i18n="video.cta.maybe">Maybe, Tell Me More</button>
                 </div>
             </div>
         </div>
@@ -70,11 +71,11 @@
     <!-- Screen Time Sharing Interactive - CTA 3 -->
     <section id="try-sharing" class="interactive-section" style="display: none;">
         <div class="container">
-            <h2>See Your Personalized Savings Potential</h2>
-            <p>Enter your daily average screen time from the last week and discover how much time you could reclaim with your family!</p>
+            <h2 data-i18n="demo.title">See Your Personalized Savings Potential</h2>
+            <p data-i18n="demo.subtitle">Enter your daily average screen time from the last week and discover how much time you could reclaim with your family!</p>
             <div class="demo-container">
                 <div class="demo-card">
-                    <h3>Your Daily Average (Last 7 Days)</h3>
+                    <h3 data-i18n="demo.your-time">Your Daily Average (Last 7 Days)</h3>
                     <div class="screentime-input-group">
                         <input 
                             type="number" 
@@ -85,37 +86,37 @@
                             step="0.1"
                             class="screentime-input"
                         >
-                        <span class="screentime-unit">hours/day</span>
+                        <span class="screentime-unit" data-i18n="demo.hours">hours/day</span>
                     </div>
-                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">💡 Tip: Open Screen Time on iPhone or Digital Wellbeing on Android - look for "Daily Average"</p>
-                    <button class="cta-button" id="share-demo-data" style="margin-top: 1rem;">Calculate My Savings</button>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;" data-i18n="demo.tip">💡 Tip: Open Screen Time on iPhone or Digital Wellbeing on Android - look for "Daily Average"</p>
+                    <button class="cta-button" id="share-demo-data" style="margin-top: 1rem;" data-i18n="demo.cta">Calculate My Savings</button>
                 </div>
                 <div class="demo-card" id="family-pot-demo" style="opacity: 0.5;">
-                    <h3 id="savings-title">Your Potential Savings</h3>
+                    <h3 id="savings-title" data-i18n="demo.potential-title">Your Potential Savings</h3>
                     <div class="demo-stat" id="family-pot-stat">? hours</div>
                     <p id="savings-message" style="font-size: 0.9rem; color: #666;">Enter your screen time to see your potential!</p>
                 </div>
             </div>
             <div id="savings-benefits" style="display: none; margin-top: 2rem; text-align: center; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Imagine What You Could Do!</h3>
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;" data-i18n="demo.benefits-title">Imagine What You Could Do!</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
                     <div class="benefit-item">
                         <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎮</div>
-                        <p><strong id="benefit-games">X game nights</strong> per month</p>
+                        <p><strong id="benefit-games">X <span data-i18n="demo.game-nights">game nights</span></strong> per month</p>
                     </div>
                     <div class="benefit-item">
                         <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
-                        <p><strong id="benefit-books">X books</strong> read together</p>
+                        <p><strong id="benefit-books">X <span data-i18n="demo.books">books</span></strong> read together</p>
                     </div>
                     <div class="benefit-item">
                         <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚴</div>
-                        <p><strong id="benefit-activities">X outdoor activities</strong></p>
+                        <p><strong id="benefit-activities">X <span data-i18n="demo.activities">outdoor adventures</span></strong></p>
                     </div>
                 </div>
                 <p style="margin-top: 1.5rem; color: var(--text-light);">By reducing just 20% of screen time, your family could gain this quality time together!</p>
             </div>
             <div style="margin-top: 2rem; text-align: center;">
-                <a href="features.html" class="cta-button" id="learn-more-features">Explore All Features</a>
+                <a href="features.html" class="cta-button" id="learn-more-features" data-i18n="demo.next-cta">Explore All Features</a>
             </div>
         </div>
     </section>
@@ -124,32 +125,32 @@
         <!-- Features Preview - CTA 4 -->
     <section id= "preview" class="video-section">
         <div class="container">
-            <h2>Why Families Choose Timepot</h2>
+            <h2 data-i18n="features-preview.title">Why Families Choose Timepot</h2>
             <div class="feature-grid">
                 <div class="feature-preview-card">
                     <div class="feature-icon">
                         <img src="assets/icons_timepot-03.svg" alt="Privacy First Icon" />
                     </div>
-                    <h3>Privacy First</h3>
-                    <p>Category-based, not app-specific tracking</p>
+                    <h3 data-i18n="features-preview.privacy">Privacy First</h3>
+                    <p data-i18n="features-preview.privacy-desc">Category-based, not app-specific tracking</p>
                 </div>
                 <div class="feature-preview-card">
                     <div class="feature-icon">
                         <img src="assets/icons_timepot-02.svg" alt="Privacy First Icon" />
                     </div>
-                    <h3>Control</h3>
-                    <p>You choose which apps to freely use or limit</p>
+                    <h3 data-i18n="features-preview.heroes">Control</h3>
+                    <p data-i18n="features-preview.heroes-desc">You choose which apps to freely use or limit</p>
                 </div>
                 <div class="feature-preview-card">
                     <div class="feature-icon">
                         <img src="assets/icons_timepot-07.svg" alt="Privacy First Icon" />
                     </div>
-                    <h3>Family Challenges</h3>
-                    <p>Turn reduction into friendly competition</p>
+                    <h3 data-i18n="features-preview.challenges">Family Challenges</h3>
+                    <p data-i18n="features-preview.challenges-desc">Turn reduction into friendly competition</p>
                 </div>
             </div>
             <div class="text-center" style="margin-top: 2rem;">
-                <a href="features.html" class="cta-button" id="view-all-features">Explore All Features</a>
+                <a href="features.html" class="cta-button" id="view-all-features" data-i18n="features-preview.cta">Explore All Features</a>
             </div>
         </div>
     </section>
@@ -158,7 +159,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year"></span> Timepot. All rights reserved.</p>
+            <p data-i18n="footer.copyright">&copy; <span id="current-year"></span> Timepot. All rights reserved.</p>
             <div class="footer-links">
                 <a href="waitlist.html">Join Waitlist</a>
             </div>

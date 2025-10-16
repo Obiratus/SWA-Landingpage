@@ -6,6 +6,7 @@
     <title>Join Waitlist - Timepot</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="44aec67b-1dc1-4330-8456-c14c21477512"></script>
+    <script src="translations.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -16,8 +17,8 @@
                     <a href="index.html"><h1>Timepot</h1></a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="index.html#video">How It Works</a></li>
-                    <li><a href="features.html">Features</a></li>
+                    <li><a href="index.html#video" data-i18n="nav.how-it-works">How It Works</a></li>
+                    <li><a href="features.html" data-i18n="nav.features">Features</a></li>
                 </ul>
             </div>
         </nav>
@@ -27,13 +28,14 @@
     <section class="signup-section signup-page">
         <div class="container">
             <div class="signup-content">
-                <h2>Join the Waitlist</h2>
-                <p class="waitlist-message">Awesome that you're interested in Timepot. We're not quite ready yet; while we can't promise a price today, we promise to put a lot of love into building your family's screen-time tool.</p>
+                <h2 data-i18n="waitlist.title">Join the Waitlist</h2>
+                <p class="waitlist-message" data-i18n="waitlist.message">Awesome that you're interested in Timepot. We're not quite ready yet; while we can't promise a price today, we promise to put a lot of love into building your family's screen-time tool.</p>
                 <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=WS4mp1YbWk-kEm8HGB9I7lAS-AZkj5tIpbHjqdB2TphUOFpQMVM0RktEV0EwRUQzUzlVTDNGRUo2MC4u" 
                    class="cta-button waitlist-cta-button" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   id="survey-button">
+                   id="survey-button"
+                   data-i18n="waitlist.cta">
                     Join the Waitlist
                 </a>
             </div>
@@ -43,7 +45,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year"></span> Timepot. All rights reserved.</p>
+            <p data-i18n="footer.copyright">&copy; <span id="current-year"></span> Timepot. All rights reserved.</p>
             <div class="footer-links">
                 <a href="waitlist.html">Join Waitlist</a>
             </div>

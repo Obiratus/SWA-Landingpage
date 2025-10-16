@@ -40,6 +40,8 @@ SWA-Landingpage/
 ├── styles.css              # Complete styling system
 ├── script.js               # Core functionality
 ├── tracking.js             # Umami analytics helper
+├── translations.js         # Multilingual support (EN/DE) 🆕
+├── test-multilingual.html  # Translation test page 🆕
 ├── POWER_AUTOMATE_SETUP.md # Data collection guide
 └── assets/                 # Images and media
 ```
@@ -47,6 +49,7 @@ SWA-Landingpage/
 ### Tech Stack
 - **Frontend:** Vanilla HTML5, CSS3, JavaScript (ES6+)
 - **Analytics:** Umami Cloud (self-hosted alternative to Google Analytics)
+- **Internationalization:** Custom i18n system with auto-detection 🆕
 - **Data Collection:** Microsoft Power Automate → Excel Online
 - **Survey:** Microsoft Forms
 - **Hosting:** GitHub Pages / Static hosting
@@ -66,6 +69,15 @@ SWA-Landingpage/
 - **Tracking**: Each modal view is tracked (CTA 4)
 - **Privacy-First**: Highlights data protection commitment
 - **Features**: Heroes & Villains System, Agreements, Privacy/App Categories, Individual Battle Reporting, Team Battle Reporting, Family vs. Family Reporting
+
+### Multilingual Support (🆕)
+- **Languages**: English (EN) and German (DE)
+- **Auto-Detection**: Automatically detects browser language
+- **Language Dropdown**: Professional dropdown menu with flags (🇬🇧/🇩🇪)
+- **Persistent**: Language preference saved in localStorage
+- **Complete Coverage**: All UI text, buttons, modals, and forms translated
+- **Extensible**: Easy to add more languages (French, Italian, Spanish, etc.)
+- **See**: `MULTILINGUAL_IMPLEMENTATION.md` for implementation details
 
 ### Pricing Section (Features Page)
 - **Single CHF input** - no tiered pricing to avoid anchoring bias
@@ -245,6 +257,12 @@ git push origin main
 
 ## 🔄 Recent Updates
 
+### October 16, 2025
+- ✅ **Multilingual support** - Complete EN/DE translation system implemented across all pages
+- ✅ **Language dropdown** - Professional dropdown menu with flags, persistence, and auto-detection
+- ✅ **Translation infrastructure** - 60+ UI elements fully translated with data-i18n system
+- ✅ **Persistent preferences** - Language selection saved in localStorage across all pages
+
 ### October 13, 2025
 - ✅ **Umami tracking fixes** - Added script to waitlist.html, enabled properties support, standardized event naming
 - ✅ **UI/UX improvements** - Added cursor: pointer to all interactive elements (.cta-button, .arrow-button, .feature-card, .play-button)
@@ -278,6 +296,12 @@ See documentation files for detailed implementation notes.
 - `MODAL_CENTERING_FIX.md` - Display flex centering implementation
 - `CTA_COLOR_CONTRAST_FIX.md` - Accessibility color improvements
 
+### Internationalization 🆕
+- `MULTILINGUAL_IMPLEMENTATION.md` - Complete guide for EN/DE translation system
+- `MULTILINGUAL_COMPLETE.md` - Full implementation summary and testing checklist ⭐
+- `LANGUAGE_DROPDOWN_SUMMARY.md` - Dropdown menu design and implementation details
+- `test-multilingual.html` - Live demonstration of translation features
+
 ### Project Overview
 - `README.md` - This file (comprehensive project documentation)
 
@@ -309,5 +333,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-**Last Updated:** October 13, 2025  
-**Version:** 2.0 (Progressive Commitment Funnel)
+**Last Updated:** October 16, 2025  
+**Version:** 2.0 (Progressive Commitment Funnel + Multilingual Support)
