@@ -5,13 +5,13 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --bg-light: #f9fafb;
-    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary-color: #AC47F5;
+    --secondary-color: #C27BFF;
+    --accent-color: #FF8705;
+    --text-dark: #020617;
+    --text-light: #62748D;
+    --bg-light: #F9FAFC;
+    --bg-gradient: linear-gradient(135deg, #AC47F5 0%, #C27BFF 100%);
     --white: #ffffff;
     --border-radius: 16px;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
@@ -282,7 +282,7 @@ header:hover {
 /* Hero Section */
 .hero {
     padding: 120px 0 100px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: linear-gradient(135deg, #AC47F5 0%, #C27BFF 50%, #DAB2FF 100%);
     color: var(--white);
     position: relative;
     overflow: hidden;
@@ -316,7 +316,7 @@ header:hover {
     margin-bottom: 1.5rem;
     line-height: 1.2;
     font-weight: 800;
-    background: linear-gradient(to right, #ffffff, #f0f0ff);
+    background: linear-gradient(to right, #ffffff, #FAF5FF);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -452,8 +452,8 @@ header:hover {
 /* Featured Section */
 .featured-section {
     padding: 80px 0;
-    background: linear-gradient(to bottom, var(--bg-light), #ffffff);
-    border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+    background: linear-gradient(to bottom, var(--bg-light), #FAF5FF);
+    border-bottom: 1px solid rgba(172, 71, 245, 0.1);
 }
 
 .featured-section h2 {
@@ -482,7 +482,7 @@ header:hover {
 /* Onboarding Section */
 .onboarding-section {
     padding: 100px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #AC47F5 0%, #C27BFF 100%);
     color: white;
     min-height: 100vh;
     display: flex;
@@ -499,7 +499,7 @@ header:hover {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #FAF5FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -1,0 +1,17 @@
+Purple500: #AC47F5
+Purple400: #C27BFF
+Purple300: #DAB2FF
+Purple100: #FAF5FF
+
+Orange500: #FF8705
+Orange400: #FFB869
+Orange300: #FFD6A7
+Orange100: #FFF8EC
+
+Black900: #020617
+Black500: #62748D
+Black300: #C9D5E1
+Black100: #F9FAFC
+
+Green500: #7BF1A7
+Red500: #FF6467
