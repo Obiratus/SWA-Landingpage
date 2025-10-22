@@ -60,6 +60,14 @@ class MobileMenu {
         this.navMenu.classList.remove('active');
         this.overlay.classList.remove('active');
         document.body.style.overflow = ''; // Restore scrolling
+        
+        // Also close language dropdown when mobile menu closes
+        const langDropdown = document.getElementById('lang-dropdown-menu');
+        const langToggle = document.getElementById('lang-dropdown-toggle');
+        if (langDropdown && langToggle) {
+            langDropdown.classList.remove('show');
+            langToggle.setAttribute('aria-expanded', 'false');
+        }
     }
     
     isMenuOpen() {
@@ -69,5 +77,5 @@ class MobileMenu {
 
 // Initialize mobile menu when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new MobileMenu();
+    window.mobileMenu = new MobileMenu();
 });

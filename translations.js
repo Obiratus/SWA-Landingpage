@@ -4,6 +4,7 @@ const translations = {
         // Navigation
         'nav.features': 'Features',
         'nav.how-it-works': 'How It Works',
+        'nav.home': 'Home',
         'nav.pricing': 'Pricing',
         
         // Hero Section
@@ -124,7 +125,10 @@ const translations = {
         // Waitlist Page
         'waitlist.title': 'Join the Waitlist',
         'waitlist.message': 'Awesome that you\'re interested in Timepot. We\'re not quite ready yet; while we can\'t promise a price today, we promise to put a lot of love into building your family\'s screen-time tool.',
-        'waitlist.cta': 'Share Your Thoughts',
+        'waitlist.email-placeholder': 'Enter your email address',
+        'waitlist.cta': 'Join Waitlist',
+        'waitlist.success': 'Thanks! We\'ll be in touch soon.',
+        'waitlist.error': 'Please enter a valid email address.',
         
         // Footer
         'footer.copyright': 'Timepot. All rights reserved.',
@@ -140,6 +144,7 @@ const translations = {
         // Navigation
         'nav.features': 'Funktionen',
         'nav.how-it-works': 'Wie es funktioniert',
+        'nav.home': 'Start',
         'nav.pricing': 'Preise',
         
         // Hero Section
@@ -260,7 +265,10 @@ const translations = {
         // Waitlist Page
         'waitlist.title': 'Zur Warteliste',
         'waitlist.message': 'Toll, dass du an Timepot interessiert bist. Wir sind noch nicht ganz fertig; obwohl wir heute noch keinen Preis versprechen können, versprechen wir, viel Liebe in den Aufbau deines Familien-Bildschirmzeit-Tools zu stecken.',
-        'waitlist.cta': 'Teile deine Gedanken',
+        'waitlist.email-placeholder': 'Gib deine E-Mail-Adresse ein',
+        'waitlist.cta': 'Zur Warteliste',
+        'waitlist.success': 'Danke! Wir melden uns bald bei dir.',
+        'waitlist.error': 'Bitte gib eine gültige E-Mail-Adresse ein.',
         
         // Footer
         'footer.copyright': 'Timepot. Alle Rechte vorbehalten.',
@@ -372,6 +380,13 @@ class LanguageSwitcher {
         
         toggleBtn.addEventListener('click', (e) => {
             e.stopPropagation();
+            
+            // On mobile, only allow dropdown toggle when mobile menu is open
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile && window.mobileMenu && !window.mobileMenu.isMenuOpen()) {
+                return; // Don't toggle if mobile menu is closed
+            }
+            
             const isOpen = menu.classList.contains('show');
             menu.classList.toggle('show');
             toggleBtn.setAttribute('aria-expanded', !isOpen);

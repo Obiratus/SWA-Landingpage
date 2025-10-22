@@ -1,20 +1,5 @@
-<!DOCTYPE htm        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <a href="index.html"><h1>Timepot</h1></a>
-                </div>
-                <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links" id="nav-menu">
-                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-                    <li><a href="features.html" data-i18n="nav.features">Features</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="menu-overlay" id="menu-overlay"></div>ng="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,12 +17,18 @@
                 <div class="logo">
                     <a href="index.html"><h1>Timepot</h1></a>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html#video" data-i18n="nav.how-it-works">How It Works</a></li>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="index.html" data-i18n="nav.home">How it Works</a></li>
                     <li><a href="features.html" data-i18n="nav.features">Features</a></li>
                 </ul>
             </div>
         </nav>
+        <div class="menu-overlay" id="menu-overlay"></div>
     </header>
 
     <!-- Signup Section -->
@@ -46,14 +37,23 @@
             <div class="signup-content">
                 <h2 data-i18n="waitlist.title">Join the Waitlist</h2>
                 <p class="waitlist-message" data-i18n="waitlist.message">Awesome that you're interested in Timepot. We're not quite ready yet; while we can't promise a price today, we promise to put a lot of love into building your family's screen-time tool.</p>
-                <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=WS4mp1YbWk-kEm8HGB9I7lAS-AZkj5tIpbHjqdB2TphUOFpQMVM0RktEV0EwRUQzUzlVTDNGRUo2MC4u" 
-                   class="cta-button waitlist-cta-button" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   id="survey-button"
-                   data-i18n="waitlist.cta">
-                    Join the Waitlist
-                </a>
+                
+                <form id="waitlist-form" class="waitlist-form">
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="waitlist-email" 
+                            data-i18n-placeholder="waitlist.email-placeholder"
+                            placeholder="Enter your email address"
+                            required
+                            class="email-input"
+                        >
+                    </div>
+                    <button type="submit" class="cta-button waitlist-cta-button" id="waitlist-submit-btn" data-i18n="waitlist.cta">
+                        Join Waitlist
+                    </button>
+                    <div id="waitlist-message" class="form-message"></div>
+                </form>
             </div>
         </div>
     </section>
@@ -74,10 +74,62 @@
         // Set current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
         
-        // Track survey button click (CTA 8)
-        document.getElementById('survey-button').addEventListener('click', () => {
-            if (typeof trackEvent === 'function') {
-                trackEvent('cta-8-waitlist-submit');
+        // Handle waitlist form submission
+        const waitlistForm = document.getElementById('waitlist-form');
+        const emailInput = document.getElementById('waitlist-email');
+        const submitBtn = document.getElementById('waitlist-submit-btn');
+        const messageDiv = document.getElementById('waitlist-message');
+        
+        waitlistForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = emailInput.value.trim();
+            
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) {
+                messageDiv.textContent = window.i18n ? window.i18n.translate('waitlist.error') : 'Please enter a valid email address.';
+                messageDiv.className = 'form-message error';
+                messageDiv.style.display = 'block';
+                return;
+            }
+            
+            // Disable form during submission
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Joining...';
+            
+            try {
+                // Here you would typically send the email to your backend
+                // For now, we'll just simulate success and track the event
+                console.log('Email submitted:', email);
+                
+                // Track the signup
+                if (typeof trackEvent === 'function') {
+                    trackEvent('waitlist-signup', { email: email });
+                }
+                
+                // Show success message
+                messageDiv.textContent = window.i18n ? window.i18n.translate('waitlist.success') : 'Thanks! We\'ll be in touch soon.';
+                messageDiv.className = 'form-message success';
+                messageDiv.style.display = 'block';
+                
+                // Clear form
+                emailInput.value = '';
+                
+                // Re-enable button after a delay
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = window.i18n ? window.i18n.translate('waitlist.cta') : 'Join Waitlist';
+                }, 2000);
+                
+            } catch (error) {
+                console.error('Error submitting email:', error);
+                messageDiv.textContent = 'Something went wrong. Please try again.';
+                messageDiv.className = 'form-message error';
+                messageDiv.style.display = 'block';
+                
+                submitBtn.disabled = false;
+                submitBtn.textContent = window.i18n ? window.i18n.translate('waitlist.cta') : 'Join Waitlist';
             }
         });
 
