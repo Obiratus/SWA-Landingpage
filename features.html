@@ -23,9 +23,8 @@
                     <span></span>
                 </button>
                 <ul class="nav-links" id="nav-menu">
-                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="index.html" data-i18n="footer.home">How it works</a></li>
                     <li><a href="#features" data-i18n="nav.features">Features</a></li>
-                    <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
                 </ul>
             </div>
         </nav>
@@ -206,70 +205,45 @@
         const featureDetails = {
             'feature-card-heroes-villains': {
                 icon: '<img src="assets/icons_timepot-04.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
-                title: 'Heroes & Villains System',
-                description: `
-                    <p>Choose "Hero" apps that don't count against your time, and "Villain" apps that get punished when time runs out. You're in control!</p>
-
-`,
+                titleKey: 'feature.heroes-villains.modal.title',
+                descriptionKey: 'feature.heroes-villains.modal.description',
                 audio: 'assets/heroes.mp3'
             },
 
             'feature-card-agreements': {
                 icon: '<img src="assets/icons_timepot-01.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
-                title: 'Agreements',
-                description: `
-                    <p>Families can define agreements, real-life treats or activities, that are unlocked when specific screen time goals are met.</p>
-
-                `,
+                titleKey: 'feature.agreements.modal.title',
+                descriptionKey: 'feature.agreements.modal.description',
                 audio: 'assets/agreements.mp3'
             },
 
             'feature-card-privacy-first': {
                 icon: '<img src="assets/icons_timepot-03.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
-                title: 'Privacy-First App Categories',
-                description: `
-                    <p>Instead of showing specific app names, Timepot groups apps into three transparent categories:</p>
-                    <ul>
-                        <li>Productive</li>
-                        <li>Educational</li>
-                        <li>Leisure</li>
-                    </ul>
-                    <p>This allows your family members to discuss screen time habits at a category level, without exposing personal app usage details.</p>
-                    `,
+                titleKey: 'feature.privacy.modal.title',
+                descriptionKey: 'feature.privacy.modal.description',
                 audio: 'assets/categories.mp3'
             },
 
             'feature-card-individual-battle': {
                 icon: '<img src="assets/icons_timepot-06.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
-                title: 'Individual Progress Visualization',
-                description: `
-                    <p>A playful insight feature that visualizes each user’s personal progress over time — showing how Timepot has influenced their Villain app usage.</p>
-                `,
+                titleKey: 'feature.individual.modal.title',
+                descriptionKey: 'feature.individual.modal.description',
                 audio: 'assets/individual.mp3'
             },
 
             'feature-card-team-battle': {
                 icon: '<img src="assets/icons_timepot-07.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
-                title: 'Family Progress Visualization',
-                description: `
-                    <p>Turn screen time reduction into a friendly family challenge with collaborative progress tracking and light gamification — no pressure, just fun!</p>
-                `
-                ,
+                titleKey: 'feature.team.modal.title',
+                descriptionKey: 'feature.team.modal.description',
                 audio: 'assets/team.mp3'
             },
 
             'feature-card-family-family': {
                 icon: '<img src="assets/icons_timepot-08.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
-                title: 'Compare to other Familes',
-                description: `
-                    <p>A social comparison feature that allows families to see how their overall screen time habits compare to other families using Timepot.</p>
-                `,
+                titleKey: 'feature.family-vs-family.modal.title',
+                descriptionKey: 'feature.family-vs-family.modal.description',
                 audio: 'assets/family.mp3'
             }
-
-
-
-
         };
 
         // Add click handlers to all feature cards
@@ -281,14 +255,15 @@
                 
                 if (feature) {
                     modalIcon.innerHTML = feature.icon;
-                    modalTitle.textContent = feature.title;
-                    modalDescription.innerHTML = feature.description;
+                    modalTitle.textContent = window.i18n ? window.i18n.translate(feature.titleKey) : feature.titleKey;
+                    modalDescription.innerHTML = `<p>${window.i18n ? window.i18n.translate(feature.descriptionKey) : feature.descriptionKey}</p>`;
                     modal.style.display = 'flex';
                     document.body.style.overflow = 'hidden';
 
                     if (feature.audio) {
+                        const audioText = window.i18n ? window.i18n.translate('feature.modal.audio-text') : 'Let Anton explain it. Hit the play button!';
                         modalDescription.innerHTML += `
-                            <p style="margin-top:2rem;">Let Anton explain it. Hit the play button!</p>
+                            <p style="margin-top:2rem;">${audioText}</p>
                             <audio controls style="margin-top:1rem; width:100%;">
                                 <source src="${feature.audio}" type="audio/mpeg">
                                 Your browser does not support the audio element.

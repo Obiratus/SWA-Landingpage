@@ -17,6 +17,10 @@ const translations = {
         'video.cta.yes': 'Yes, I\'d Try This',
         'video.cta.maybe': 'Maybe, Tell Me More',
         
+        // Sharing Section
+        'sharing.title': 'Sharing is Caring',
+        'sharing.subtitle': 'Share some of your screen time data with your family and start building better habits together!',
+        
         // Demo Section
         'demo.title': 'See Your Personalized Savings Potential',
         'demo.subtitle': 'Enter your daily average screen time to see how much quality time you could reclaim.',
@@ -77,6 +81,15 @@ const translations = {
         
         'feature.modal.cta': 'Join the Waitlist',
         
+        // Feature Modal Content (for features.html JavaScript)
+        'feature.heroes-villains.modal.description': 'Choose "Hero" apps that don\'t count against your time, and "Villain" apps that get punished when time runs out. You\'re in control!',
+        'feature.agreements.modal.description': 'Families can define agreements, real-life treats or activities, that are unlocked when specific screen time goals are met.',
+        'feature.privacy.modal.description': 'Instead of showing specific app names, Timepot groups apps into three transparent categories: Productive, Educational, and Leisure. This allows your family members to discuss screen time habits at a category level, without exposing personal app usage details.',
+        'feature.individual.modal.description': 'A playful insight feature that visualizes each user\'s personal progress over time — showing how Timepot has influenced their Villain app usage.',
+        'feature.team.modal.description': 'Turn screen time reduction into a friendly family challenge with collaborative progress tracking and light gamification — no pressure, just fun!',
+        'feature.family-vs-family.modal.description': 'A social comparison feature that allows families to see how their overall screen time habits compare to other families using Timepot.',
+        'feature.modal.audio-text': 'Let Anton explain it. Hit the play button!',
+        
         // Pricing Section
         'pricing.title': 'What Would You Pay?',
         'pricing.subtitle': 'Help us understand what Timepot is worth to your family. Be honest - there\'s no wrong answer!',
@@ -100,7 +113,7 @@ const translations = {
         
         // Footer
         'footer.copyright': 'Timepot. All rights reserved.',
-        'footer.home': 'Home',
+        'footer.home': 'How it works',
         'footer.features': 'Features',
         'footer.pricing': 'Pricing',
         
@@ -124,6 +137,10 @@ const translations = {
         'video.question': 'Würdest du die Bildschirmzeit deiner Familie teilen, um gemeinsam bessere Gewohnheiten aufzubauen?',
         'video.cta.yes': 'Ja, das würde ich ausprobieren',
         'video.cta.maybe': 'Vielleicht, erzähl mir mehr',
+        
+        // Sharing Section
+        'sharing.title': 'Teilen ist Fürsorge',
+        'sharing.subtitle': 'Teile einige deiner Bildschirmzeit-Daten mit deiner Familie und beginnt gemeinsam, bessere Gewohnheiten aufzubauen!',
         
         // Demo Section
         'demo.title': 'Dein persönliches Einsparpotenzial',
@@ -184,6 +201,15 @@ const translations = {
         'feature.family-vs-family.modal.content': 'Fordere andere Familien zu Bildschirmzeit-Reduzierungs-Wettbewerben heraus. Leichte Gamification hält alle motiviert und engagiert beim Aufbau gesünderer digitaler Gewohnheiten.',
         
         'feature.modal.cta': 'Zur Warteliste',
+        
+        // Feature Modal Content (for features.html JavaScript)
+        'feature.heroes-villains.modal.description': 'Wähle "Helden"-Apps, die nicht auf deine Zeit angerechnet werden, und "Schurken"-Apps, die bestraft werden, wenn die Zeit abläuft. Du hast die Kontrolle!',
+        'feature.agreements.modal.description': 'Familien können Vereinbarungen definieren, reale Belohnungen oder Aktivitäten, die freigeschaltet werden, wenn bestimmte Bildschirmzeit-Ziele erreicht werden.',
+        'feature.privacy.modal.description': 'Anstatt spezifische App-Namen zu zeigen, gruppiert Timepot Apps in drei transparente Kategorien: Produktiv, Lehrreich und Freizeit. Dies ermöglicht es Familienmitgliedern, Bildschirmzeit-Gewohnheiten auf Kategorieebene zu besprechen, ohne persönliche App-Nutzungsdetails preiszugeben.',
+        'feature.individual.modal.description': 'Eine spielerische Einblicksfunktion, die den persönlichen Fortschritt jedes Benutzers im Laufe der Zeit visualisiert — zeigt, wie Timepot die Nutzung von Schurken-Apps beeinflusst hat.',
+        'feature.team.modal.description': 'Verwandle die Reduzierung der Bildschirmzeit in eine freundliche Familien-Challenge mit kollaborativem Fortschritts-Tracking und leichter Gamification — kein Druck, nur Spaß!',
+        'feature.family-vs-family.modal.description': 'Eine soziale Vergleichsfunktion, die es Familien ermöglicht, zu sehen, wie sich ihre gesamten Bildschirmzeit-Gewohnheiten im Vergleich zu anderen Timepot-Familien verhalten.',
+        'feature.modal.audio-text': 'Lass Anton es erklären. Drück den Play-Button!',
         
         // Pricing Section
         'pricing.title': 'Was würdest du bezahlen?',

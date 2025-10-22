@@ -487,7 +487,6 @@ header:hover {
 
 .features-page {
     padding: 40px 0 120px 0; /* 40px top, 120px bottom */
-    min-height: calc(100vh - 200px);
 }
 
 .features h2 {
