@@ -90,6 +90,21 @@ const translations = {
         'feature.family-vs-family.modal.description': 'A social comparison feature that allows families to see how their overall screen time habits compare to other families using Timepot.',
         'feature.modal.audio-text': 'Let Anton explain it. Hit the play button!',
         
+        // Onboarding Questions (for features.html)
+        'onboarding.title': 'Let\'s personalize your Timepot experience',
+        'onboarding.subtitle': 'Help us understand your family better so we can show you the most relevant features',
+        'onboarding.family-size.question': 'How many people are in your family?',
+        'onboarding.family-size.2-3': '2-3 people',
+        'onboarding.family-size.4-5': '4-5 people',
+        'onboarding.family-size.6-plus': '6+ people',
+        'onboarding.device-age.question': 'When did your kids get their first smartphone/tablet?',
+        'onboarding.device-age.recent': 'Recently (last 1-2 years)',
+        'onboarding.device-age.few-years': 'A few years ago (3-5 years)',
+        'onboarding.device-age.long-time': 'Quite some time ago (6+ years)',
+        'onboarding.device-age.none': 'They don\'t have smartphones yet',
+        'onboarding.cta': 'Show Me Features',
+        'onboarding.skip': 'Skip for now',
+        
         // Pricing Section
         'pricing.title': 'What Would You Pay?',
         'pricing.subtitle': 'Help us understand what Timepot is worth to your family. Be honest - there\'s no wrong answer!',
@@ -210,6 +225,21 @@ const translations = {
         'feature.team.modal.description': 'Verwandle die Reduzierung der Bildschirmzeit in eine freundliche Familien-Challenge mit kollaborativem Fortschritts-Tracking und leichter Gamification — kein Druck, nur Spaß!',
         'feature.family-vs-family.modal.description': 'Eine soziale Vergleichsfunktion, die es Familien ermöglicht, zu sehen, wie sich ihre gesamten Bildschirmzeit-Gewohnheiten im Vergleich zu anderen Timepot-Familien verhalten.',
         'feature.modal.audio-text': 'Lass Anton es erklären. Drück den Play-Button!',
+        
+        // Onboarding Questions (for features.html)
+        'onboarding.title': 'Lass uns deine Timepot-Erfahrung personalisieren',
+        'onboarding.subtitle': 'Hilf uns, deine Familie besser zu verstehen, damit wir dir die relevantesten Funktionen zeigen können',
+        'onboarding.family-size.question': 'Wie viele Personen sind in deiner Familie?',
+        'onboarding.family-size.2-3': '2-3 Personen',
+        'onboarding.family-size.4-5': '4-5 Personen',
+        'onboarding.family-size.6-plus': '6+ Personen',
+        'onboarding.device-age.question': 'Wann haben deine Kinder ihr erstes Smartphone/Tablet bekommen?',
+        'onboarding.device-age.recent': 'Kürzlich (letzte 1-2 Jahre)',
+        'onboarding.device-age.few-years': 'Vor ein paar Jahren (3-5 Jahre)',
+        'onboarding.device-age.long-time': 'Vor ziemlich langer Zeit (6+ Jahre)',
+        'onboarding.device-age.none': 'Sie haben noch keine Smartphones',
+        'onboarding.cta': 'Zeig mir die Funktionen',
+        'onboarding.skip': 'Für jetzt überspringen',
         
         // Pricing Section
         'pricing.title': 'Was würdest du bezahlen?',

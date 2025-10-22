@@ -31,6 +31,42 @@
         <div class="menu-overlay" id="menu-overlay"></div>
     </header>
 
+    <!-- Onboarding Section -->
+    <section id="onboarding" class="onboarding-section">
+        <div class="container">
+            <div class="onboarding-content">
+                <h2 data-i18n="onboarding.title">Let's personalize your Timepot experience</h2>
+                <p data-i18n="onboarding.subtitle">Help us understand your family better so we can show you the most relevant features</p>
+                
+                <div class="onboarding-questions">
+                    <div class="question-group">
+                        <h3 data-i18n="onboarding.family-size.question">How many people are in your family?</h3>
+                        <div class="option-buttons">
+                            <button class="option-btn" data-family-size="2-3" data-i18n="onboarding.family-size.2-3">2-3 people</button>
+                            <button class="option-btn" data-family-size="4-5" data-i18n="onboarding.family-size.4-5">4-5 people</button>
+                            <button class="option-btn" data-family-size="6-plus" data-i18n="onboarding.family-size.6-plus">6+ people</button>
+                        </div>
+                    </div>
+                    
+                    <div class="question-group">
+                        <h3 data-i18n="onboarding.device-age.question">When did your kids get their first smartphone/tablet?</h3>
+                        <div class="option-buttons">
+                            <button class="option-btn" data-device-age="recent" data-i18n="onboarding.device-age.recent">Recently (last 1-2 years)</button>
+                            <button class="option-btn" data-device-age="few-years" data-i18n="onboarding.device-age.few-years">A few years ago (3-5 years)</button>
+                            <button class="option-btn" data-device-age="long-time" data-i18n="onboarding.device-age.long-time">Quite some time ago (6+ years)</button>
+                            <button class="option-btn" data-device-age="none" data-i18n="onboarding.device-age.none">They don't have smartphones yet</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="onboarding-actions">
+                    <button class="cta-button" id="continue-to-features" data-i18n="onboarding.cta">Show Me Features</button>
+                    <button class="cta-button cta-ghost" id="skip-onboarding" data-i18n="onboarding.skip">Skip for now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section id="features" class="features features-page">
         <div class="container">
@@ -166,6 +202,105 @@
     <script>
         // Set current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Onboarding logic
+        const onboardingSection = document.getElementById('onboarding');
+        const featuresSection = document.getElementById('features');
+        const continueBtn = document.getElementById('continue-to-features');
+        const skipBtn = document.getElementById('skip-onboarding');
+        
+        let selectedFamilySize = null;
+        let selectedDeviceAge = null;
+
+        // Check if user has already completed onboarding
+        const hasCompletedOnboarding = localStorage.getItem('timepot-onboarding-completed');
+        
+        if (hasCompletedOnboarding) {
+            // Show features directly
+            onboardingSection.style.display = 'none';
+            featuresSection.style.display = 'block';
+        } else {
+            // Show onboarding
+            onboardingSection.style.display = 'block';
+            featuresSection.style.display = 'none';
+        }
+
+        // Handle family size selection
+        document.querySelectorAll('[data-family-size]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all family size buttons
+                document.querySelectorAll('[data-family-size]').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                selectedFamilySize = this.getAttribute('data-family-size');
+                checkContinueButton();
+            });
+        });
+
+        // Handle device age selection
+        document.querySelectorAll('[data-device-age]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all device age buttons
+                document.querySelectorAll('[data-device-age]').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                selectedDeviceAge = this.getAttribute('data-device-age');
+                checkContinueButton();
+            });
+        });
+
+        function checkContinueButton() {
+            if (selectedFamilySize && selectedDeviceAge) {
+                continueBtn.disabled = false;
+                continueBtn.style.opacity = '1';
+            } else {
+                continueBtn.disabled = true;
+                continueBtn.style.opacity = '0.6';
+            }
+        }
+
+        // Continue to features
+        continueBtn.addEventListener('click', function() {
+            if (selectedFamilySize && selectedDeviceAge) {
+                // Store user preferences
+                const userPreferences = {
+                    familySize: selectedFamilySize,
+                    deviceAge: selectedDeviceAge,
+                    completedAt: new Date().toISOString()
+                };
+                localStorage.setItem('timepot-user-preferences', JSON.stringify(userPreferences));
+                localStorage.setItem('timepot-onboarding-completed', 'true');
+                
+                // Track onboarding completion
+                if (typeof trackEvent === 'function') {
+                    trackEvent('onboarding-completed', {
+                        family_size: selectedFamilySize,
+                        device_age: selectedDeviceAge
+                    });
+                }
+                
+                // Show features
+                onboardingSection.style.display = 'none';
+                featuresSection.style.display = 'block';
+                
+                // Smooth scroll to features
+                featuresSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
+        // Skip onboarding
+        skipBtn.addEventListener('click', function() {
+            localStorage.setItem('timepot-onboarding-completed', 'true');
+            
+            // Track skip
+            if (typeof trackEvent === 'function') {
+                trackEvent('onboarding-skipped');
+            }
+            
+            // Show features
+            onboardingSection.style.display = 'none';
+            featuresSection.style.display = 'block';
+        });
 
         // Feature card tracking
         document.getElementById('feature-card-team-battle').addEventListener('click', () => trackEvent('feature-card-family-challenge-click'));

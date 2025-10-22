@@ -479,6 +479,107 @@ header:hover {
     text-align: center;
 }
 
+/* Onboarding Section */
+.onboarding-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.onboarding-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.onboarding-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.onboarding-content p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.onboarding-questions {
+    margin-bottom: 3rem;
+}
+
+.question-group {
+    margin-bottom: 2.5rem;
+}
+
+.question-group h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.option-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.option-btn {
+    padding: 1rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.option-btn:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.option-btn.active {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+.onboarding-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.onboarding-actions .cta-button {
+    min-width: 200px;
+}
+
+.onboarding-actions .cta-ghost {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.onboarding-actions .cta-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
 /* Features Section */
 .features {
     padding: 100px 0;
@@ -1698,6 +1799,41 @@ footer .container {
 
 .features-grid.all-visible .feature-card p {
     font-size: 0.9rem;
+}
+
+/* Onboarding Responsive Styles */
+@media (max-width: 768px) {
+    .onboarding-content h2 {
+        font-size: 2rem;
+    }
+    
+    .onboarding-content p {
+        font-size: 1.1rem;
+    }
+    
+    .question-group h3 {
+        font-size: 1.2rem;
+    }
+    
+    .option-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .option-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .onboarding-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .onboarding-actions .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 .features.features-page {
