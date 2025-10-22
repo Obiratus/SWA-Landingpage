@@ -122,7 +122,7 @@
 
 
     <!-- Pricing Section -->
-    <section id="pricing" class="pricing-section">
+    <section id="pricing" class="pricing-section" style="display: none;">
         <div class="container">
             <h2 data-i18n="pricing.title">What Would You Pay?</h2>
             <div class="pricing-input-container">
@@ -207,6 +207,7 @@
         // Onboarding logic
         const onboardingSection = document.getElementById('onboarding');
         const featuresSection = document.getElementById('features');
+        const pricingSection = document.getElementById('pricing');
         const continueBtn = document.getElementById('continue-to-features');
         const skipBtn = document.getElementById('skip-onboarding');
         
@@ -217,13 +218,15 @@
         const hasCompletedOnboarding = localStorage.getItem('timepot-onboarding-completed');
         
         if (hasCompletedOnboarding) {
-            // Show features directly
+            // Show features and pricing directly
             onboardingSection.style.display = 'none';
             featuresSection.style.display = 'block';
+            pricingSection.style.display = 'block';
         } else {
             // Show onboarding
             onboardingSection.style.display = 'block';
             featuresSection.style.display = 'none';
+            pricingSection.style.display = 'none';
         }
 
         // Handle family size selection
@@ -279,9 +282,10 @@
                     });
                 }
                 
-                // Show features
+                // Show features and pricing
                 onboardingSection.style.display = 'none';
                 featuresSection.style.display = 'block';
+                pricingSection.style.display = 'block';
                 
                 // Smooth scroll to features
                 featuresSection.scrollIntoView({ behavior: 'smooth' });
@@ -297,9 +301,10 @@
                 trackEvent('onboarding-skipped');
             }
             
-            // Show features
+            // Show features and pricing
             onboardingSection.style.display = 'none';
             featuresSection.style.display = 'block';
+            pricingSection.style.display = 'block';
         });
 
         // Feature card tracking
