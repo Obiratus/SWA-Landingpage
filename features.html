@@ -51,9 +51,10 @@
                     <div class="question-group">
                         <h3 data-i18n="onboarding.device-age.question">When did your kids get their first smartphone/tablet?</h3>
                         <div class="option-buttons">
-                            <button class="option-btn" data-device-age="recent" data-i18n="onboarding.device-age.recent">Recently (last 1-2 years)</button>
-                            <button class="option-btn" data-device-age="few-years" data-i18n="onboarding.device-age.few-years">A few years ago (3-5 years)</button>
-                            <button class="option-btn" data-device-age="long-time" data-i18n="onboarding.device-age.long-time">Quite some time ago (6+ years)</button>
+                            <button class="option-btn" data-device-age="1-2-years" data-i18n="onboarding.device-age.1-2-years">1-2 years ago</button>
+                            <button class="option-btn" data-device-age="3-5-years" data-i18n="onboarding.device-age.3-5-years">3-5 years ago</button>
+                            <button class="option-btn" data-device-age="6-10-years" data-i18n="onboarding.device-age.6-10-years">6-10 years ago</button>
+                            <button class="option-btn" data-device-age="more-than-10" data-i18n="onboarding.device-age.more-than-10">More than 10 years ago</button>
                             <button class="option-btn" data-device-age="none" data-i18n="onboarding.device-age.none">They don't have smartphones yet</button>
                         </div>
                     </div>
@@ -237,14 +238,13 @@
             });
         });
 
-        // Handle device age selection
+        // Handle device age selection (MULTIPLE SELECTION)
         document.querySelectorAll('[data-device-age]').forEach(btn => {
             btn.addEventListener('click', function() {
-                // Remove active class from all device age buttons
-                document.querySelectorAll('[data-device-age]').forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                this.classList.add('active');
-                selectedDeviceAge = this.getAttribute('data-device-age');
+                // Toggle active class (multiple selection allowed)
+                this.classList.toggle('active');
+                // Update selected device ages array
+                selectedDeviceAge = Array.from(document.querySelectorAll('[data-device-age].active')).map(b => b.getAttribute('data-device-age'));
                 checkContinueButton();
             });
         });
@@ -478,6 +478,17 @@
         });
 
         // Modal close handlers for price confirmation
+        document.querySelectorAll('.close-modal').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.closest('.modal').style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal')) {
+                e.target.style.display = 'none';
+            }
+        });
         document.querySelectorAll('.close-modal').forEach(btn => {
             btn.addEventListener('click', function() {
                 this.closest('.modal').style.display = 'none';
