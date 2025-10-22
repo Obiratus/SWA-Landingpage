@@ -234,7 +234,7 @@ const translations = {
         
         // Footer
         'footer.copyright': 'Timepot. Alle Rechte vorbehalten.',
-        'footer.home': 'Start',
+        'footer.home': 'Wie es funktioniert',
         'footer.features': 'Funktionen',
         'footer.pricing': 'Preise',
         
