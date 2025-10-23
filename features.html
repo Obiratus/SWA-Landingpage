@@ -128,7 +128,7 @@
             <div class="pricing-input-container">
                 <label for="user-price-input" style="display: block; text-align: center; font-size: 1.1rem; margin-bottom: 1rem;" data-i18n="pricing.label">Monthly price, for the whole family</label>
                 <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 2rem;">
-                    <span style="font-size: 2rem; font-weight: bold;">CHF</span>
+                    <span id="currency-symbol" style="font-size: 2rem; font-weight: bold;">CHF</span>
                     <input
                             type="number"
                             id="user-price-input"
@@ -461,7 +461,7 @@
             }
             
             // Track the pricing submission
-            trackEvent('cta-6-price-submit', { price_chf: price });
+            trackEvent('cta-6-price-submit', { price: price });
             
             // Store price for later use
             sessionStorage.setItem('userPrice', price);
@@ -475,11 +475,12 @@
         document.getElementById('reserve-spot-btn').addEventListener('click', function(e) {
             e.preventDefault();
             const price = sessionStorage.getItem('userPrice');
+            const currency = sessionStorage.getItem('userCurrency') || 'CHF';
             
-            trackEvent('cta-7-reserve-at-price', { price_chf: price });
+            trackEvent('cta-7-reserve-at-price', { price: price, currency: currency });
             
             // Redirect to waitlist with price parameter
-            window.location.href = `waitlist.html?price=${price}`;
+            window.location.href = `waitlist.html?price=${price}&currency=${currency}`;
         });
 
         // Modal close handlers for price confirmation
@@ -503,6 +504,60 @@
         window.addEventListener('click', function(e) {
             if (e.target.classList.contains('modal')) {
                 e.target.style.display = 'none';
+            }
+        });
+    </script>
+    <script>
+        // Dynamic Currency Handling
+        const currencySpan = document.getElementById('currency-symbol');
+        const priceConfirmationText = document.getElementById('price-confirmation-text');
+        const priceInput = document.getElementById('user-price-input');
+
+        function getCurrencyForLang(lang) {
+            const langPart = lang.split('-')[0];
+            const regionPart = (lang.split('-')[1] || '').toUpperCase();
+
+            if (regionPart === 'CH') return 'CHF';
+            if (regionPart === 'US') return 'USD';
+            if (regionPart === 'GB') return 'GBP';
+            if (langPart === 'de' || regionPart === 'AT' || regionPart === 'BE' || regionPart === 'CY' || regionPart === 'EE' || regionPart === 'FI' || regionPart === 'FR' || regionPart === 'GR' || regionPart === 'IE' || regionPart === 'IT' || regionPart === 'LV' || regionPart === 'LT' || regionPart === 'LU' || regionPart === 'MT' || regionPart === 'NL' || regionPart === 'PT' || regionPart === 'SK' || regionPart === 'SI' || regionPart === 'ES') return 'EUR';
+            
+            return 'USD'; // Default currency
+        }
+
+        function formatCurrency(amount, currency, lang) {
+            return new Intl.NumberFormat(lang, {
+                style: 'currency',
+                currency: currency,
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }).format(amount);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = window.i18n.getCurrentLanguage();
+            const currency = getCurrencyForLang(userLang);
+
+            sessionStorage.setItem('userCurrency', currency);
+
+            // Update currency symbol in the input
+            if (currencySpan) {
+                currencySpan.textContent = currency;
+            }
+
+            // Update price confirmation modal text
+            const submitPriceBtn = document.getElementById('submit-price-btn');
+            if (submitPriceBtn) {
+                submitPriceBtn.addEventListener('click', function() {
+                    const price = parseFloat(priceInput.value);
+                    if (price && price >= 0) {
+                        const formattedPrice = formatCurrency(price, currency, userLang);
+                        priceConfirmationText.textContent = `You'd pay ${formattedPrice}/month`;
+                        
+                        // Also update the tracking event with currency
+                        trackEvent('cta-6-price-submit', { price: price, currency: currency });
+                    }
+                });
             }
         });
     </script>
