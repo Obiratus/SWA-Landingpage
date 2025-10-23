@@ -94,7 +94,7 @@ const translations = {
         // Onboarding Questions (for features.html)
         'onboarding.title': 'Let\'s personalize your Timepot experience',
         'onboarding.subtitle': 'Help us understand your family better so we can show you the most relevant features',
-        'onboarding.family-size.question': 'How many people are in your family?',
+        'onboarding.family-size.question': 'How many people are in your family (in the same household)?',
         'onboarding.family-size.2-3': '2-3 people',
         'onboarding.family-size.4-5': '4-5 people',
         'onboarding.family-size.6-plus': '6+ people',
@@ -235,7 +235,7 @@ const translations = {
         // Onboarding Questions (for features.html)
         'onboarding.title': 'Lass uns deine Timepot-Erfahrung personalisieren',
         'onboarding.subtitle': 'Hilf uns, deine Familie besser zu verstehen, damit wir dir die relevantesten Funktionen zeigen können',
-        'onboarding.family-size.question': 'Wie viele Personen sind in deiner Familie?',
+        'onboarding.family-size.question': 'Wie viele Personen leben in deinem Haushalt?',
         'onboarding.family-size.2-3': '2-3 Personen',
         'onboarding.family-size.4-5': '4-5 Personen',
         'onboarding.family-size.6-plus': '6+ Personen',
