@@ -130,6 +130,11 @@ const translations = {
         'waitlist.cta': 'Join Waitlist',
         'waitlist.success': 'Thanks! We\'ll be in touch soon.',
         'waitlist.error': 'Please enter a valid email address.',
+        'waitlist.survey.prompt': 'Would you be open to a quick follow-up survey so we can build Timepot with your feedback?',
+        'waitlist.survey.yes': 'Sure, show me the survey',
+        'waitlist.survey.no': 'Maybe later',
+        'waitlist.thankyou.heading': 'You\'re on the list! 🎉',
+        'waitlist.thankyou.copy': 'Thank you for joining the Timepot waitlist. We\'ll keep you in the loop as we prepare the launch.',
         
         // Footer
         'footer.copyright': 'Timepot. All rights reserved.',
@@ -271,6 +276,11 @@ const translations = {
         'waitlist.cta': 'Zur Warteliste',
         'waitlist.success': 'Danke! Wir melden uns bald bei dir.',
         'waitlist.error': 'Bitte gib eine gültige E-Mail-Adresse ein.',
+        'waitlist.survey.prompt': 'Hättest du kurz Zeit für eine schnelle Umfrage, damit wir Timepot mit deinem Feedback bauen können?',
+        'waitlist.survey.yes': 'Ja, zeig mir die Umfrage',
+        'waitlist.survey.no': 'Vielleicht später',
+        'waitlist.thankyou.heading': 'Du bist dabei! 🎉',
+        'waitlist.thankyou.copy': 'Danke, dass du dich für die Timepot-Warteliste eingetragen hast. Wir halten dich auf dem Laufenden, während wir den Launch vorbereiten.',
         
         // Footer
         'footer.copyright': 'Timepot. Alle Rechte vorbehalten.',

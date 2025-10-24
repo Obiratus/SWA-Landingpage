@@ -54,6 +54,23 @@
                     </button>
                     <div id="waitlist-message" class="form-message"></div>
                 </form>
+                    <div id="post-signup" class="post-signup" style="display: none;">
+                        <div id="thank-you-container"></div>
+                        <div id="survey-prompt" class="survey-prompt">
+                            <p data-i18n="waitlist.survey.prompt">Would you be open to a quick follow-up survey so we can build Timepot with your feedback?</p>
+                            <div class="button-group survey-buttons">
+                                <a
+                                    id="survey-yes"
+                                    class="cta-button survey-cta"
+                                    href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=WS4mp1YbWk-kEm8HGB9I7lAS-AZkj5tIpbHjqdB2TphUOFpQMVM0RktEV0EwRUQzUzlVTDNGRUo2MC4u"
+                                    target="_blank"
+                                    rel="noopener"
+                                    data-i18n="waitlist.survey.yes"
+                                >Sure, show me the survey</a>
+                                <button type="button" id="survey-no" class="cta-button cta-ghost" data-i18n="waitlist.survey.no">Maybe later</button>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </section>
@@ -79,6 +96,12 @@
         const emailInput = document.getElementById('waitlist-email');
         const submitBtn = document.getElementById('waitlist-submit-btn');
         const messageDiv = document.getElementById('waitlist-message');
+        const surveyPrompt = document.getElementById('survey-prompt');
+        const surveyYes = document.getElementById('survey-yes');
+        const surveyNo = document.getElementById('survey-no');
+    const postSignup = document.getElementById('post-signup');
+    const thankYouContainer = document.getElementById('thank-you-container');
+    const waitlistFormContainer = document.querySelector('.waitlist-form');
         
         waitlistForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -116,6 +139,30 @@
                 // Clear form
                 emailInput.value = '';
                 
+                if (waitlistFormContainer) {
+                    waitlistFormContainer.classList.add('success-state');
+                }
+
+                if (postSignup) {
+                    postSignup.style.display = 'block';
+                }
+
+                if (thankYouContainer && !thankYouContainer.querySelector('.thank-you-message-block')) {
+                    thankYouContainer.innerHTML = `
+                        <div class="thank-you-message-block">
+                            <h3 data-i18n="waitlist.thankyou.heading">You're on the list! 🎉</h3>
+                            <p data-i18n="waitlist.thankyou.copy">Thank you for joining the Timepot waitlist. We'll keep you in the loop as we prepare the launch.</p>
+                        </div>
+                    `;
+                    if (window.i18n && typeof window.i18n.applyTranslations === 'function') {
+                        window.i18n.applyTranslations();
+                    }
+                }
+
+                if (surveyPrompt) {
+                    surveyPrompt.style.display = 'block';
+                }
+                
                 // Re-enable button after a delay
                 setTimeout(() => {
                     submitBtn.disabled = false;
@@ -132,6 +179,25 @@
                 submitBtn.textContent = window.i18n ? window.i18n.translate('waitlist.cta') : 'Join Waitlist';
             }
         });
+
+        if (surveyYes) {
+            surveyYes.addEventListener('click', () => {
+                if (typeof trackEvent === 'function') {
+                    trackEvent('waitlist-survey-opt-in');
+                }
+            });
+        }
+
+        if (surveyNo) {
+            surveyNo.addEventListener('click', () => {
+                if (surveyPrompt) {
+                    surveyPrompt.style.display = 'none';
+                }
+                if (typeof trackEvent === 'function') {
+                    trackEvent('waitlist-survey-decline');
+                }
+            });
+        }
 
         // Track navigation clicks
         document.querySelectorAll('.nav-links a').forEach(link => {

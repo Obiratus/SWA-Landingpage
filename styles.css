@@ -914,6 +914,68 @@ header:hover {
     color: #ef4444;
 }
 
+.survey-prompt {
+    margin-top: 2rem;
+    padding: 1.75rem;
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+    display: none;
+}
+
+.survey-prompt p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.survey-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.survey-cta {
+    background: var(--white);
+    color: var(--primary-color);
+    min-width: 220px;
+}
+
+.survey-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.waitlist-form.success-state {
+    display: none;
+}
+
+.thank-you-message-block {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeInUp 0.6s ease;
+}
+
+.thank-you-message-block h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.thank-you-message-block p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
 .signup-form {
     display: flex;
     flex-direction: column;
