@@ -25,3 +25,23 @@ function trackEvent(eventName, properties = {}) {
     console.warn('⚠️ Umami not ready. Event not tracked:', eventName, properties);
   }
 }
+
+/**
+ * Detect referral query params (e.g. ?ref=flyer) and track them once per session.
+ */
+function trackReferral() {
+  const params = new URLSearchParams(window.location.search);
+  const source = params.get('ref') || params.get('utm_source');
+  const sessionKey = 'timepot-referral-source';
+
+  if (source && !sessionStorage.getItem(sessionKey)) {
+    trackEvent('referral', { source });
+    sessionStorage.setItem(sessionKey, source);
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', trackReferral);
+} else {
+  trackReferral();
+}
