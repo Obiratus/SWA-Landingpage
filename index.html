@@ -23,7 +23,7 @@
                     <span></span>
                 </button>
                 <ul class="nav-links" id="nav-menu">
-                    <li><a href="#video" data-i18n="nav.home">How It Works</a></li>
+                    <li><a href="#hero-video" data-i18n="nav.home">How It Works</a></li>
                     <li><a href="features.html" data-i18n="nav.features">Features</a></li>
                 </ul>
             </div>
@@ -37,23 +37,11 @@
             <div class="hero-content text-center">
                 <h1 class="hero-title" data-i18n="hero.title">Turn Screen Time into Quality Time</h1>
                 <p class="hero-subtitle" data-i18n="hero.subtitle">Timepot helps your family build healthier digital habits together. No more fighting, just collaborating.</p>
-                <a href="#video" class="cta-button" id="watch-video-hero" data-i18n="hero.cta">Watch How It Works</a>
-            </div>
-            <div class="hero-image">
-                <img src="assets/pexels-rdne-8489723.jpg" alt="Family spending quality time together" class="hero-img">
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Section -->
-    <section id="video" class="video-section">
-        <div class="container">
-            <h2 data-i18n="video.title">See How Timepot Works</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tGihymYM8Zw" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <!-- CTA 2: Would you share screen time? -->
-            <div class="video-cta text-center" style="margin-top: 2rem;">
+                <div class="hero-video" id="hero-video">
+                    <div class="hero-video-frame">
+                        <iframe src="https://www.youtube.com/embed/tGihymYM8Zw" title="Timepot overview video" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -178,11 +166,6 @@
     <script>
         // Set current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // CTA 1: Watch video
-        document.getElementById('watch-video-hero').addEventListener('click', () => {
-            trackEvent('cta-1-watch-video');
-        });
 
         // CTA 2: Would you share screen time?
         document.getElementById('share-screentime-yes').addEventListener('click', () => {
