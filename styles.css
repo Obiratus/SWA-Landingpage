@@ -2072,3 +2072,41 @@ footer .container {
         font-size: 0.8rem;
     }
 }
+
+/* styles.css */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Make the logo smaller and constrain its size */
+.site-logo {
+    height: 20px; /* reduced from 40px */
+    width: auto;
+    max-width: 160px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Hide any remaining heading if you replaced it with the image */
+.logo h1 {
+    display: none;
+}
+
+/* Slightly reduce header padding to match smaller logo */
+.navbar {
+    padding: 0.75rem 0;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+    .site-logo {
+        height: 18px;
+        max-width: 120px;
+    }
+
+    .navbar {
+        padding: 0.5rem 0;
+    }
+}

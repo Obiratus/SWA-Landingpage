@@ -15,7 +15,9 @@
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
-                    <a href="index.html"><h1>Timepot</h1></a>
+                    <a href="index.html" class="logo-link" aria-label="Timepot home">
+                        <img src="assets/Timepot_Logo-positive.svg" alt="Timepot logo" class="site-logo">
+                    </a>
                 </div>
                 <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
                     <span></span>
@@ -39,7 +41,7 @@
                 <p class="hero-subtitle" data-i18n="hero.subtitle">Timepot helps your family build healthier digital habits together. No more fighting, just collaborating.</p>
                 <div class="hero-video" id="hero-video">
                     <div class="hero-video-frame">
-                        <iframe src="https://www.youtube.com/embed/tGihymYM8Zw" title="Timepot overview video" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/CeMSDVuQ2yA" title="Timepot overview video" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -72,11 +74,11 @@
                 <div class="demo-card">
                     <h3 data-i18n="demo.your-time">Your Daily Average (Last 7 Days)</h3>
                     <div class="screentime-input-group">
-                        <input 
-                            type="number" 
-                            id="user-screentime-input" 
-                            placeholder="5" 
-                            min="0" 
+                        <input
+                            type="number"
+                            id="user-screentime-input"
+                            placeholder="5"
+                            min="0"
                             max="24"
                             step="0.1"
                             class="screentime-input"
@@ -88,7 +90,7 @@
                 </div>
                 <div class="demo-card" id="family-pot-demo" style="opacity: 0.5;">
                     <h3 id="savings-title" data-i18n="demo.potential-title">Your Potential Savings</h3>
-                    <div class="demo-stat" id="family-pot-stat">? hours</div>
+                    <div class="demo-stat" id="family-pot-stat"data-i18n="demo.potential-time" >? hours</div>
                     <p id="savings-message" style="font-size: 0.9rem; color: #666;">Enter your screen time to see your potential!</p>
                 </div>
             </div>
@@ -183,56 +185,56 @@
         document.getElementById('share-demo-data').addEventListener('click', function() {
             const screenTimeInput = document.getElementById('user-screentime-input');
             const dailyScreenTime = parseFloat(screenTimeInput.value);
-            
+
             // Validate input
             if (!dailyScreenTime || dailyScreenTime < 0 || dailyScreenTime > 24) {
                 alert('Please enter a valid daily screen time between 0 and 24 hours');
                 return;
             }
-            
+
             // Convert to weekly for calculations
             const weeklyScreenTime = dailyScreenTime * 7;
-            
+
             // Track the actual screen time value
             trackEvent('cta-3-share-demo-data', { daily_screen_time: dailyScreenTime, weekly_screen_time: weeklyScreenTime });
-            
+
             this.disabled = true;
             this.textContent = 'Calculating...';
-            
+
             setTimeout(() => {
                 // Calculate 20% reduction
                 const dailyReduction = dailyScreenTime * 0.2;
                 const weeklyReduction = weeklyScreenTime * 0.2;
                 const monthlyReduction = weeklyReduction * 4;
-                
+
                 // Update the savings display
                 const familyPot = document.getElementById('family-pot-demo');
                 const familyPotStat = document.getElementById('family-pot-stat');
                 const savingsTitle = document.getElementById('savings-title');
                 const savingsMessage = document.getElementById('savings-message');
-                
+
                 familyPot.style.opacity = '1';
                 savingsTitle.textContent = '✨ Your Potential Savings';
                 familyPotStat.textContent = `${dailyReduction.toFixed(1)} hours/day`;
                 savingsMessage.innerHTML = `<strong style="color: #10b981;">That's ${monthlyReduction.toFixed(0)} hours per month!</strong>`;
-                
+
                 // Calculate and show benefits
                 const gameNights = Math.floor(monthlyReduction / 3); // 3 hours per game night
                 const books = Math.floor(monthlyReduction / 8); // 8 hours per book
                 const activities = Math.floor(monthlyReduction / 4); // 4 hours per activity
-                
+
                 document.getElementById('benefit-games').textContent = `${gameNights} game nights`;
                 document.getElementById('benefit-books').textContent = `${books} books`;
                 document.getElementById('benefit-activities').textContent = `${activities} outdoor adventures`;
-                
+
                 // Show benefits section
                 document.getElementById('savings-benefits').style.display = 'block';
-                
+
                 // Scroll to benefits
                 setTimeout(() => {
                     document.getElementById('family-pot-demo').scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }, 300);
-                
+
                 // Disable input after sharing
                 screenTimeInput.disabled = true;
             }, 1000);
