@@ -14,7 +14,7 @@ const translations = {
         
         // Video Section
         'video.title': 'See How Timepot Works',
-        'video.id': 'CeMSDVuQ2yA',
+        'video.id': 'wZDorOa3pTA',
         'video.question': 'Curious to see your saving potential?',
         'video.cta.yes': 'Yes, Let’s Find Out',
         'video.cta.maybe': 'Maybe, Tell Me More',
@@ -107,22 +107,22 @@ const translations = {
         // Pricing Section
         'pricing.title': 'What Would You Pay?',
         'pricing.subtitle': 'Help us understand what Timepot is worth to your family. Be honest - there\'s no wrong answer!',
-        'pricing.label': 'Monthly Price (CHF)',
+        'pricing.label': 'Monthly price for the whole family',
         'pricing.placeholder': '0.00',
-        'pricing.month': '/month',
+        'pricing.month': '/ month',
         'pricing.cta': 'Continue',
         'pricing.direct-waitlist': 'Skip to Waitlist',
         
         // Price Confirmation Modal
-        'price-confirm.title': 'Thank You!',
+        'price-confirm.title': 'Great Choice!',
         'price-confirm.message': 'You said you\'d pay',
         'price-confirm.month': 'per month',
-        'price-confirm.reserve': 'Reserve this price and we\'ll keep you updated when we launch.',
+        'price-confirm.reserve': 'Reserve this price and we\'ll keep you updated as we get closer to launch. No payment or credit card information needed! ',
         'price-confirm.cta': 'Reserve for This Price',
         
         // Waitlist Page
-        'waitlist.title': 'Join the Waitlist',
-        'waitlist.message': 'Awesome that you\'re interested in Timepot. We\'re not quite ready yet; while we can\'t promise a price today, we promise to put a lot of love into building your family\'s screen-time tool.',
+        'waitlist.title': 'Awesome that you’re interested in Timepot!',
+        'waitlist.message': 'We’re not quite ready to launch yet and while we can’t promise a price today, we can promise to put a lot of love into building your family’s screen-time tool.',
         'waitlist.email-placeholder': 'Enter your email address',
         'waitlist.cta': 'Join Waitlist',
         'waitlist.success': 'Thanks! We\'ll be in touch soon.',
@@ -130,7 +130,7 @@ const translations = {
         'waitlist.survey.prompt': 'Would you be open to a quick follow-up survey so we can build Timepot with your feedback?',
         'waitlist.survey.yes': 'Sure, show me the survey',
         'waitlist.survey.no': 'Maybe later',
-        'waitlist.thankyou.heading': 'You\'re on the list! 🎉',
+        'waitlist.thankyou.heading': 'You\'re on the list!',
         'waitlist.thankyou.copy': 'Thank you for joining the Timepot waitlist. We\'ll keep you in the loop as we prepare the launch.',
         
         // Footer
@@ -157,7 +157,7 @@ const translations = {
         
         // Video Section
         'video.title': 'So funktioniert Timepot',
-        'video.id': 'm2Icf0KYr1k',
+        'video.id': 'Fcqk6IKAxR8',
         'video.question': 'Neugierig auf dein Sparpotenzial?',
         'video.cta.yes': 'Ja, lass es uns herausfinden',
         'video.cta.maybe': 'Vielleicht, erzähl mir mehr',
@@ -250,9 +250,9 @@ const translations = {
         // Pricing Section
         'pricing.title': 'Was würdest du bezahlen?',
         'pricing.subtitle': 'Hilf uns zu verstehen, was Timepot deiner Familie wert ist. Sei ehrlich - es gibt keine falsche Antwort!',
-        'pricing.label': 'Monatlicher Preis (CHF)',
+        'pricing.label': 'Monatlicher Preis für die ganze Familie',
         'pricing.placeholder': '0.00',
-        'pricing.month': '/Monat',
+        'pricing.month': '/ Monat',
         'pricing.cta': 'Weiter',
         'pricing.direct-waitlist': 'Direkt zur Warteliste',
         
@@ -260,12 +260,12 @@ const translations = {
         'price-confirm.title': 'Vielen Dank!',
         'price-confirm.message': 'Du hast gesagt, du würdest bezahlen',
         'price-confirm.month': 'pro Monat',
-        'price-confirm.reserve': 'Reserviere diesen Preis und wir halten dich auf dem Laufenden, wenn wir starten.',
+        'price-confirm.reserve': 'Reserviere diesen Preis und wir halten dich auf dem Laufenden, wenn wir starten. Keine Zahlung oder Kreditkarteninformationen erforderlich!',
         'price-confirm.cta': 'Für diesen Preis reservieren',
         
         // Waitlist Page
-        'waitlist.title': 'Zur Warteliste',
-        'waitlist.message': 'Toll, dass du an Timepot interessiert bist. Wir sind noch nicht ganz fertig; obwohl wir heute noch keinen Preis versprechen können, versprechen wir, viel Liebe in den Aufbau deines Familien-Bildschirmzeit-Tools zu stecken.',
+        'waitlist.title': 'Wie schön, dass du dich für Timepot interessierst!',
+        'waitlist.message': 'Wir sind noch nicht ganz so weit und auch wenn wir heute noch keinen Preis versprechen können, versprechen wir eines: ganz viel Liebe beim Bauen eures Familien-Bildschirmzeit-Tools.',
         'waitlist.email-placeholder': 'Gib deine E-Mail-Adresse ein',
         'waitlist.cta': 'Zur Warteliste',
         'waitlist.success': 'Danke! Wir melden uns bald bei dir.',
@@ -273,7 +273,7 @@ const translations = {
         'waitlist.survey.prompt': 'Hättest du kurz Zeit für eine schnelle Umfrage, damit wir Timepot mit deinem Feedback bauen können?',
         'waitlist.survey.yes': 'Ja, zeig mir die Umfrage',
         'waitlist.survey.no': 'Vielleicht später',
-        'waitlist.thankyou.heading': 'Du bist dabei! 🎉',
+        'waitlist.thankyou.heading': 'Du bist dabei!',
         'waitlist.thankyou.copy': 'Danke, dass du dich für die Timepot-Warteliste eingetragen hast. Wir halten dich auf dem Laufenden, während wir den Launch vorbereiten.',
         
         // Footer
