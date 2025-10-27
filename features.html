@@ -349,42 +349,42 @@
                 icon: '<img src="assets/icons_timepot-04.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
                 titleKey: 'feature.heroes-villains.modal.title',
                 descriptionKey: 'feature.heroes-villains.modal.description',
-                audio: 'assets/heroes.mp3'
+                audio: 'feature.heroes-villains.modal.audio'
             },
 
             'feature-card-agreements': {
                 icon: '<img src="assets/icons_timepot-01.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
                 titleKey: 'feature.agreements.modal.title',
                 descriptionKey: 'feature.agreements.modal.description',
-                audio: 'assets/agreements.mp3'
+                audio: 'feature.agreements.modal.audio'
             },
 
             'feature-card-privacy-first': {
                 icon: '<img src="assets/icons_timepot-03.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
                 titleKey: 'feature.privacy.modal.title',
                 descriptionKey: 'feature.privacy.modal.description',
-                audio: 'assets/categories.mp3'
+                audio: 'feature.privacy.modal.audio'
             },
 
             'feature-card-individual-battle': {
                 icon: '<img src="assets/icons_timepot-06.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
                 titleKey: 'feature.individual.modal.title',
                 descriptionKey: 'feature.individual.modal.description',
-                audio: 'assets/individual.mp3'
+                audio: 'feature.individual.modal.audio'
             },
 
             'feature-card-team-battle': {
                 icon: '<img src="assets/icons_timepot-07.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
                 titleKey: 'feature.team.modal.title',
                 descriptionKey: 'feature.team.modal.description',
-                audio: 'assets/team.mp3'
+                audio: 'feature.team.modal.audio'
             },
 
             'feature-card-family-family': {
                 icon: '<img src="assets/icons_timepot-08.svg" alt="Heroes & Villains Icon" style="width:3.5rem;height:3.5rem;vertical-align:middle;" />',
                 titleKey: 'feature.family-vs-family.modal.title',
                 descriptionKey: 'feature.family-vs-family.modal.description',
-                audio: 'assets/family.mp3'
+                audio: 'feature.family-vs-family.modal.audio'
             }
         };
 
@@ -403,11 +403,30 @@
                     document.body.style.overflow = 'hidden';
 
                     if (feature.audio) {
-                        const audioText = window.i18n ? window.i18n.translate('feature.modal.audio-text') : 'Let Anton explain it. Hit the play button!';
+                        const audioText = (window.i18n && typeof window.i18n.translate === 'function')
+                            ? window.i18n.translate('feature.modal.audio-text')
+                            : 'Let Anton explain it. Hit the play button!';
+
+                        let audioSrc = feature.audio;
+
+                        const isPath = typeof feature.audio === 'string' && (
+                            feature.audio.startsWith('assets/') ||
+                            feature.audio.startsWith('./') ||
+                            feature.audio.startsWith('/') ||
+                            /\.(mp3|wav|ogg|m4a)$/i.test(feature.audio)
+                        );
+
+                        if (!isPath && window.i18n && typeof window.i18n.translate === 'function') {
+                            const translated = window.i18n.translate(feature.audio);
+                            if (translated && translated !== feature.audio) {
+                                audioSrc = translated;
+                            }
+                        }
+
                         modalDescription.innerHTML += `
                             <p style="margin-top:2rem;">${audioText}</p>
                             <audio controls style="margin-top:1rem; width:100%;">
-                                <source src="${feature.audio}" type="audio/mpeg">
+                                <source src="${audioSrc}" type="audio/mpeg">
                                 Your browser does not support the audio element.
                             </audio>
                         `;

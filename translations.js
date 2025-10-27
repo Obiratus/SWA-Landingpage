@@ -57,31 +57,37 @@ const translations = {
         'feature.heroes-villains.title': 'Heroes & Villains System',
         'feature.heroes-villains.modal.title': 'Heroes & Villains System',
         'feature.heroes-villains.modal.description': 'Choose "Hero" apps that don\'t count against your time, and "Villain" apps that get punished when time runs out. You\'re in control!',
-        
+        'feature.heroes-villains.modal.audio': 'assets/heroes.mp3',
+
+
         'feature.agreements.title': 'Agreements',
         'feature.agreements.modal.title': 'Family Agreements',
         'feature.agreements.modal.description': 'Families can define agreements, real-life treats or activities, that are unlocked when specific screen time goals are met.',
-        
+        'feature.agreements.modal.audio': 'assets/agreements.mp3',
+
         'feature.privacy.title': 'Privacy',
         'feature.privacy.subtitle': 'App Categories',
         'feature.privacy.modal.title': 'Privacy-First App Categories',
         'feature.privacy.modal.description': 'Your privacy matters. Instead of showing specific app names, Timepot groups apps into three transparent categories: Productive, Educational, and Leisure. This allows your family members to discuss screen time habits at a category level, without exposing personal app usage details.',
+        'feature.privacy.modal.audio': 'assets/categories.mp3',
 
         'feature.individual.title': 'Reporting',
         'feature.individual.subtitle': 'Individual Battle',
         'feature.individual.modal.title': 'Individual Battle Reporting',
         'feature.individual.modal.description': 'Track your personal screen time trends, celebrate your wins, and see your achievements over time. Focus on your own progress without comparison pressure.',
+        'feature.individual.modal.audio': 'assets/individual.mp3',
 
         'feature.team.title': 'Reporting',
         'feature.team.subtitle': 'Team Battle',
         'feature.team.modal.title': 'Team Battle Reporting',
         'feature.team.modal.description': 'Turn screen time reduction into a friendly family challenge. See your family\'s collective progress, visualize overall achievements, and celebrate together as a team.',
+        'feature.team.modal.audio': 'assets/team.mp3',
 
         'feature.family-vs-family.title': 'Reporting',
         'feature.family-vs-family.subtitle': 'Family vs. Family',
         'feature.family-vs-family.modal.title': 'Family vs. Family Reporting',
         'feature.family-vs-family.modal.description': 'A social comparison feature that allows families to see how their overall screen time habits compare to other similar families using Timepot.',
-
+        'feature.family-vs-family.modal.audio': 'assets/family.mp3',
 
         'feature.modal.cta': 'Join the Waitlist',
         
@@ -202,32 +208,38 @@ const translations = {
         'feature.heroes-villains.title': 'Helden & Schurken System',
         'feature.heroes-villains.modal.title': 'Helden & Schurken System',
         'feature.heroes-villains.modal.description': 'Wähle „Helden“-Apps, die nicht gegen deine Zeit zählen, und „Schurken“-Apps, die bestraft werden, wenn die Zeit abläuft. Du hast die volle Kontrolle!',
+        'feature.heroes-villains.modal.audio': 'assets/heroes-de.mp3',
 
         'feature.agreements.title': 'Vereinbarungen',
         'feature.agreements.modal.title': 'Familien-Vereinbarungen',
         'feature.agreements.modal.description': 'Familien können gemeinsame Vereinbarungen festlegen, echte Belohnungen oder Aktivitäten, die freigeschaltet werden, sobald bestimmte Bildschirmzeit-Ziele erreicht sind.',
+        'feature.agreements.modal.audio': 'assets/agreements-de.mp3',
 
         'feature.privacy.title': 'Privatsphäre',
         'feature.privacy.subtitle': 'App-Kategorien',
         'feature.privacy.modal.title': 'Volle Privatsphäre dank App-Kategorien',
         'feature.privacy.modal.description': 'Deine Privatsphäre ist uns sehr wichtig. Anstatt einzelne App-Namen zu zeigen, fasst Timepot Apps in drei transparente Kategorien zusammen: Produktiv, Lehrreich und Freizeit. So kann deine Familie über Bildschirmgewohnheiten sprechen, ohne persönliche Nutzungsdetails offenzulegen.',
+        'feature.privacy.modal.audio': 'assets/categories-de.mp3',
 
         'feature.individual.title': 'Berichte',
         'feature.individual.subtitle': 'Individueller Kampf',
         'feature.individual.modal.title': 'Individuelle Kampf-Berichte',
         'feature.individual.modal.description': 'Verfolge deine persönlichen Bildschirmzeit-Trends, feiere deine Erfolge und sieh deine Fortschritte im Laufe der Zeit.',
+        'feature.individual.modal.audio': 'assets/individual-de.mp3',
 
         'feature.team.title': 'Berichte',
         'feature.team.subtitle': 'Team Kampf',
         'feature.team.modal.title': 'Team Kampf-Berichte',
         'feature.team.modal.description': 'Mach aus der Reduzierung der Bildschirmzeit eine freundliche Familien-Challenge. Sieh den gemeinsamen Fortschritt und wie ihr in eurer Familie abschneidet, visualisiere eure Erfolge und feiert zusammen als Team.',
+        'feature.team.modal.audio': 'assets/team-de.mp3',
 
         'feature.family-vs-family.title': 'Berichte',
         'feature.family-vs-family.subtitle': 'Familie gegen Familie',
         'feature.family-vs-family.modal.title': 'Familie gegen Familie Berichte',
         'feature.family-vs-family.modal.description': 'Eine soziale Vergleichsfunktion, mit der Familien sehen können, wie ihre Bildschirmzeit-Gewohnheiten im Vergleich zu anderen Familien aussehen, die ebenfalls Timepot nutzen.',
+        'feature.family-vs-family.modal.audio': 'assets/family-de.mp3',
 
-        'feature.modal.audio-text': 'Lass Anton es erklären. Drück den Play-Button!',
+        'feature.modal.audio-text': 'Lass Heidi es erklären. Drück den Play-Button!',
 
         'feature.modal.cta': 'Zur Warteliste',
         
