@@ -85,13 +85,13 @@
                         >
                         <span class="screentime-unit" data-i18n="demo.hours">hours/day</span>
                     </div>
-                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;" data-i18n="demo.tip">💡 Tip: Open Screen Time on iPhone or Digital Wellbeing on Android - look for "Daily Average"</p>
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;" data-i18n="demo.tip">💡 Tip: Open Screen Time on iPhone or Digital Wellbeing on Android - look for "Daily Average"</p>
                     <button class="cta-button" id="share-demo-data" style="margin-top: 1rem;" data-i18n="demo.cta">Calculate My Savings</button>
                 </div>
                 <div class="demo-card" id="family-pot-demo" style="opacity: 0.5;">
                     <h3 id="savings-title" data-i18n="demo.potential-title">Your Potential Savings</h3>
                     <div class="demo-stat" id="family-pot-stat"data-i18n="demo.potential-time" >? hours</div>
-                    <p id="savings-message" style="font-size: 0.9rem; color: #666;">Enter your screen time to see your potential!</p>
+                    <p id="savings-message" style="font-size: 0.9rem; color: var(--text-light);">Enter your screen time to see your potential!</p>
                 </div>
             </div>
             <div id="savings-benefits" style="display: none; margin-top: 2rem; text-align: center; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
@@ -216,7 +216,7 @@
                 familyPot.style.opacity = '1';
                 savingsTitle.textContent = '✨ Your Potential Savings';
                 familyPotStat.textContent = `${dailyReduction.toFixed(1)} hours/day`;
-                savingsMessage.innerHTML = `<strong style="color: #10b981;">That's ${monthlyReduction.toFixed(0)} hours per month!</strong>`;
+                savingsMessage.innerHTML = `<strong style="color: var(--green-500);">That's ${monthlyReduction.toFixed(0)} hours per month!</strong>`;
 
                 // Calculate and show benefits
                 const gameNights = Math.floor(monthlyReduction / 3); // 3 hours per game night

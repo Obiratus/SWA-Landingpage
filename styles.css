@@ -5,13 +5,46 @@
 }
 
 :root {
-    --primary-color: #AC47F5;
-    --secondary-color: #C27BFF;
-    --accent-color: #FF8705;
-    --text-dark: #020617;
-    --text-light: #62748D;
-    --bg-light: #F9FAFC;
-    --bg-gradient: linear-gradient(135deg, #AC47F5 0%, #C27BFF 100%);
+    --purple-500: #AC47F5;
+    --purple-500-rgb: 172, 71, 245;
+    --purple-400: #C27BFF;
+    --purple-400-rgb: 194, 123, 255;
+    --purple-300: #DAB2FF;
+    --purple-300-rgb: 218, 178, 255;
+    --purple-100: #FAF5FF;
+    --purple-100-rgb: 250, 245, 255;
+
+    --orange-500: #FF8705;
+    --orange-500-rgb: 255, 135, 5;
+    --orange-400: #FFB869;
+    --orange-400-rgb: 255, 184, 105;
+    --orange-300: #FFD6A7;
+    --orange-300-rgb: 255, 214, 167;
+    --orange-100: #FFF8EC;
+    --orange-100-rgb: 255, 248, 236;
+
+    --black-900: #020617;
+    --black-900-rgb: 2, 6, 23;
+    --black-500: #62748D;
+    --black-500-rgb: 98, 116, 141;
+    --black-300: #C9D5E1;
+    --black-300-rgb: 201, 213, 225;
+    --black-100: #F9FAFC;
+    --black-100-rgb: 249, 250, 252;
+
+    --green-500: #7BF1A7;
+    --green-500-rgb: 123, 241, 167;
+    --red-500: #FF6467;
+    --red-500-rgb: 255, 100, 103;
+
+    --primary-color: var(--purple-500);
+    --secondary-color: var(--purple-400);
+    --tertiary-color: var(--purple-300);
+    --accent-color: var(--orange-500);
+    --text-dark: var(--black-900);
+    --text-light: var(--black-500);
+    --bg-light: var(--black-100);
+    --bg-gradient: linear-gradient(135deg, var(--purple-500) 0%, var(--purple-400) 100%);
     --white: #ffffff;
     --border-radius: 16px;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
@@ -282,7 +315,7 @@ header:hover {
 /* Hero Section */
 .hero {
     padding: 120px 0 100px;
-    background: linear-gradient(135deg, #AC47F5 0%, #C27BFF 50%, #DAB2FF 100%);
+    background: linear-gradient(135deg, var(--purple-500) 0%, var(--purple-400) 50%, var(--purple-300) 100%);
     color: var(--white);
     position: relative;
     overflow: hidden;
@@ -389,7 +422,7 @@ header:hover {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(var(--purple-500-rgb), 0.12);
     transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
     transform: translate(-50%, -50%);
 }
@@ -429,7 +462,7 @@ header:hover {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(var(--purple-500-rgb), 0.12);
     transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
     transform: translate(-50%, -50%);
 }
@@ -611,7 +644,7 @@ header:hover {
     border-radius: var(--border-radius);
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(var(--purple-500-rgb), 0.12);
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -624,7 +657,7 @@ header:hover {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.05), transparent);
+    background: linear-gradient(90deg, transparent, rgba(var(--purple-400-rgb), 0.12), transparent);
     transition: left 0.6s;
 }
 
@@ -635,7 +668,7 @@ header:hover {
 .feature-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: var(--shadow-lg);
-    border-color: rgba(99, 102, 241, 0.2);
+    border-color: rgba(var(--purple-500-rgb), 0.28);
 }
 
 .feature-icon {
@@ -725,7 +758,7 @@ header:hover {
 }
 
 .heroes, .villains {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+    background: linear-gradient(135deg, rgba(var(--purple-500-rgb), 0.12), rgba(var(--purple-300-rgb), 0.12));
     padding: 2rem;
     border-radius: var(--border-radius);
     border-left: 4px solid var(--primary-color);
@@ -739,7 +772,7 @@ header:hover {
 
 .villains {
     border-left-color: var(--secondary-color);
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05));
+    background: linear-gradient(135deg, rgba(var(--purple-400-rgb), 0.12), rgba(var(--orange-400-rgb), 0.18));
 }
 
 .heroes h4, .villains h4 {
@@ -820,7 +853,7 @@ header:hover {
 /* Signup Section */
 .signup-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--purple-500) 0%, var(--purple-300) 100%);
     color: var(--white);
 }
 
@@ -903,15 +936,15 @@ header:hover {
 }
 
 .form-message.success {
-    background: rgba(34, 197, 94, 0.2);
-    border: 1px solid rgba(34, 197, 94, 0.3);
-    color: #22c55e;
+    background: rgba(var(--green-500-rgb), 0.2);
+    border: 1px solid rgba(var(--green-500-rgb), 0.35);
+    color: var(--green-500);
 }
 
 .form-message.error {
-    background: rgba(239, 68, 68, 0.2);
-    border: 1px solid rgba(239, 68, 68, 0.3);
-    color: #ef4444;
+    background: rgba(var(--red-500-rgb), 0.2);
+    border: 1px solid rgba(var(--red-500-rgb), 0.35);
+    color: var(--red-500);
 }
 
 .survey-prompt {
@@ -1282,7 +1315,7 @@ footer .container {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #d1d5db;
+    background: var(--black-300);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -1410,7 +1443,7 @@ footer .container {
 
 .modal-close:hover {
     color: var(--primary-color);
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(var(--purple-500-rgb), 0.12);
     transform: rotate(90deg);
 }
 
@@ -1518,7 +1551,7 @@ footer .container {
 /* Interactive Demo Section */
 .interactive-section {
     padding: 4rem 0;
-    background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+    background: linear-gradient(135deg, var(--black-100) 0%, var(--purple-100) 100%);
 }
 
 .demo-container {
@@ -1573,11 +1606,11 @@ footer .container {
 .screentime-input:focus {
     outline: none;
     border-color: var(--secondary-color);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 4px rgba(var(--purple-400-rgb), 0.25);
 }
 
 .screentime-input:disabled {
-    background: #f3f4f6;
+    background: var(--black-100);
     cursor: not-allowed;
 }
 
@@ -1642,7 +1675,7 @@ footer .container {
 /* Pricing Section */
 .pricing-section {
     padding: 4rem 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--purple-500) 0%, var(--purple-300) 100%);
     color: white;
 }
 
@@ -1711,7 +1744,7 @@ footer .container {
 
 .price span {
     font-size: 1rem;
-    color: #666;
+    color: var(--text-light);
 }
 
 .pricing-features {
@@ -1723,7 +1756,7 @@ footer .container {
 
 .pricing-features li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(var(--black-300-rgb), 0.6);
 }
 
 .pricing-features li:last-child {
@@ -1741,12 +1774,14 @@ footer .container {
 }
 
 .cta-secondary {
-    background: #10b981;
-    color: white;
+    background: var(--green-500);
+    color: var(--black-900);
 }
 
 .cta-secondary:hover {
-    background: #059669;
+    background: var(--green-500);
+    box-shadow: 0 10px 25px rgba(var(--green-500-rgb), 0.4);
+    transform: translateY(-2px);
 }
 
 .cta-ghost {
@@ -1814,14 +1849,14 @@ footer .container {
     top: 1.5rem;
     font-size: 2rem;
     font-weight: bold;
-    color: #999;
+    color: var(--text-light);
     cursor: pointer;
     transition: color 0.3s ease;
     line-height: 1;
 }
 
 .close-modal:hover {
-    color: #333;
+    color: var(--text-dark);
 }
 
 #reservation-modal .modal-content h2,
@@ -1854,7 +1889,7 @@ footer .container {
     width: 100%;
     padding: 0.75rem;
     margin-top: 0.5rem;
-    border: 2px solid #e5e7eb;
+    border: 2px solid var(--black-300);
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
