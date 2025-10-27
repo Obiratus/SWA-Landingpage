@@ -209,7 +209,7 @@ const translations = {
 
         'feature.privacy.title': 'Privatsphäre',
         'feature.privacy.subtitle': 'App-Kategorien',
-        'feature.privacy.modal.title': 'Privatsphäre-erste App-Kategorien',
+        'feature.privacy.modal.title': 'Volle Privatsphäre dank App-Kategorien',
         'feature.privacy.modal.description': 'Deine Privatsphäre ist uns sehr wichtig. Anstatt einzelne App-Namen zu zeigen, fasst Timepot Apps in drei transparente Kategorien zusammen: Produktiv, Lernend und Freizeit. So kann deine Familie über Bildschirmgewohnheiten sprechen, ohne persönliche Nutzungsdetails offenzulegen.',
 
         'feature.individual.title': 'Berichte',
