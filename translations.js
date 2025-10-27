@@ -218,8 +218,8 @@ const translations = {
         'feature.individual.modal.description': 'Verfolge deine persönlichen Bildschirmzeit-Trends, feiere deine Erfolge und sieh deine Fortschritte im Laufe der Zeit.',
 
         'feature.team.title': 'Berichte',
-        'feature.team.subtitle': 'Team-Kampf',
-        'feature.team.modal.title': 'Team-Kampf-Berichte',
+        'feature.team.subtitle': 'Team Kampf',
+        'feature.team.modal.title': 'Team Kampf-Berichte',
         'feature.team.modal.description': 'Mach aus der Reduzierung der Bildschirmzeit eine freundliche Familien-Challenge. Sieh den gemeinsamen Fortschritt und wie ihr in eurer Familie abschneidet, visualisiere eure Erfolge und feiert zusammen als Team.',
 
         'feature.family-vs-family.title': 'Berichte',
