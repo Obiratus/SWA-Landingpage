@@ -239,7 +239,7 @@ const translations = {
         'feature.family-vs-family.modal.description': 'Eine soziale Vergleichsfunktion, mit der Familien sehen können, wie ihre Bildschirmzeit-Gewohnheiten im Vergleich zu anderen Familien aussehen, die ebenfalls Timepot nutzen.',
         'feature.family-vs-family.modal.audio': 'assets/family-de.mp3',
 
-        'feature.modal.audio-text': 'Lass Heidi es erklären. Drück den Play-Button!',
+        'feature.modal.audio-text': 'Lass es Heidi erklären. Drück den Play-Button!',
 
         'feature.modal.cta': 'Zur Warteliste',
         
