@@ -146,6 +146,7 @@ const translations = {
         'footer.home': 'How it works',
         'footer.features': 'Features',
         'footer.pricing': 'Pricing',
+    'footer.privacy': 'Privacy Disclaimer',
         
         // Common
         'common.close': 'Close',
@@ -297,6 +298,7 @@ const translations = {
         'footer.home': 'Wie es funktioniert',
         'footer.features': 'Funktionen',
         'footer.pricing': 'Preise',
+    'footer.privacy': 'Datenschutzerklärung',
         
         // Common
         'common.close': 'Schließen',
