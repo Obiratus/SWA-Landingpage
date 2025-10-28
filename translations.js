@@ -376,8 +376,8 @@ class LanguageSwitcher {
         
         // Get language display names
         const languages = {
-            en: '🇬🇧 English',
-            de: '🇩🇪 Deutsch'
+            en: 'English',
+            de: 'Deutsch'
         };
         
         dropdownContainer.innerHTML = `
