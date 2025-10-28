@@ -2167,7 +2167,7 @@ footer .container {
 .family-size-btn {
     -webkit-appearance: none;
     appearance: none;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255,255,255,0.32);
     color: #ffffff;
     padding: 0.7rem 0.75rem;
