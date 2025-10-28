@@ -445,8 +445,8 @@ class LanguageSwitcher {
     updateToggleButton() {
         const currentSpan = document.querySelector('.lang-current');
         const languages = {
-            en: '🇬🇧 English',
-            de: '🇩🇪 Deutsch'
+            en: 'English',
+            de: 'Deutsch'
         };
         
         if (currentSpan) {
