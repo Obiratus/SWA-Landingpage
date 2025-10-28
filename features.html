@@ -41,14 +41,50 @@
                 <p data-i18n="onboarding.subtitle">Help us understand your family better so we can show you the most relevant features</p>
                 
                 <div class="onboarding-questions">
+                    <!-- html -->
                     <div class="question-group">
                         <h3 data-i18n="onboarding.family-size.question">How many people are in your family?</h3>
-                        <div class="option-buttons">
-                            <button class="option-btn" data-family-size="2-3" data-i18n="onboarding.family-size.2-3">2-3 people</button>
-                            <button class="option-btn" data-family-size="4-5" data-i18n="onboarding.family-size.4-5">4-5 people</button>
-                            <button class="option-btn" data-family-size="6-plus" data-i18n="onboarding.family-size.6-plus">6+ people</button>
+                        <div class="family-size-buttons">
+                            <button class="family-size-btn" type="button" data-family-size="1A-1K" aria-pressed="false">
+                                <img src="assets/1%20Adult%201%20Kid.svg" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="onboarding.family-size.1A-1K">1 Adult 1 Kid</span>
+                            </button>
+
+                            <button class="family-size-btn" type="button" data-family-size="2A-1K" aria-pressed="false">
+                                <img src="assets/2%20Adults%201%20Kid.svg" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="onboarding.family-size.2A-1K">2 Adults 1 Kid</span>
+                            </button>
+
+                            <button class="family-size-btn" type="button" data-family-size="1A-2K" aria-pressed="false">
+                                <img src="assets/1%20Adult%202%20Kids.svg" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="onboarding.family-size.1A-2K">1 Adult 2 Kids</span>
+                            </button>
+
+                            <button class="family-size-btn" type="button" data-family-size="2A-2K" aria-pressed="false">
+                                <img src="assets/2%20Adults%202%20Kids.svg" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="onboarding.family-size.2A-2K">2 Adults 2 Kids</span>
+                            </button>
+
+                            <button class="family-size-btn" type="button" data-family-size="1A-2plusK" aria-pressed="false">
+                                <img src="assets/1%20Adult%202%2BKids.svg" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="onboarding.family-size.1A-2plusK">1 Adult 2+ Kids</span>
+                            </button>
+
+                            <button class="family-size-btn" type="button" data-family-size="2A-2plusK" aria-pressed="false">
+                                <img src="assets/2%20Adults%202%2BKids.svg" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="onboarding.family-size.2A-2plusK">2 Adults 2+ Kids</span>
+                            </button>
+
+
                         </div>
                     </div>
+
+                    <div class="onboarding-actions">
+                        <div class="family-size-none">
+                            <button class="cta-button cta-ghost" id="no-kids" data-i18n="onboarding.no-kids">No Kids</button>
+                        </div>
+                    </div>
+
                     
                     <div class="question-group">
                         <h3 data-i18n="onboarding.device-age.question">When did your kids get their first smartphone/tablet?</h3>
@@ -210,6 +246,7 @@
         const onboardingSection = document.getElementById('onboarding');
         const featuresSection = document.getElementById('features');
         const pricingSection = document.getElementById('pricing');
+        const noKidsBtn = document.getElementById('no-kids');
         const continueBtn = document.getElementById('continue-to-features');
         const skipBtn = document.getElementById('skip-onboarding');
         
@@ -303,6 +340,21 @@
                 trackEvent('onboarding-skipped');
             }
             
+            // Show features and pricing
+            onboardingSection.style.display = 'none';
+            featuresSection.style.display = 'block';
+            pricingSection.style.display = 'block';
+        });
+
+        // Skip onboarding
+        noKidsBtn.addEventListener('click', function() {
+            localStorage.setItem('timepot-onboarding-completed', 'true');
+
+            // Track skip
+            if (typeof trackEvent === 'function') {
+                trackEvent('onboarding-no-kids');
+            }
+
             // Show features and pricing
             onboardingSection.style.display = 'none';
             featuresSection.style.display = 'block';

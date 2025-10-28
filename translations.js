@@ -38,6 +38,7 @@ const translations = {
         'demo.game-nights': 'game nights per month',
         'demo.books': 'books read together',
         'demo.activities': 'outdoor adventures',
+        'demo.reduce.screen-time': 'By reducing just 20% of screen time, your family could gain this quality time together!',
         'demo.next-cta': 'Explore All Features',
         
         // Features Preview (index.html)
@@ -97,7 +98,7 @@ const translations = {
         // Onboarding Questions (for features.html)
         'onboarding.title': 'Let\'s personalize your Timepot experience',
         'onboarding.subtitle': 'Help us understand your family better so we can show you the most relevant features',
-        'onboarding.family-size.question': 'How many people are in your family (in the same household)?',
+        'onboarding.family-size.question': 'How big is your Family (living in the same household)?',
         'onboarding.family-size.2-3': '2-3 people',
         'onboarding.family-size.4-5': '4-5 people',
         'onboarding.family-size.6-plus': '6+ people',
@@ -109,6 +110,7 @@ const translations = {
         'onboarding.device-age.none': 'They don\'t have smartphones yet',
         'onboarding.cta': 'Show Me Features',
         'onboarding.skip': 'Skip for now',
+        'onboarding.no-kids': 'No Kids',
         
         // Pricing Section
         'pricing.title': 'What Would You Pay?',
@@ -189,6 +191,7 @@ const translations = {
         'demo.game-nights': 'Spieleabende pro Monat',
         'demo.books': 'gemeinsam gelesene Bücher',
         'demo.activities': 'Outdoor-Abenteuer',
+        'demo.reduce.screen-time': 'Durch eine Reduzierung der Bildschirmzeit um nur 20 % könnte deine Familie diese wertvollen gemeinsame Momente gewinnen!',
         'demo.next-cta': 'Alle Funktionen entdecken',
         
         // Features Preview (index.html)
@@ -246,7 +249,7 @@ const translations = {
         // Onboarding Questions (for features.html)
         'onboarding.title': 'Lass uns deine Timepot-Erfahrung personalisieren',
         'onboarding.subtitle': 'Hilf uns, deine Familie besser zu verstehen, damit wir dir die relevantesten Funktionen zeigen können',
-        'onboarding.family-size.question': 'Wie viele Personen leben in deinem Haushalt?',
+        'onboarding.family-size.question': 'Wie gross ist deine Famile (im gleichen Haushalt lebend)?',
         'onboarding.family-size.2-3': '2-3 Personen',
         'onboarding.family-size.4-5': '4-5 Personen',
         'onboarding.family-size.6-plus': '6+ Personen',
@@ -258,6 +261,7 @@ const translations = {
         'onboarding.device-age.none': 'Sie haben noch keine Smartphones',
         'onboarding.cta': 'Zeig mir die Funktionen',
         'onboarding.skip': 'Für jetzt überspringen',
+        'onboarding.no-kids': 'Keine Kinder',
         
         // Pricing Section
         'pricing.title': 'Was würdest du bezahlen?',
