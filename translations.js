@@ -389,10 +389,10 @@ class LanguageSwitcher {
             </button>
             <ul class="lang-dropdown-menu" id="lang-dropdown-menu" role="menu">
                 <li role="menuitem">
-                    <button class="lang-option" data-lang="en">🇬🇧 English</button>
+                    <button class="lang-option" data-lang="en">English</button>
                 </li>
                 <li role="menuitem">
-                    <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
+                    <button class="lang-option" data-lang="de">Deutsch</button>
                 </li>
             </ul>
         `;
